@@ -241,10 +241,12 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "FootTrap")
         {
-            this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
-            moveSpeed = 0;
-            Invoke("MoveSpeedReturn", 1.1f);
             VelocityZero();
+            moveSpeed = 0;
+            anim.SetBool("isJumpUp", false);
+            anim.SetBool("isJumpDown", false);
+            Invoke("MoveSpeedReturn", 2f);
+            this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
         }
 
         if (collision.gameObject.tag == "HpItem")
@@ -329,11 +331,17 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Finish")
+        if (collision.gameObject.tag == "door")
         {
-            //Next Stage
-            gameManager.NextStage();
+            anim.SetTrigger("doDoor");
+            Invoke("NextStage", 1f);
+            VelocityZero();
         }
+    }
+
+    private void NextStage()
+    {
+        gameManager.NextStage();
     }
 
     void PlaySound(string action)

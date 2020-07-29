@@ -12,6 +12,7 @@ TagManager:
   - MineTrap
   - HpItem
   - SpeedItem
+  - door
   layers:
   - Default
   - TransparentFX
