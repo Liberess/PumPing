@@ -317,7 +317,7 @@ public class Player : MonoBehaviour
 
         PlaySound("Die");
 
-        anim.Play("Died");
+        anim.SetTrigger("doDied");
 
         gameObject.layer = 11;
 
