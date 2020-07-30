@@ -315,6 +315,10 @@ public class Player : MonoBehaviour
 
         UIReStart.SetActive(true);
 
+        gameManager.menuSet.SetActive(false);
+
+        gameManager.miniMap.SetActive(false);
+
         PlaySound("Die");
 
         anim.SetTrigger("doDied");

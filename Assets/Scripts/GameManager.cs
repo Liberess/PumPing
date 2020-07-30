@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject pumping;
     public GameObject menuSet;
     public GameObject player;
+    public GameObject miniMap;
 
     public int stageIndex;
     public string gaSc;
@@ -32,7 +33,9 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
         //Sub Menu
-        if (stageIndex != 0 && Input.GetButtonDown("Cancel"))
+        //esc를 눌렀을 때 만약 stage가 0, 즉 메인화면이라면 메뉴화면을 켤 수 없다.
+        //또한 현재 미니맵이 꺼져있고 재시작 버튼이 비활성화 되어 있어야지 메뉴를 불러 올 수 있다.
+        if (stageIndex != 0 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false && playerMv.UIReStart.activeSelf == false)
         {
             if (menuSet.activeSelf)
             {
