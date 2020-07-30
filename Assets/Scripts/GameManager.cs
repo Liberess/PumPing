@@ -52,16 +52,12 @@ public class GameManager : MonoBehaviour
     {
         stageIndex++;
 
-        //Calculate Point
-        /* totalPoint += stagePoint;
-        stagePoint = 0; */
-
         SceneManager.LoadScene("Stage_2");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             playerMv.onDie();
         }
@@ -86,8 +82,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        float x = PlayerPrefs.GetFloat("PlayerX");
-        float y = PlayerPrefs.GetFloat("PlayerY");
         int gameScene = PlayerPrefs.GetInt("GameScene");
         gaSc = PlayerPrefs.GetString("GaSc");
 

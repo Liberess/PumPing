@@ -378,8 +378,9 @@ MonoBehaviour:
   pumping: {fileID: 595829092}
   menuSet: {fileID: 595829090}
   player: {fileID: 867833567}
+  miniMap: {fileID: 1787338998}
   stageIndex: 3
-  gaSc: 
+  gaSc: Stage_2
   pumpingGauge: 0
 --- !u!4 &382524963
 Transform:
@@ -1000,6 +1001,26 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 382524962}
+    - target: {fileID: 2944890292390977092, guid: 4b0d0085600fe604fabe3193cda4e60d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -67.111
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944890292390977092, guid: 4b0d0085600fe604fabe3193cda4e60d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944890292390977092, guid: 4b0d0085600fe604fabe3193cda4e60d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 134.2213
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944890292390977092, guid: 4b0d0085600fe604fabe3193cda4e60d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 154.7105
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b0d0085600fe604fabe3193cda4e60d, type: 3}
 --- !u!114 &595829088 stripped

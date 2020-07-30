@@ -29,7 +29,7 @@ public class SceneLoad : MonoBehaviour
     {
         yield return null;
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync("Stage_1");
+        AsyncOperation operation = SceneManager.LoadSceneAsync("Stage_0");
 
         operation.allowSceneActivation = false;
 
@@ -64,7 +64,7 @@ public class SceneLoad : MonoBehaviour
             else if (loadType == 1)
             {
                 //새게임
-                SceneManager.LoadScene("Stage_1");
+                SceneManager.LoadScene("Stage_0");
             }
             else if (loadType == 2)
             {

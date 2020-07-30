@@ -50,10 +50,9 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         switch (currentType)
         {
             case BTNType.New:
-                SceneLoad.LoadSceneHandle("Stage_1", 1);
+                SceneLoad.LoadSceneHandle("Stage_0", 1);
                 break;
             case BTNType.Load:
-                //game.GameLoad();
                 SceneLoad.LoadSceneHandle(game.gaSc, 2);
                 break;
             case BTNType.Option:
