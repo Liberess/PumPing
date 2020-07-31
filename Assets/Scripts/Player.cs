@@ -26,9 +26,9 @@ public class Player : MonoBehaviour
     private float moveSpeed = 10;
     private float jumpPower = 10;
     private float maxPumping = 200;
-    float maxJump = 2;
-    int jumpCount = 0;
-    int pumpingCount = 0;
+    private float maxJump = 2;
+    private int jumpCount = 0;
+    private int pumpingCount = 0;
 
     //사망 효과음 On/Off
     private bool audioPlay;
@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         }
 
         //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
-        if (gameManager.energyBar.value >= 0.5f && IsAlive && isMove == true)
+        if (IsAlive && isMove == true)
         {
             Move();
             Jump();
@@ -101,7 +101,6 @@ public class Player : MonoBehaviour
                 if (rayHit.distance < 0.5f)
                 {
                     anim.SetBool("isJumpUp", false);
-                    anim.SetBool("isJumpDown", false);
                     jumpCount = 0;
                 }
             }
@@ -112,7 +111,7 @@ public class Player : MonoBehaviour
     {
         get
         {
-            return gameManager.energyBar.value > 0;
+            return gameManager.energyBar.value >= 0.5f;
         }
     }
 
@@ -128,7 +127,8 @@ public class Player : MonoBehaviour
         //Stop Speed
         if (Input.GetButtonUp("Horizontal"))
         {
-            rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.5f, rigid.velocity.y);
+            //rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.5f, rigid.velocity.y);
+            VelocityZero();
         }
 
         if (Input.GetButton("Horizontal"))
@@ -218,8 +218,27 @@ public class Player : MonoBehaviour
         Invoke("MoveSpeedReturn", 1.2f);
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            anim.SetBool("isJumpUp", false);
+            anim.SetBool("isJumpDown", false);
+
+            rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
+            moveSpeed = 10;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Wall")
+        {
+            anim.SetBool("isJumpUp", false);
+            anim.SetBool("isJumpDown", false);
+            VelocityZero();
+        }
+
         if (collision.gameObject.tag == "Platform")
         {
             anim.SetBool("isJumpUp", false);
@@ -234,14 +253,17 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "FootTrap")
         {
-            this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
-
             isMove = false;
 
+            moveSpeed = 0;
+
+            this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
+
+            anim.SetBool("isRun", false);
             anim.SetBool("isJumpUp", false);
             anim.SetBool("isJumpDown", false);
 
-            Invoke("MoveOn", 1.5f);
+            Invoke("MoveOn", 2f);
         }
 
         if (collision.gameObject.tag == "HpItem")
@@ -258,14 +280,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void MoveOn()
+    public void MoveOn()
     {
         isMove = true;
+        moveSpeed = 0;
     }
 
-    private void MoveSpeedReturn()
+    public void MoveSpeedReturn()
     {
         moveSpeed = 10;
+        float h = Input.GetAxisRaw("Horizontal");
+        rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+        rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -339,12 +365,17 @@ public class Player : MonoBehaviour
         {
             isMove = false;
 
+            moveSpeed = 0;
+
+            VelocityZero();
+
             this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
 
             anim.SetTrigger("doDoor");
 
             Invoke("MoveOn", 1f);
             Invoke("NextStage", 0.8f);
+            Invoke("MoveSpeedReturn", 2f);
         }
     }
 
@@ -353,7 +384,7 @@ public class Player : MonoBehaviour
         gameManager.NextStage();
     }
 
-    void PlaySound(string action)
+    void PlaySound(string action)  //Player Sounds
     {
         switch (action)
         {

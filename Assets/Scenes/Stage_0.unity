@@ -3374,11 +3374,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMv: {fileID: 1605415378}
   energyBar: {fileID: 1841089869}
+  player: {fileID: 1605415374}
   pumping: {fileID: 1841089870}
   menuSet: {fileID: 1841089871}
-  player: {fileID: 1605415374}
   miniMap: {fileID: 429401171}
-  stageIndex: 1
   gaSc: Stage_0
   pumpingGauge: 0
 --- !u!4 &960878606
@@ -3838,6 +3837,16 @@ PrefabInstance:
     - target: {fileID: 5983153266675876627, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
         type: 3}
       propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876627, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876627, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5983153266675876628, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
@@ -12794,6 +12803,11 @@ PrefabInstance:
       propertyPath: miniMap
       value: 
       objectReference: {fileID: 429401171}
+    - target: {fileID: 399755608186736825, guid: 4b0d0085600fe604fabe3193cda4e60d,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 960878605}
     - target: {fileID: 399755608186736826, guid: 4b0d0085600fe604fabe3193cda4e60d,
         type: 3}
       propertyPath: m_Layer
@@ -13097,17 +13111,22 @@ PrefabInstance:
         type: 3}
       propertyPath: playerMv
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1605415378}
     - target: {fileID: 399755609575779409, guid: 4b0d0085600fe604fabe3193cda4e60d,
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1605415374}
     - target: {fileID: 399755609575779409, guid: 4b0d0085600fe604fabe3193cda4e60d,
         type: 3}
       propertyPath: miniMap
       value: 
       objectReference: {fileID: 429401171}
+    - target: {fileID: 399755609575779409, guid: 4b0d0085600fe604fabe3193cda4e60d,
+        type: 3}
+      propertyPath: gaSc
+      value: Stage_0
+      objectReference: {fileID: 0}
     - target: {fileID: 399755609575779411, guid: 4b0d0085600fe604fabe3193cda4e60d,
         type: 3}
       propertyPath: m_Layer

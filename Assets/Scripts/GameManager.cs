@@ -10,24 +10,21 @@ public class GameManager : MonoBehaviour
 
     public Slider energyBar;
 
+    public GameObject player;
     public GameObject pumping;
     public GameObject menuSet;
-    public GameObject player;
     public GameObject miniMap;
 
-    public int stageIndex;
-    public string gaSc;
+    private int stageIndex;
+    public int gameScene;
     public float pumpingGauge;
 
     void Awake()
     {
+        gameScene = 2;
+
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Screen.SetResolution(1920, 1080, true);
-    }
-
-    public void Start()
-    {
-        //GameLoad();
     }
 
     public void Update()
@@ -46,13 +43,9 @@ public class GameManager : MonoBehaviour
                 menuSet.SetActive(true);
             }
         }
-    }
 
-    public void NextStage()
-    {
-        stageIndex++;
-
-        SceneManager.LoadScene("Stage_2");
+        stageIndex = SceneManager.GetActiveScene().buildIndex;
+        gameScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -69,7 +62,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
         PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
         PlayerPrefs.SetInt("GameScene", SceneManager.GetActiveScene().buildIndex);
-        PlayerPrefs.SetString("GaSc", SceneManager.GetActiveScene().name);
         PlayerPrefs.Save();
 
         menuSet.SetActive(false);
@@ -82,8 +74,12 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        int gameScene = PlayerPrefs.GetInt("GameScene");
-        gaSc = PlayerPrefs.GetString("GaSc");
+        float x = PlayerPrefs.GetFloat("PlayerX");
+        float y = PlayerPrefs.GetFloat("PlayerY");
+
+        player.transform.position = new Vector3(x, y, 0);
+        
+        gameScene = PlayerPrefs.GetInt("GameScene");
 
         SceneManager.LoadScene(gameScene);
     }
@@ -91,5 +87,25 @@ public class GameManager : MonoBehaviour
     public void GameExit()
     {
         Application.Quit();
+    }
+
+    public void PlayerReposition()
+    {
+        player.transform.position = new Vector3(0, 0, -1);
+        playerMv.VelocityZero();
+    }
+
+    public void NextStage()
+    {
+        if (gameScene < 4 && gameScene > 1)
+        {
+            gameScene++;
+            SceneLoad.LoadSceneHandle(gameScene, 3);
+        }
+        else
+        {
+            Time.timeScale = 0;
+            Debug.Log("게임 클리어");
+        }
     }
 }

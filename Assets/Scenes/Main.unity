@@ -174,9 +174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 4
-  scene: {fileID: 0}
   buttonScale: {fileID: 46914859}
-  game: {fileID: 0}
+  gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   SoundText: {fileID: 1732883900}
@@ -506,9 +505,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 3
-  scene: {fileID: 0}
   buttonScale: {fileID: 297512112}
-  game: {fileID: 0}
+  gameManager: {fileID: 0}
   mainGroup: {fileID: 900735210}
   optionGroup: {fileID: 117989879}
   SoundText: {fileID: 0}
@@ -658,9 +656,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 1
-  scene: {fileID: 0}
   buttonScale: {fileID: 327987919}
-  game: {fileID: 1740102346}
+  gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   SoundText: {fileID: 0}
@@ -679,11 +676,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMv: {fileID: 0}
   energyBar: {fileID: 0}
+  player: {fileID: 0}
   pumping: {fileID: 0}
   menuSet: {fileID: 900735206}
-  player: {fileID: 0}
-  stageIndex: 0
-  gaSc: 
+  miniMap: {fileID: 0}
+  gameScene: 0
   pumpingGauge: 0
 --- !u!1 &330714708
 GameObject:
@@ -829,9 +826,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 8
-  scene: {fileID: 0}
   buttonScale: {fileID: 330714709}
-  game: {fileID: 0}
+  gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   SoundText: {fileID: 0}
@@ -1292,9 +1288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 6
-  scene: {fileID: 0}
   buttonScale: {fileID: 1261858994}
-  game: {fileID: 0}
+  gameManager: {fileID: 0}
   mainGroup: {fileID: 900735210}
   optionGroup: {fileID: 117989879}
   SoundText: {fileID: 0}
@@ -1701,9 +1696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 5
-  scene: {fileID: 0}
   buttonScale: {fileID: 1432336774}
-  game: {fileID: 0}
+  gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   SoundText: {fileID: 0}
@@ -2180,11 +2174,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMv: {fileID: 0}
   energyBar: {fileID: 0}
+  player: {fileID: 0}
   pumping: {fileID: 0}
   menuSet: {fileID: 0}
-  player: {fileID: 0}
-  stageIndex: 0
-  gaSc: 
+  miniMap: {fileID: 0}
+  gameScene: 0
   pumpingGauge: 0
 --- !u!1 &2038600130
 GameObject:
@@ -2330,9 +2324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
-  scene: {fileID: 0}
   buttonScale: {fileID: 2038600131}
-  game: {fileID: 0}
+  gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   SoundText: {fileID: 0}

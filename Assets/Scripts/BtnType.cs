@@ -23,19 +23,17 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public BTNType currentType;
 
-    public SceneLoad scene;
-
     public Transform buttonScale;
 
-    public GameManager game;
-
-    Vector3 defaultScale;
+    public GameManager gameManager;
 
     public CanvasGroup mainGroup;
     public CanvasGroup optionGroup;
 
     public Text SoundText;
     public Text BgmText;
+
+    Vector3 defaultScale;
 
     private void Start()
     {
@@ -50,10 +48,10 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         switch (currentType)
         {
             case BTNType.New:
-                SceneLoad.LoadSceneHandle("Stage_0", 1);
+                SceneLoad.LoadSceneHandle(2, 1);
                 break;
             case BTNType.Load:
-                SceneLoad.LoadSceneHandle(game.gaSc, 2);
+                SceneLoad.LoadSceneHandle(gameManager.gameScene, 2);
                 break;
             case BTNType.Option:
                 CanvasGroupOn(optionGroup);
@@ -88,7 +86,8 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 CanvasGroupOff(optionGroup);
                 break;
             case BTNType.Main:
-                SceneLoad.LoadSceneHandle("Main", 0);
+                //SceneLoad.LoadSceneHandle("Main", 0);
+                SceneManager.LoadScene("Main");
                 break;
             case BTNType.Exit:
                 Application.Quit();

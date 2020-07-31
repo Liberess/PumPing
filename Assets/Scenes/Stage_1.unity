@@ -460,6 +460,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMv: {fileID: 867833570}
+  Stages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   energyBar: {fileID: 1409624044}
   pumping: {fileID: 574364442}
   menuSet: {fileID: 1990397032}
