@@ -23,6 +23,7 @@ public class SceneLoad : MonoBehaviour
     {
         gameScene = _gameScene;
         loadType = _loadType;
+
         SceneManager.LoadScene("Loading");
     }
 
@@ -30,7 +31,7 @@ public class SceneLoad : MonoBehaviour
     {
         yield return null;
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync(gameScene); //원래는 Stage_0
+        AsyncOperation operation = SceneManager.LoadSceneAsync(gameScene); //원래는 Stage_0 -> gameScene -> game.Manager.gameScene
 
         operation.allowSceneActivation = false;
 

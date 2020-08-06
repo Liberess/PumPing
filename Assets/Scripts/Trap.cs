@@ -19,29 +19,33 @@ public class Trap : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && gameObject.tag == "MineTrap")
+        if(collision.gameObject.tag == "Player" && trap.gameObject.tag != "FenceTrap")
         {
-            gameManager.energyBar.value -= 5;
+            if (trap.gameObject.tag == "MineTrap")
+            {
+                gameManager.energyBar.value -= 5;
+
+                Invoke("DelateTrap", 0.5f);
+            }
+            
+            if (trap.gameObject.tag == "FootTrap")
+            {
+                trap.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+                gameManager.energyBar.value -= 2;
+
+                Invoke("DelateTrap", 1.1f);
+            }
 
             anim.SetTrigger("doTouch");
 
-            Destroy(trap, 0.5f);
-        }
-        else if(collision.gameObject.tag == "Player" && gameObject.tag == "FootTrap")
-        {
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-
-            gameManager.energyBar.value -= 2;
-
-            anim.SetTrigger("doTouch");
-
-            Destroy(trap, 1.1f);
+            Invoke("ReSetting", 6f);
         }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && gameObject.tag == "FenceTrap")
+        if(collision.gameObject.tag == "Player" && trap.gameObject.layer == 13)
         {
             doDamage();
         }
@@ -49,16 +53,28 @@ public class Trap : MonoBehaviour
 
     private void doDamage()
     {
-        gameObject.layer = 14;
+        trap.gameObject.layer = 14;
 
         //EnergyDown
         gameManager.energyBar.value -= 1;
 
-        Invoke("offDamage", 0.5f);
+        Invoke("offDamage", 0.1f);
     }
 
     private void offDamage()
     {
-        gameObject.layer = 13;
+        trap.gameObject.layer = 13;
+    }
+
+    private void DelateTrap()
+    {
+        trap.SetActive(false);
+    }
+
+    private void ReSetting()
+    {
+        trap.SetActive(true);
+
+        trap.gameObject.GetComponent<BoxCollider2D>().enabled = true;
     }
 }

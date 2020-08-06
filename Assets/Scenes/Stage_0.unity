@@ -334,7 +334,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 6313971904908743194, guid: f92b68ce7b3fabe4f835260a43c19b6f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3378,7 +3378,7 @@ MonoBehaviour:
   pumping: {fileID: 1841089870}
   menuSet: {fileID: 1841089871}
   miniMap: {fileID: 429401171}
-  gaSc: Stage_0
+  gameScene: 0
   pumpingGauge: 0
 --- !u!4 &960878606
 Transform:
@@ -3714,6 +3714,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6643792914244459692, guid: c7bad628882c0134aa8f1e486195c856,
         type: 3}
+    - target: {fileID: 5983153266675876624, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12537,6 +12542,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4652240091286432997, guid: 7d77bff92802a184ca92286493bf6ed8,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d77bff92802a184ca92286493bf6ed8, type: 3}
 --- !u!4 &1750643384 stripped
@@ -16909,7 +16919,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094596933}
   m_LocalRotation: {x: -0, y: -0, z: 0.99999475, w: 0.0032485062}
-  m_LocalPosition: {x: -0.02, y: 6.62, z: 0.05560983}
+  m_LocalPosition: {x: -0.022, y: 6.251, z: 0.05560983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2006582840}
@@ -17115,7 +17125,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3806351096997713743, guid: f92b68ce7b3fabe4f835260a43c19b6f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

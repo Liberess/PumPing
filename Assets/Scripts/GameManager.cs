@@ -64,6 +64,8 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("GameScene", SceneManager.GetActiveScene().buildIndex);
         PlayerPrefs.Save();
 
+        Debug.Log("Save : " + gameScene);
+
         menuSet.SetActive(false);
     }
 
@@ -80,6 +82,8 @@ public class GameManager : MonoBehaviour
         player.transform.position = new Vector3(x, y, 0);
         
         gameScene = PlayerPrefs.GetInt("GameScene");
+
+        Debug.Log("Load : " + gameScene);
 
         SceneManager.LoadScene(gameScene);
     }
@@ -100,7 +104,7 @@ public class GameManager : MonoBehaviour
         if (gameScene < 4 && gameScene > 1)
         {
             gameScene++;
-            SceneLoad.LoadSceneHandle(gameScene, 3);
+            SceneLoad.LoadSceneHandle(gameScene,3);
         }
         else
         {

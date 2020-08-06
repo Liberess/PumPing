@@ -175,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 4
   buttonScale: {fileID: 46914859}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1740102346}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   SoundText: {fileID: 1732883900}
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 3
   buttonScale: {fileID: 297512112}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1740102346}
   mainGroup: {fileID: 900735210}
   optionGroup: {fileID: 117989879}
   SoundText: {fileID: 0}
@@ -524,7 +524,6 @@ GameObject:
   - component: {fileID: 327987921}
   - component: {fileID: 327987920}
   - component: {fileID: 327987923}
-  - component: {fileID: 327987924}
   m_Layer: 5
   m_Name: LoadBtn
   m_TagString: Untagged
@@ -657,31 +656,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 1
   buttonScale: {fileID: 327987919}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1740102346}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   SoundText: {fileID: 0}
   BgmText: {fileID: 0}
---- !u!114 &327987924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327987918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23dbb9d5ec2cf034a92736ed52ef976f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMv: {fileID: 0}
-  energyBar: {fileID: 0}
-  player: {fileID: 0}
-  pumping: {fileID: 0}
-  menuSet: {fileID: 900735206}
-  miniMap: {fileID: 0}
-  gameScene: 0
-  pumpingGauge: 0
 --- !u!1 &330714708
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 8
   buttonScale: {fileID: 330714709}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1740102346}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   SoundText: {fileID: 0}
@@ -910,6 +889,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461639256}
   m_CullTransparentMesh: 0
+--- !u!1001 &505448944
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.789
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876625, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876655, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983153266675876655, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4, type: 3}
+--- !u!1 &505448945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5983153266675876655, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+    type: 3}
+  m_PrefabInstance: {fileID: 505448944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &505448946 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5983153266675876626, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+    type: 3}
+  m_PrefabInstance: {fileID: 505448944}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505448945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e281cfb373da7e44ac0822f77314e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &900735206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 6
   buttonScale: {fileID: 1261858994}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1740102346}
   mainGroup: {fileID: 900735210}
   optionGroup: {fileID: 117989879}
   SoundText: {fileID: 0}
@@ -1697,7 +1768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 5
   buttonScale: {fileID: 1432336774}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1740102346}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   SoundText: {fileID: 0}
@@ -2172,9 +2243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23dbb9d5ec2cf034a92736ed52ef976f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMv: {fileID: 0}
+  playerMv: {fileID: 505448946}
   energyBar: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 505448945}
   pumping: {fileID: 0}
   menuSet: {fileID: 0}
   miniMap: {fileID: 0}
@@ -2325,7 +2396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   buttonScale: {fileID: 2038600131}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1740102346}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   SoundText: {fileID: 0}

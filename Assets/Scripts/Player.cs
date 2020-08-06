@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public GameObject UIReStart;
 
     //플레이어 이동
-    private float moveSpeed = 10;
+    public float moveSpeed;
     private float jumpPower = 10;
     private float maxPumping = 200;
     private float maxJump = 2;
@@ -51,6 +51,8 @@ public class Player : MonoBehaviour
     {
         audioPlay = true;
         isMove = true;
+
+        moveSpeed = 10;
 
         gameManager.energyBar.value = 10f;
 
@@ -137,7 +139,7 @@ public class Player : MonoBehaviour
         }
 
         //Run Animation
-        if (Mathf.Abs(rigid.velocity.x) < 0.3f && isMove == true)
+        if (Mathf.Abs(rigid.velocity.x) < 0.3f)
         {
             anim.SetBool("isRun", false);
         }
@@ -194,7 +196,7 @@ public class Player : MonoBehaviour
         {
             if (pumpingCount >= 10 && gameManager.pumpingGauge >= 0.2)
             {
-                rigid.velocity = new Vector2(rigid.velocity.x, jumpPower * pumpingCount / 100);
+                rigid.velocity = new Vector2(rigid.velocity.x, jumpPower * pumpingCount / 120);
                 anim.SetBool("isJumpUp", true);
                 anim.SetBool("isJumpDown", true);
                 gameManager.energyBar.value -= 3;
@@ -215,19 +217,7 @@ public class Player : MonoBehaviour
             anim.SetTrigger("doSliding");
         }
 
-        Invoke("MoveSpeedReturn", 1.2f);
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Wall")
-        {
-            anim.SetBool("isJumpUp", false);
-            anim.SetBool("isJumpDown", false);
-
-            rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
-            moveSpeed = 10;
-        }
+        Invoke("MoveOn", 1.2f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -263,7 +253,7 @@ public class Player : MonoBehaviour
             anim.SetBool("isJumpUp", false);
             anim.SetBool("isJumpDown", false);
 
-            Invoke("MoveOn", 2f);
+            Invoke("MoveOn", 1.8f);
         }
 
         if (collision.gameObject.tag == "HpItem")
@@ -274,24 +264,16 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "SpeedItem")
         {
-            moveSpeed = 15;
+            moveSpeed += 10;
             PlaySound("SpeedItem");
-            Invoke("MoveSpeedReturn", 5f);
+            Invoke("MoveOn", 3f);
         }
     }
 
     public void MoveOn()
     {
         isMove = true;
-        moveSpeed = 0;
-    }
-
-    public void MoveSpeedReturn()
-    {
         moveSpeed = 10;
-        float h = Input.GetAxisRaw("Horizontal");
-        rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
-        rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
