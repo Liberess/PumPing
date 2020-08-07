@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
 
     //플레이어 이동
     public float moveSpeed;
+    private float maxSpeed = 10;
     private float jumpPower = 10;
     private float maxPumping = 200;
     private float maxJump = 2;
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
 
     //플레이어 움직임 On/Off
     private bool isMove;
+    private bool isSliding;
 
     private Animator animator;
 
@@ -64,7 +66,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
+    void Update()
     {
         if (audioPlay == true)
         {
@@ -82,15 +84,40 @@ public class Player : MonoBehaviour
         //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
         if (IsAlive && isMove == true)
         {
-            Move();
             Jump();
             Pumping();
             Sliding();
         }
+
+        //Stop Speed
+        if (Input.GetButtonUp("Horizontal"))
+        {
+            //rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.5f, rigid.velocity.y);
+            VelocityZero();
+        }
+
+        //Sprite Flip
+        if (Input.GetButton("Horizontal"))
+        {
+            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+        }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
+        if (this.transform.position.y < this.previousPosition.y)
+        {
+            anim.SetBool("isJumpUp", false);
+        }
+
+        this.previousPosition = this.transform.position;
+
+        //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
+        if (IsAlive && isMove == true)
+        {
+            Move();
+        }
+
         //Landing Platform
         if (rigid.velocity.y < 0)
         {
@@ -117,25 +144,21 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Move()
+    private void Move()  //FixedUpdate
     {
         //Move Speed
         float h = Input.GetAxisRaw("Horizontal");
-
         rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
-
         rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
 
-        //Stop Speed
-        if (Input.GetButtonUp("Horizontal"))
+        //MaxSpeed
+        if(rigid.velocity.x > maxSpeed)  //Right
         {
-            //rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.5f, rigid.velocity.y);
-            VelocityZero();
+            rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
         }
-
-        if (Input.GetButton("Horizontal"))
+        else if (rigid.velocity.x < maxSpeed * (-1))  //Left
         {
-            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+            rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
         }
 
         //Run Animation
@@ -151,13 +174,6 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (this.transform.position.y < this.previousPosition.y)
-        {
-            anim.SetBool("isJumpUp", false);
-        }
-
-        this.previousPosition = this.transform.position;
-
         if (Input.GetButtonDown("Jump") && jumpCount < 2 && gameManager.energyBar.value >= 1f)
         {
             if (jumpCount < maxJump)
@@ -211,23 +227,27 @@ public class Player : MonoBehaviour
 
     private void Sliding()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
+        if (isSliding == true)
         {
-            isMove = false;
+            if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
+            {
+                //VelocityZero();
+                isSliding = false;
+                isMove = false;
 
-            float h = Input.GetAxisRaw("Horizontal");
+                //float h = Input.GetAxisRaw("Horizontal");
 
-            //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
-            rigid.AddForce(Vector2.right * h * moveSpeed);
+                //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
 
-            //rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
+                //rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
 
-            gameManager.energyBar.value -= 1;
-            animator.SetLayerWeight(1, 1);
-            anim.SetTrigger("doSliding");
+                gameManager.energyBar.value -= 1;
+                animator.SetLayerWeight(1, 1);
+                anim.SetTrigger("doSliding");
+            }
+  
+            Invoke("MoveOn", 3f);
         }
-
-        Invoke("MoveOn", 1.2f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -255,10 +275,13 @@ public class Player : MonoBehaviour
         {
             isMove = false;
 
+            VelocityZero();
+
             moveSpeed = 0;
 
             this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
 
+            //anim.Play("Idle");
             anim.SetBool("isRun", false);
             anim.SetBool("isJumpUp", false);
             anim.SetBool("isJumpDown", false);
@@ -274,7 +297,9 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "SpeedItem")
         {
-            moveSpeed += 10;
+            //VelocityZero();
+            moveSpeed += 4;
+            Debug.Log(moveSpeed);
             PlaySound("SpeedItem");
             Invoke("MoveOn", 3f);
         }
@@ -282,6 +307,7 @@ public class Player : MonoBehaviour
 
     public void MoveOn()
     {
+        isSliding = true;
         isMove = true;
         moveSpeed = 10;
     }
@@ -343,7 +369,7 @@ public class Player : MonoBehaviour
 
         gameObject.layer = 11;
 
-        Invoke("VelocityZero", 1);
+        Invoke("VelocityZero", 1f);
     }
 
     public void VelocityZero()

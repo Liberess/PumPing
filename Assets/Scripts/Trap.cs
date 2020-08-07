@@ -23,6 +23,8 @@ public class Trap : MonoBehaviour
         {
             if (trap.gameObject.tag == "MineTrap")
             {
+                trap.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
                 gameManager.energyBar.value -= 5;
 
                 Invoke("DelateTrap", 0.5f);
