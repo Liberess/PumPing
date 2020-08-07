@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
     CapsuleCollider2D capsuleCollider;
+    BoxCollider2D boxCollider;  //Sliding
     AudioSource audioSource;
 
     //실시간 플레이어 위치
@@ -62,8 +63,11 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
+
+        SlidingOff();
     }
 
     void Update()
@@ -233,12 +237,13 @@ public class Player : MonoBehaviour
             {
                 //VelocityZero();
                 isSliding = false;
-                isMove = false;
+                //isMove = false;
+
+                this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                this.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
 
                 //float h = Input.GetAxisRaw("Horizontal");
-
                 //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
-
                 //rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
 
                 gameManager.energyBar.value -= 1;
@@ -247,7 +252,14 @@ public class Player : MonoBehaviour
             }
   
             Invoke("MoveOn", 3f);
+            Invoke("SlidingOff", 3f);
         }
+    }
+
+    private void SlidingOff()
+    {
+        this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        this.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

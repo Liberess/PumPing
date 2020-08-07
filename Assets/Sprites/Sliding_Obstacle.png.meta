@@ -1,40 +1,43 @@
 fileFormatVersion: 2
-guid: 89bce687109f3aa489aa03ee7099ccce
+guid: b18c8818169e50f49a74167f3fbae8b4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6552097398077303760
-    second: Pumping_Character_Sliding_0
+      213: -1087845045241516765
+    second: Sliding_Obstacle_0
   - first:
-      213: -7724774836156760959
-    second: Pumping_Character_Sliding_1
+      213: -1756500629846109282
+    second: Sliding_Obstacle_1
   - first:
-      213: -2558596660093782348
-    second: Pumping_Character_Sliding_2
+      213: 8912098066800844793
+    second: Sliding_Obstacle_2
   - first:
-      213: 2675713211708319737
-    second: Pumping_Character_Sliding_3
+      213: -8692678597592348465
+    second: Sliding_Obstacle_3
   - first:
-      213: 4382520135875118710
-    second: Pumping_Character_Sliding_4
+      213: 3669844081189318712
+    second: Sliding_Obstacle_4
   - first:
-      213: -6875388833508049033
-    second: Pumping_Character_Sliding_5
+      213: -5028382094674880537
+    second: Sliding_Obstacle_5
   - first:
-      213: 3821598374476600325
-    second: Pumping_Character_Sliding_6
+      213: 2024908275289733088
+    second: Sliding_Obstacle_6
   - first:
-      213: 8479436173387836753
-    second: Pumping_Character_Sliding_7
+      213: -2519444432631440174
+    second: Sliding_Obstacle_7
   - first:
-      213: -7109236927644020178
-    second: Pumping_Character_Sliding_8
+      213: 2974523905118349173
+    second: Sliding_Obstacle_8
   - first:
-      213: 3177820788035802158
-    second: Pumping_Character_Sliding_9
+      213: -8335467965298813011
+    second: Sliding_Obstacle_9
   - first:
-      213: -5576950377580400711
-    second: Pumping_Character_Sliding_10
+      213: 5939714304699949771
+    second: Sliding_Obstacle_10
+  - first:
+      213: -2226814810402207545
+    second: Sliding_Obstacle_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -144,7 +147,107 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pumping_Character_Sliding_0
+      name: Sliding_Obstacle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 4}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32de5bbe1b237e0f0800000000000000
+      internalID: -1087845045241516765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sliding_Obstacle_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 4}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93d546cbf7af97e0800000000000000
+      internalID: -1756500629846109282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sliding_Obstacle_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 4}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff1c1339f12eab70800000000000000
+      internalID: 8912098066800844793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sliding_Obstacle_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 4}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc80edb0fd66d5780800000000000000
+      internalID: -8692678597592348465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sliding_Obstacle_4
       rect:
         serializedVersion: 2
         x: 0
@@ -156,21 +259,20 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -7, y: -8}
-        - {x: -7, y: -3}
-        - {x: -2, y: 5}
-        - {x: 1, y: 5}
-        - {x: 7, y: -8}
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: -4, y: 8}
+        - {x: -4, y: -8}
       tessellationDetail: 0
       bones: []
-      spriteID: 0dba82a7ed9bdea50800000000000000
-      internalID: 6552097398077303760
+      spriteID: 830fb588fb7ede230800000000000000
+      internalID: 3669844081189318712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pumping_Character_Sliding_1
+      name: Sliding_Obstacle_5
       rect:
         serializedVersion: 2
         x: 16
@@ -182,23 +284,20 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -7, y: -8}
-        - {x: -7, y: -4}
-        - {x: -4, y: 1}
-        - {x: -1, y: 1}
-        - {x: 0, y: -3}
-        - {x: 5, y: -4}
-        - {x: 8, y: -8}
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: -4, y: 8}
+        - {x: -4, y: -8}
       tessellationDetail: 0
       bones: []
-      spriteID: 18cfff0d6361cc490800000000000000
-      internalID: -7724774836156760959
+      spriteID: 7e718fb5029973ab0800000000000000
+      internalID: -5028382094674880537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pumping_Character_Sliding_2
+      name: Sliding_Obstacle_6
       rect:
         serializedVersion: 2
         x: 32
@@ -211,19 +310,19 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -8, y: -8}
-        - {x: -7, y: 0}
-        - {x: 4, y: -2}
-        - {x: 8, y: -8}
+        - {x: -8, y: 8}
+        - {x: -4, y: 8}
+        - {x: -4, y: -8}
       tessellationDetail: 0
       bones: []
-      spriteID: 4b6fb97c4e90e7cd0800000000000000
-      internalID: -2558596660093782348
+      spriteID: 0e7b463195be91c10800000000000000
+      internalID: 2024908275289733088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pumping_Character_Sliding_3
+      name: Sliding_Obstacle_7
       rect:
         serializedVersion: 2
         x: 48
@@ -236,102 +335,19 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -8, y: -8}
-        - {x: -7, y: 0}
-        - {x: 4, y: -2}
-        - {x: 8, y: -8}
+        - {x: -8, y: 8}
+        - {x: -4, y: 8}
+        - {x: -4, y: -8}
       tessellationDetail: 0
       bones: []
-      spriteID: 9f7a1b05dfa022520800000000000000
-      internalID: 2675713211708319737
+      spriteID: 2dcdaa913a2290dd0800000000000000
+      internalID: -2519444432631440174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pumping_Character_Sliding_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -7, y: -8}
-        - {x: -7, y: -4}
-        - {x: -4, y: 1}
-        - {x: -1, y: 1}
-        - {x: 5, y: -4}
-        - {x: 8, y: -6}
-        - {x: 8, y: -8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67645df08d6d1dc30800000000000000
-      internalID: 4382520135875118710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pumping_Character_Sliding_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -7, y: -8}
-        - {x: -7, y: -1}
-        - {x: -5, y: 2}
-        - {x: -2, y: 2}
-        - {x: 8, y: -6}
-        - {x: 8, y: -8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77fb0168846b590a0800000000000000
-      internalID: -6875388833508049033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pumping_Character_Sliding_6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -7, y: -8}
-        - {x: -7, y: -3}
-        - {x: -4, y: 3}
-        - {x: -2, y: 5}
-        - {x: 1, y: 5}
-        - {x: 5, y: -4}
-        - {x: 7, y: -8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50453e0597b090530800000000000000
-      internalID: 3821598374476600325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pumping_Character_Sliding_7
+      name: Sliding_Obstacle_8
       rect:
         serializedVersion: 2
         x: 0
@@ -342,17 +358,21 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: -8}
+        - {x: 4, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
-      spriteID: 15d216216420da570800000000000000
-      internalID: 8479436173387836753
+      spriteID: 577ac746bb1a74920800000000000000
+      internalID: 2974523905118349173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pumping_Character_Sliding_8
+      name: Sliding_Obstacle_9
       rect:
         serializedVersion: 2
         x: 16
@@ -363,17 +383,21 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: -8}
+        - {x: 4, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
-      spriteID: e2250bf3eaae65d90800000000000000
-      internalID: -7109236927644020178
+      spriteID: da757bb7c08725c80800000000000000
+      internalID: -8335467965298813011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pumping_Character_Sliding_9
+      name: Sliding_Obstacle_10
       rect:
         serializedVersion: 2
         x: 32
@@ -384,17 +408,21 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: -8}
+        - {x: 4, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
-      spriteID: e24d9be7b23e91c20800000000000000
-      internalID: 3177820788035802158
+      spriteID: bc262fea0ba1e6250800000000000000
+      internalID: 5939714304699949771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pumping_Character_Sliding_10
+      name: Sliding_Obstacle_11
       rect:
         serializedVersion: 2
         x: 48
@@ -405,11 +433,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: -8}
+        - {x: 4, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
-      spriteID: 9bfe656fd21ba92b0800000000000000
-      internalID: -5576950377580400711
+      spriteID: 7c8c5656ab3c811e0800000000000000
+      internalID: -2226814810402207545
       vertices: []
       indices: 
       edges: []
