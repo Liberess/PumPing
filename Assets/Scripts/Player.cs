@@ -213,6 +213,16 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
+            isMove = false;
+
+            float h = Input.GetAxisRaw("Horizontal");
+
+            //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+            rigid.AddForce(Vector2.right * h * moveSpeed);
+
+            //rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
+
+            gameManager.energyBar.value -= 1;
             animator.SetLayerWeight(1, 1);
             anim.SetTrigger("doSliding");
         }
