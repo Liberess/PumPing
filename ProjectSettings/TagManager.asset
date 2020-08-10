@@ -14,6 +14,9 @@ TagManager:
   - SpeedItem
   - door
   - Wall
+  - ShotTurret
+  - MoveTurret
+  - Bullet
   layers:
   - Default
   - TransparentFX

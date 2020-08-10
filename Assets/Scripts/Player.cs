@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
 
         moveSpeed = 10;
 
-        gameManager.energyBar.value = 10f;
+        gameManager.energyBar.value = 14f;
 
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                gameManager.energyBar.value = Mathf.MoveTowards(gameManager.energyBar.value, 10f, Time.deltaTime * 1f);
+                gameManager.energyBar.value = Mathf.MoveTowards(gameManager.energyBar.value, 14f, Time.deltaTime * 1f);
             }
         }
 
@@ -264,6 +264,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "Bullet")
+        {
+            gameManager.energyBar.value -= 5;
+        }
+
         if (collision.gameObject.tag == "Wall")
         {
             anim.SetBool("isJumpUp", false);
@@ -330,9 +335,14 @@ public class Player : MonoBehaviour
         {
             onDamaged(collision.transform.position, 1);
         }
+
+        if (collision.gameObject.tag == "ShotTrap")
+        {
+            onDamaged(collision.transform.position, 1);
+        }
     }
 
-    private void onDamaged(Vector2 targetPos, int what)
+    public void onDamaged(Vector2 targetPos, int what)
     {
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
 
@@ -352,6 +362,17 @@ public class Player : MonoBehaviour
             //Reaction Force
             rigid.AddForce(new Vector2(dirc, 3f) * 4f, ForceMode2D.Impulse);
         }
+        else if(what == 6)
+        {
+            //Change Layer (Immortal Active)
+            gameObject.layer = 11;
+
+            //View Alpha
+            spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+
+            //Reaction Force
+            rigid.AddForce(new Vector2(dirc * 10f, 1f) * 2f, ForceMode2D.Impulse);
+        }
 
         //Animation
         anim.SetTrigger("doDamaged");
@@ -359,7 +380,7 @@ public class Player : MonoBehaviour
         Invoke("offDamaged", 0.5f);
     }
 
-    void offDamaged()
+    public void offDamaged()
     {
         gameObject.layer = 10;
         spriteRenderer.color = new Color(1, 1, 1, 1);
