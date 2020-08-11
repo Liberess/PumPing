@@ -16,7 +16,6 @@ public class Bullet : MonoBehaviour
         {
             transform.Translate(transform.right * (-1) * moveSpeed * Time.deltaTime);
         }
-
         Destroy(gameObject, 9f);
     }
 

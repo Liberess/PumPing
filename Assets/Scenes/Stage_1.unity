@@ -31924,6 +31924,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 535.3033
       objectReference: {fileID: 0}
+    - target: {fileID: 2535815249979469998, guid: 4da74979bcc6bbf4587fac00698793a0,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 8400000, guid: b9fd81409e4f67c4fb12491a521c88c5, type: 2}
     - target: {fileID: 2535815249979469999, guid: 4da74979bcc6bbf4587fac00698793a0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -32234,6 +32239,11 @@ PrefabInstance:
       propertyPath: near clip plane
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5983153268004657131, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: b9fd81409e4f67c4fb12491a521c88c5, type: 2}
     - target: {fileID: 5983153268004657132, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
         type: 3}
       propertyPath: m_LocalPosition.z
