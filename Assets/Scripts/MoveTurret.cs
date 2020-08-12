@@ -24,7 +24,7 @@ public class MoveTurret : MonoBehaviour
     private void FixedUpdate()
     {
         //Move
-        rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
+        rigid.velocity = new Vector2(nextMove * 2f, rigid.velocity.y);
 
         //Platform Check
         Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.2f, rigid.position.y);

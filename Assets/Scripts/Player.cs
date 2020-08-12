@@ -18,17 +18,18 @@ public class Player : MonoBehaviour
     public AudioClip audioMineTrap;
     public AudioClip audioHpItem;
     public AudioClip audioSpeedItem;
+    public AudioClip audioEmpItem;
 
     //게임 중 사망 시 다시 시작 버튼
     public GameObject UIReStart;
 
     //플레이어 이동
-    public float moveSpeed;
+    public float moveSpeed = 10;
     private float maxSpeed = 10;
     private float jumpPower = 10;
     private float maxPumping = 200;
     private float maxJump = 2;
-    private int jumpCount = 0;
+    public int jumpCount = 0;
     private int pumpingCount = 0;
 
     //사망 효과음 On/Off
@@ -66,8 +67,6 @@ public class Player : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
-
-        SlidingOff();
     }
 
     void Update()
@@ -127,13 +126,25 @@ public class Player : MonoBehaviour
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
 
-            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Platform"));
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1f, LayerMask.GetMask("Platform"));
+
+            RaycastHit2D rayHit2 = Physics2D.Raycast(rigid.position, Vector3.down, 1f, LayerMask.GetMask("Enemy"));
 
             if (rayHit.collider != null)
             {
                 if (rayHit.distance < 0.5f)
                 {
-                    anim.SetBool("isJumpUp", false);
+                    anim.Play("Idle");
+                    jumpCount = 0;
+                }
+            }
+
+            if (rayHit2.collider != null)
+            {
+                if (rayHit2.distance < 0.5f)
+                {
+                    //anim.SetBool("isJumpUp", false);
+                    anim.Play("Idle");
                     jumpCount = 0;
                 }
             }
@@ -239,8 +250,8 @@ public class Player : MonoBehaviour
                 isSliding = false;
                 //isMove = false;
 
-                this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
-                this.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+                boxCollider.enabled = true;
+                capsuleCollider.enabled = false;
 
                 //float h = Input.GetAxisRaw("Horizontal");
                 //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
@@ -258,8 +269,8 @@ public class Player : MonoBehaviour
 
     private void SlidingOff()
     {
-        this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        this.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+        boxCollider.enabled = false;
+        capsuleCollider.enabled = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -315,10 +326,15 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "SpeedItem")
         {
             //VelocityZero();
-            moveSpeed += 4;
+            moveSpeed += 10;
             Debug.Log(moveSpeed);
             PlaySound("SpeedItem");
             Invoke("MoveOn", 3f);
+        }
+
+        if (collision.gameObject.tag == "EmpItem")
+        {
+            PlaySound("EmpItem");
         }
     }
 
@@ -435,7 +451,7 @@ public class Player : MonoBehaviour
         gameManager.NextStage();
     }
 
-    void PlaySound(string action)  //Player Sounds
+    public void PlaySound(string action)  //Player Sounds
     {
         switch (action)
         {
@@ -456,6 +472,9 @@ public class Player : MonoBehaviour
                 break;
             case "SpeedItem":
                 audioSource.clip = audioSpeedItem;
+                break;
+            case "EmpItem":
+                audioSource.clip = audioEmpItem;
                 break;
         }
 

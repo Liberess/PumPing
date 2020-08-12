@@ -9,6 +9,7 @@ public class Turret : MonoBehaviour
     public Transform pos;
 
     Animator anim;
+    ParticleSystem particle;
 
     public bool canShot = true;
 
@@ -18,24 +19,37 @@ public class Turret : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        particle = GetComponent<ParticleSystem>();
+
+        particle.Stop();
+        particle.Clear();
     }
     void Update()
     {
-        ShotControl();
+        if (canShot)
+        {
+            if (shotTimer >= shotDelay)  //쿨타임이 지났으면
+            {
+                ShotControl();
+            }
+            shotTimer += Time.deltaTime;
+        }
     }
 
     void ShotControl()
     {
-        if (canShot)
-        {
-            if(shotTimer > shotDelay)  //쿨타임이 지났으면
-            {
-                //anim.SetBool("isShot", true);
-                anim.SetTrigger("isShoot");
-                Instantiate(bulletPrefab, pos.position, transform.rotation);  //총알 생성
-                shotTimer = 0;  //쿨타임 초기화
-            }
-            shotTimer += Time.deltaTime;
-        }
+        particle.Clear();
+        particle.Play();
+
+        Invoke("ShotAction", 0.2f);
+
+        shotTimer = 0;  //쿨타임 초기화
+    }
+
+    void ShotAction()
+    {
+        anim.SetTrigger("isShoot");
+        Instantiate(bulletPrefab, pos.position, transform.rotation);  //총알 생성
+        particle.Clear();
     }
 }
