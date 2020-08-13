@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public Player playerMv;
+    //public SoundManager soundManager;
+    public SoundManager bgmManager;
+    public SoundManager sfxManager;
 
     public Slider energyBar;
 
@@ -21,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        gameScene = 2;
+        //gameScene = 2;
 
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Screen.SetResolution(1920, 1080, true);
@@ -62,9 +65,16 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
         PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
         PlayerPrefs.SetInt("GameScene", SceneManager.GetActiveScene().buildIndex);
+        //PlayerPrefs.SetFloat("BGMCheck", soundManager.bgmSlider.value);
+        //PlayerPrefs.SetFloat("SFXCheck", soundManager.sfxSlider.value);
+        PlayerPrefs.SetFloat("BGMCheck", bgmManager.bgmSlider.value);
+        PlayerPrefs.SetFloat("SFXCheck", sfxManager.sfxSlider.value);
         PlayerPrefs.Save();
 
-        Debug.Log("Save : " + gameScene);
+        //soundManager.SoundSave();
+
+        Debug.Log("Save BGM " + bgmManager.bgmSlider.value);
+        Debug.Log("Save SFX " + sfxManager.sfxSlider.value);
 
         menuSet.SetActive(false);
     }
@@ -83,7 +93,15 @@ public class GameManager : MonoBehaviour
         
         gameScene = PlayerPrefs.GetInt("GameScene");
 
-        Debug.Log("Load : " + gameScene);
+        bgmManager.bgmSlider.value = PlayerPrefs.GetFloat("BGMCheck");
+        bgmManager.bgmSound = PlayerPrefs.GetFloat("BGMCheck");
+        sfxManager.sfxSlider.value = PlayerPrefs.GetFloat("SFXCheck");
+        sfxManager.sfxSound = PlayerPrefs.GetFloat("SFXCheck");
+
+        //soundManager.SoundLoad();
+
+        Debug.Log("Load BGM " + bgmManager.bgmSlider.value);
+        Debug.Log("Load SFX " + sfxManager.sfxSlider.value);
 
         SceneManager.LoadScene(gameScene);
     }

@@ -10,15 +10,7 @@ public class Player : MonoBehaviour
     //타 스크립트
     public GameManager gameManager;
     public PumpingGauge pumpingGauge;
-
-    //사운드
-    public AudioClip audioJump;
-    public AudioClip audioDamaged;
-    public AudioClip audioDie;
-    public AudioClip audioMineTrap;
-    public AudioClip audioHpItem;
-    public AudioClip audioSpeedItem;
-    public AudioClip audioEmpItem;
+    public SoundManager sfxManager;
 
     //게임 중 사망 시 다시 시작 버튼
     public GameObject UIReStart;
@@ -46,7 +38,6 @@ public class Player : MonoBehaviour
     SpriteRenderer spriteRenderer;
     CapsuleCollider2D capsuleCollider;
     BoxCollider2D boxCollider;  //Sliding
-    AudioSource audioSource;
 
     //실시간 플레이어 위치
     Vector3 previousPosition = new Vector3();
@@ -65,7 +56,6 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         boxCollider = GetComponent<BoxCollider2D>();
-        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
 
@@ -203,7 +193,7 @@ public class Player : MonoBehaviour
                 gameManager.energyBar.value--;
                 jumpCount++;
 
-                PlaySound("Jump");
+                sfxManager.PlaySound("Jump");
             }
         }
     }
@@ -295,7 +285,7 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "MineTrap")
         {
-            PlaySound("MineTrap");
+            sfxManager.PlaySound("MineTrap");
             onDamaged(collision.transform.position, 5);
         }
 
@@ -320,7 +310,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "HpItem")
         {
             gameManager.energyBar.value += 4;
-            PlaySound("HpItem");
+            sfxManager.PlaySound("HpItem");
         }
 
         if (collision.gameObject.tag == "SpeedItem")
@@ -328,13 +318,13 @@ public class Player : MonoBehaviour
             //VelocityZero();
             moveSpeed += 10;
             Debug.Log(moveSpeed);
-            PlaySound("SpeedItem");
+            sfxManager.PlaySound("SpeedItem");
             Invoke("MoveOn", 3f);
         }
 
         if (collision.gameObject.tag == "EmpItem")
         {
-            PlaySound("EmpItem");
+            sfxManager.PlaySound("EmpItem");
         }
     }
 
@@ -412,7 +402,7 @@ public class Player : MonoBehaviour
 
         gameManager.miniMap.SetActive(false);
 
-        PlaySound("Die");
+        sfxManager.PlaySound("Die");
 
         anim.SetTrigger("doDied");
 
@@ -449,40 +439,5 @@ public class Player : MonoBehaviour
     private void NextStage()
     {
         gameManager.NextStage();
-    }
-
-    public void PlaySound(string action)  //Player Sounds
-    {
-        switch (action)
-        {
-            case "Jump":
-                audioSource.clip = audioJump;
-                break;
-            case "Damaged":
-                audioSource.clip = audioDamaged;
-                break;
-            case "Die":
-                audioSource.clip = audioDie;
-                break;
-            case "MineTrap":
-                audioSource.clip = audioMineTrap;
-                break;
-            case "HpItem":
-                audioSource.clip = audioHpItem;
-                break;
-            case "SpeedItem":
-                audioSource.clip = audioSpeedItem;
-                break;
-            case "EmpItem":
-                audioSource.clip = audioEmpItem;
-                break;
-        }
-
-        audioSource.Play();
-
-        if (action == "Died")
-        {
-            audioSource.PlayOneShot(audioDie);
-        }
     }
 }

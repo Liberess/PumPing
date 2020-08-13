@@ -11,7 +11,7 @@ public enum BTNType
     Load,
     Save,
     Option,
-    Sound,
+    SFX,
     Bgm,
     Back,
     Main,
@@ -30,18 +30,20 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public CanvasGroup mainGroup;
     public CanvasGroup optionGroup;
 
-    public Text SoundText;
     public Text BgmText;
+    public Text SfxText;
+
+    public Button button;
 
     Vector3 defaultScale;
+
+    bool isSfx;
+    bool isBgm;
 
     private void Start()
     {
         defaultScale = buttonScale.localScale;
     }
-
-    bool isSound;
-    bool isBgm;
 
     public void OnBtnClick()
     {
@@ -58,28 +60,32 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 CanvasGroupOn(optionGroup);
                 CanvasGroupOff(mainGroup);
                 break;
-            case BTNType.Sound:
-                if (isSound)
+            case BTNType.SFX:
+                if (isSfx)
                 {
-                    isSound = false;
-                    SoundText.text = "Sound Off";
+                    isSfx = false;
+                    PlayerPrefs.SetInt("SFXCheck", 0);
+                    SfxText.text = "SFX Off";
                 }
                 else
                 {
-                    isSound = true;
-                    SoundText.text = "Sound On";
+                    isSfx = true;
+                    PlayerPrefs.SetInt("SFXCheck", 1);
+                    SfxText.text = "SFX On";
                 }
                 break;
             case BTNType.Bgm:
                 if (isBgm)
                 {
                     isBgm = false;
-                    BgmText.text = "Bgm Off";
+                    PlayerPrefs.SetInt("BGMCheck", 0);
+                    BgmText.text = "BGM Off";
                 }
                 else
                 {
                     isBgm = true;
-                    BgmText.text = "Bgm On";
+                    PlayerPrefs.SetInt("BGMCheck", 1);
+                    BgmText.text = "BGM On";
                 }
                 break;
             case BTNType.Back:
