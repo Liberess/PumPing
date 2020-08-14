@@ -12,12 +12,12 @@ public class SoundManager : MonoBehaviour
     public AudioMixer masterMixer;
 
     public AudioClip audioMain;
-    public AudioClip audioLoading;
+    /* public AudioClip audioLoading;
     public AudioClip audioStage_0;
     public AudioClip audioStage_1;
     public AudioClip audioStage_2;
     public AudioClip audioStage_3;
-    public AudioClip audioStage_4;
+    public AudioClip audioStage_4; */
 
     //사운드
     public AudioClip audioJump;
@@ -33,21 +33,13 @@ public class SoundManager : MonoBehaviour
     public float bgmSound;
     public float sfxSound;
 
-    int first;
-
     public void Awake()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioMain;
 
-
-        if(first < 1)
-        {
-            bgmSlider.value = 1;
-            sfxSlider.value = 1;
-        }
-
-        first++;
+        bgmSlider.value = 1;
+        sfxSlider.value = 1;
 
         if (bgmSlider.value == 1)
         {
@@ -66,11 +58,14 @@ public class SoundManager : MonoBehaviour
         {
             audioSource.Stop();
         }
+
+        SoundLoad();
     }
 
     private void Update()
     {
         AudioControl();
+        SoundSave();
     }
 
     public void AudioControl()
@@ -161,22 +156,16 @@ public class SoundManager : MonoBehaviour
         AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
     }
 
-    /* public void SoundSave()
+    public void SoundSave()
     {
         PlayerPrefs.SetFloat("BGMCheck", bgmSlider.value);
         PlayerPrefs.SetFloat("SFXCheck", sfxSlider.value);
         PlayerPrefs.Save();
+    }
 
-        Debug.Log("사운드 매니저 Save BGM " + bgmSlider.value);
-        Debug.Log("사운드 매니저 Save SFX " + sfxSlider.value);
-    } */
-
-    /* public void SoundLoad()
+    public void SoundLoad()
     {
         bgmSlider.value = PlayerPrefs.GetFloat("BGMCheck");
         sfxSlider.value = PlayerPrefs.GetFloat("SFXCheck");
-
-        Debug.Log("사운드 매니저 Load BGM " + bgmSlider.value);
-        Debug.Log("사운드 매니저 Load SFX " + sfxSlider.value);
-    } */
+    }
 }

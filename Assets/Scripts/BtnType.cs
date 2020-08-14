@@ -30,11 +30,6 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public CanvasGroup mainGroup;
     public CanvasGroup optionGroup;
 
-    public Text BgmText;
-    public Text SfxText;
-
-    public Button button;
-
     Vector3 defaultScale;
 
     bool isSfx;
@@ -64,28 +59,20 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 if (isSfx)
                 {
                     isSfx = false;
-                    PlayerPrefs.SetInt("SFXCheck", 0);
-                    SfxText.text = "SFX Off";
                 }
                 else
                 {
                     isSfx = true;
-                    PlayerPrefs.SetInt("SFXCheck", 1);
-                    SfxText.text = "SFX On";
                 }
                 break;
             case BTNType.Bgm:
                 if (isBgm)
                 {
                     isBgm = false;
-                    PlayerPrefs.SetInt("BGMCheck", 0);
-                    BgmText.text = "BGM Off";
                 }
                 else
                 {
                     isBgm = true;
-                    PlayerPrefs.SetInt("BGMCheck", 1);
-                    BgmText.text = "BGM On";
                 }
                 break;
             case BTNType.Back:

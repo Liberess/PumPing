@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         //gameScene = 2;
-
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Screen.SetResolution(1920, 1080, true);
     }
@@ -94,11 +93,7 @@ public class GameManager : MonoBehaviour
         gameScene = PlayerPrefs.GetInt("GameScene");
 
         bgmManager.bgmSlider.value = PlayerPrefs.GetFloat("BGMCheck");
-        bgmManager.bgmSound = PlayerPrefs.GetFloat("BGMCheck");
         sfxManager.sfxSlider.value = PlayerPrefs.GetFloat("SFXCheck");
-        sfxManager.sfxSound = PlayerPrefs.GetFloat("SFXCheck");
-
-        //soundManager.SoundLoad();
 
         Debug.Log("Load BGM " + bgmManager.bgmSlider.value);
         Debug.Log("Load SFX " + sfxManager.sfxSlider.value);

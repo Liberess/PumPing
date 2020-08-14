@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Platform")
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

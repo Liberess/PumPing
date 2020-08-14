@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     private float jumpPower = 10;
     private float maxPumping = 200;
     private float maxJump = 2;
-    public int jumpCount = 0;
+    private int jumpCount = 0;
     private int pumpingCount = 0;
 
     //사망 효과음 On/Off
@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
     private bool isMove;
     private bool isSliding;
 
+    private bool isGround;
+    private bool isEnemy;
+
     private Animator animator;
 
     Animator anim;
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour
     SpriteRenderer spriteRenderer;
     CapsuleCollider2D capsuleCollider;
     BoxCollider2D boxCollider;  //Sliding
+    AudioManager audioManager;
 
     //실시간 플레이어 위치
     Vector3 previousPosition = new Vector3();
@@ -57,10 +61,30 @@ public class Player : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        audioManager = AudioManager.instance;
     }
 
     void Update()
     {
+        isGround = Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Platform"));
+        isEnemy = Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Enemy"));
+
+        if (!isGround)
+        {
+            anim.SetBool("isJump", true);
+        }
+        else
+        {
+            jumpCount = 0;
+            anim.SetBool("isJump", false);
+        }
+
+        if (isEnemy)
+        {
+            jumpCount = 0;
+            anim.SetBool("isJump", false);
+        }
+
         if (audioPlay == true)
         {
             if (gameManager.energyBar.value <= 0.5f)
@@ -100,7 +124,8 @@ public class Player : MonoBehaviour
     {
         if (this.transform.position.y < this.previousPosition.y)
         {
-            anim.SetBool("isJumpUp", false);
+            //anim.SetBool("isJumpUp", false);
+            anim.SetBool("isJump", false);
         }
 
         this.previousPosition = this.transform.position;
@@ -114,7 +139,7 @@ public class Player : MonoBehaviour
         //Landing Platform
         if (rigid.velocity.y < 0)
         {
-            Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
+            /* Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
 
             RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1f, LayerMask.GetMask("Platform"));
 
@@ -124,7 +149,8 @@ public class Player : MonoBehaviour
             {
                 if (rayHit.distance < 0.5f)
                 {
-                    anim.Play("Idle");
+                    //anim.SetBool("isJumpUp", false);
+                    anim.SetBool("isJump", false);
                     jumpCount = 0;
                 }
             }
@@ -134,10 +160,10 @@ public class Player : MonoBehaviour
                 if (rayHit2.distance < 0.5f)
                 {
                     //anim.SetBool("isJumpUp", false);
-                    anim.Play("Idle");
+                    anim.SetBool("isJump", false);
                     jumpCount = 0;
                 }
-            }
+            } */
         }
     }
 
@@ -187,12 +213,14 @@ public class Player : MonoBehaviour
 
                 rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
 
-                anim.SetBool("isJumpUp", true);
-                anim.SetBool("isJumpDown", true);
+                //anim.SetBool("isJumpUp", true);
+                //anim.SetBool("isJumpDown", true);
+                anim.SetBool("isJump", true);
 
                 gameManager.energyBar.value--;
                 jumpCount++;
 
+                AudioManager.instance.PlaySFX("Jump");
                 sfxManager.PlaySound("Jump");
             }
         }
@@ -218,8 +246,10 @@ public class Player : MonoBehaviour
             if (pumpingCount >= 10 && gameManager.pumpingGauge >= 0.2)
             {
                 rigid.velocity = new Vector2(rigid.velocity.x, jumpPower * pumpingCount / 120);
-                anim.SetBool("isJumpUp", true);
-                anim.SetBool("isJumpDown", true);
+                //anim.SetBool("isJumpUp", true);
+                //anim.SetBool("isJumpDown", true);
+                anim.SetBool("isJump", true);
+                AudioManager.instance.PlaySFX("Pumping");
                 gameManager.energyBar.value -= 3;
             }
             pumpingCount = 0;
@@ -267,25 +297,21 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bullet")
         {
+            onDamaged(collision.transform.position, 5);
             gameManager.energyBar.value -= 5;
-        }
-
-        if (collision.gameObject.tag == "Wall")
-        {
-            anim.SetBool("isJumpUp", false);
-            anim.SetBool("isJumpDown", false);
-            VelocityZero();
         }
 
         if (collision.gameObject.tag == "Platform")
         {
-            anim.SetBool("isJumpUp", false);
-            anim.SetBool("isJumpDown", false);
+            //anim.SetBool("isJumpUp", false);
+            //anim.SetBool("isJumpDown", false);
+            anim.SetBool("isJump", false);
         }
 
         if (collision.gameObject.tag == "MineTrap")
         {
-            sfxManager.PlaySound("MineTrap");
+            //sfxManager.PlaySound("MineTrap");
+            AudioManager.instance.PlaySFX("MineTrap");
             onDamaged(collision.transform.position, 5);
         }
 
@@ -299,10 +325,13 @@ public class Player : MonoBehaviour
 
             this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
 
+            AudioManager.instance.PlaySFX("FootTrap");
+
             //anim.Play("Idle");
             anim.SetBool("isRun", false);
-            anim.SetBool("isJumpUp", false);
-            anim.SetBool("isJumpDown", false);
+            //anim.SetBool("isJumpUp", false);
+            //anim.SetBool("isJumpDown", false);
+            anim.SetBool("isJump", false);
 
             Invoke("MoveOn", 1.8f);
         }
@@ -310,7 +339,8 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "HpItem")
         {
             gameManager.energyBar.value += 4;
-            sfxManager.PlaySound("HpItem");
+            //sfxManager.PlaySound("HpItem");
+            AudioManager.instance.PlaySFX("HpItem");
         }
 
         if (collision.gameObject.tag == "SpeedItem")
@@ -318,13 +348,15 @@ public class Player : MonoBehaviour
             //VelocityZero();
             moveSpeed += 10;
             Debug.Log(moveSpeed);
-            sfxManager.PlaySound("SpeedItem");
+            //sfxManager.PlaySound("SpeedItem");
+            AudioManager.instance.PlaySFX("SpeedItem");
             Invoke("MoveOn", 3f);
         }
 
         if (collision.gameObject.tag == "EmpItem")
         {
-            sfxManager.PlaySound("EmpItem");
+            //sfxManager.PlaySound("EmpItem");
+            AudioManager.instance.PlaySFX("EmpItem");
         }
     }
 
@@ -339,13 +371,19 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "FenceTrap")
         {
+            Invoke("FenceSound", 0.2f);
             onDamaged(collision.transform.position, 1);
         }
 
-        if (collision.gameObject.tag == "ShotTrap")
+        if (collision.gameObject.tag == "MoveTrap")
         {
             onDamaged(collision.transform.position, 1);
         }
+    }
+
+    private void FenceSound()
+    {
+        AudioManager.instance.PlaySFX("FenceTrap");
     }
 
     public void onDamaged(Vector2 targetPos, int what)
@@ -402,7 +440,9 @@ public class Player : MonoBehaviour
 
         gameManager.miniMap.SetActive(false);
 
-        sfxManager.PlaySound("Die");
+        AudioManager.instance.PlaySFX("GameOver");
+
+        anim.Play("Died");
 
         anim.SetTrigger("doDied");
 
