@@ -25,11 +25,13 @@ public class MiniMap : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T) && gameManager.menuSet.activeSelf == false && gameManager.playerMv.UIReStart.activeSelf == false)
         {
             if (miniMap.activeSelf)
-            {   
+            {
+                AudioManager.instance.PlaySFX("Minimap_Off");
                 miniMap.SetActive(false);
             }
             else
             {
+                AudioManager.instance.PlaySFX("Minimap_On");
                 miniMap.SetActive(true);
             }
         }

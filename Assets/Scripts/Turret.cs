@@ -48,6 +48,7 @@ public class Turret : MonoBehaviour
 
     void ShotAction()
     {
+        AudioManager.instance.PlaySFX("Shot");
         anim.SetTrigger("isShoot");
         Instantiate(bulletPrefab, pos.position, transform.rotation);  //총알 생성
         particle.Clear();

@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     //타 스크립트
     public GameManager gameManager;
     public PumpingGauge pumpingGauge;
-    public SoundManager sfxManager;
 
     //게임 중 사망 시 다시 시작 버튼
     public GameObject UIReStart;
@@ -221,7 +220,6 @@ public class Player : MonoBehaviour
                 jumpCount++;
 
                 AudioManager.instance.PlaySFX("Jump");
-                sfxManager.PlaySound("Jump");
             }
         }
     }

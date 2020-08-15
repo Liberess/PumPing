@@ -1396,6 +1396,103 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1001 &921485412
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2020490045680173165, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: bgmSlider
+      value: 
+      objectReference: {fileID: 433882911}
+    - target: {fileID: 2020490045680173165, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: sfxSlider
+      value: 
+      objectReference: {fileID: 2124441019}
+    - target: {fileID: 2020490045680173165, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: masterMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 71cc785c0c09d2b4f872fda2bc2a56ff,
+        type: 2}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 80.53232
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 911.4422
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.5009427
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173166, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020490045680173167, guid: efd2a6818a795594b89ed4124857d2ad,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd2a6818a795594b89ed4124857d2ad, type: 3}
+--- !u!114 &921485413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2020490045680173165, guid: efd2a6818a795594b89ed4124857d2ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 921485412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768cd883d3e52724686b746d16c9c2f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &925743424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMv: {fileID: 505448946}
+  audioManager: {fileID: 921485413}
   bgmManager: {fileID: 897686626}
   sfxManager: {fileID: 1500327078}
   energyBar: {fileID: 0}
