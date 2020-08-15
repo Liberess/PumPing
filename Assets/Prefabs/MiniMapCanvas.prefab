@@ -186,8 +186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83fcd09447be2c04a89f2a14ce1f5744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  miniMap: {fileID: 0}
+  gameManager: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
+    type: 3}
+  miniMap: {fileID: 6979320324563707308}
   miniMapCamera: {fileID: 0}
 --- !u!1 &6979320324563707308
 GameObject:

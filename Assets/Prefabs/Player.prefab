@@ -223,15 +223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e281cfb373da7e44ac0822f77314e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
+    type: 3}
   pumpingGauge: {fileID: 0}
-  audioJump: {fileID: 8300000, guid: b55b63d4fd215f34aafcb32786805d69, type: 3}
-  audioDamaged: {fileID: 8300000, guid: 2adb857f469be6542b88433c6cb895b6, type: 3}
-  audioDie: {fileID: 8300000, guid: b5e9bdd3eb0f347408eb081db5a31112, type: 3}
-  audioMineTrap: {fileID: 8300000, guid: 7020f67507d2c0c48b4e7a2449bfad82, type: 3}
-  audioHpItem: {fileID: 8300000, guid: ddf0aefa61c268541b81cea5b9c72027, type: 3}
-  audioSpeedItem: {fileID: 8300000, guid: e468ef6de2b28ac48899e582fd3084dc, type: 3}
   UIReStart: {fileID: 0}
+  moveSpeed: 10
 --- !u!70 &5983153266675876628
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

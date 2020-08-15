@@ -52,6 +52,9 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 //SceneLoad.LoadSceneHandle(gameManager.gameScene, 2);
                 gameManager.GameLoad();
                 break;
+            case BTNType.Save:
+                gameManager.GameSave();
+                break;
             case BTNType.Option:
                 CanvasGroupOn(optionGroup);
                 CanvasGroupOff(mainGroup);

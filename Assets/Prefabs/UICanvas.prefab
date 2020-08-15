@@ -268,7 +268,6 @@ GameObject:
   - component: {fileID: 399755608168792440}
   - component: {fileID: 399755608168792443}
   - component: {fileID: 399755608168792447}
-  - component: {fileID: 399755608168792446}
   m_Layer: 0
   m_Name: ReStartBtn
   m_TagString: Untagged
@@ -405,28 +404,6 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
---- !u!114 &399755608168792446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399755608168792421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23dbb9d5ec2cf034a92736ed52ef976f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMv: {fileID: 0}
-  bgmManager: {fileID: 0}
-  sfxManager: {fileID: 0}
-  energyBar: {fileID: 0}
-  player: {fileID: 0}
-  pumping: {fileID: 0}
-  menuSet: {fileID: 399755608217117890}
-  miniMap: {fileID: 0}
-  gameScene: 0
-  pumpingGauge: 0
 --- !u!1 &399755608186736826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1305,6 @@ GameObject:
   - component: {fileID: 399755609575779412}
   - component: {fileID: 399755609575779415}
   - component: {fileID: 399755609575779414}
-  - component: {fileID: 399755609575779409}
   m_Layer: 0
   m_Name: SaveBtn
   m_TagString: Untagged
@@ -1436,8 +1412,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 399755609575779409}
-        m_MethodName: GameSave
+      - m_Target: {fileID: 399755609575779414}
+        m_MethodName: OnBtnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1464,28 +1440,6 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
---- !u!114 &399755609575779409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399755609575779411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23dbb9d5ec2cf034a92736ed52ef976f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMv: {fileID: 0}
-  bgmManager: {fileID: 0}
-  sfxManager: {fileID: 0}
-  energyBar: {fileID: 0}
-  player: {fileID: 0}
-  pumping: {fileID: 0}
-  menuSet: {fileID: 399755608217117890}
-  miniMap: {fileID: 0}
-  gameScene: 0
-  pumpingGauge: 0
 --- !u!1 &399755609866308941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,8 +1602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMv: {fileID: 0}
-  bgmManager: {fileID: 0}
-  sfxManager: {fileID: 0}
+  audioManager: {fileID: 0}
   energyBar: {fileID: 0}
   player: {fileID: 0}
   pumping: {fileID: 0}
@@ -3314,7 +3267,7 @@ MonoBehaviour:
   currentType: 6
   buttonScale: {fileID: 269139453032594367}
   gameManager: {fileID: 0}
-  mainGroup: {fileID: 0}
+  mainGroup: {fileID: 399755608217117888}
   optionGroup: {fileID: 4782650121932420924}
 --- !u!1 &6374122141932909028
 GameObject:
