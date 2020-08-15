@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public Player playerMv;
     public AudioManager audioManager;
-    public SoundManager bgmManager;
-    public SoundManager sfxManager;
+    //public SoundManager bgmManager;
+    //public SoundManager sfxManager;
 
     public Slider energyBar;
 
@@ -24,7 +24,12 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        //gameScene = 2;
+        if (!PlayerPrefs.HasKey("BGMCheck"))
+        {
+            PlayerPrefs.SetFloat("BGMCheck", 1);
+            PlayerPrefs.SetFloat("SFXCheck", 1);
+        }
+
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Screen.SetResolution(1920, 1080, true);
     }
@@ -64,8 +69,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
         PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
         PlayerPrefs.SetInt("GameScene", SceneManager.GetActiveScene().buildIndex);
-        //PlayerPrefs.SetFloat("BGMCheck", soundManager.bgmSlider.value);
-        //PlayerPrefs.SetFloat("SFXCheck", soundManager.sfxSlider.value);
         //PlayerPrefs.SetFloat("BGMCheck", bgmManager.bgmSlider.value);
         //PlayerPrefs.SetFloat("SFXCheck", sfxManager.sfxSlider.value);
         PlayerPrefs.SetFloat("BGMCheck", audioManager.bgmSlider.value);
@@ -115,7 +118,7 @@ public class GameManager : MonoBehaviour
         if (gameScene < 4 && gameScene > 1)
         {
             gameScene++;
-            SceneLoad.LoadSceneHandle(gameScene,3);
+            SceneLoad.LoadSceneHandle(gameScene, 3);
         }
         else
         {

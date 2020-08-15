@@ -65,8 +65,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -162,8 +162,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -259,8 +259,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -356,8 +356,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -453,8 +453,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -550,8 +550,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -647,8 +647,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -744,8 +744,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -841,8 +841,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -938,8 +938,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1035,8 +1035,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1132,8 +1132,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1229,8 +1229,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1326,8 +1326,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1575,6 +1575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768cd883d3e52724686b746d16c9c2f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterMixer: {fileID: 24100000, guid: 71cc785c0c09d2b4f872fda2bc2a56ff, type: 2}
   bgmSlider: {fileID: 0}
   sfxSlider: {fileID: 0}
   sfx:
@@ -1583,7 +1584,7 @@ MonoBehaviour:
   - name: Pumping
     clip: {fileID: 8300000, guid: 46a20f9a37f27fa49813b92c59fe2748, type: 3}
   - name: Damaed
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 8fd31ce11ae7f37479bcc1d06d79ae16, type: 3}
   - name: GameOver
     clip: {fileID: 8300000, guid: e464210e3ba08db4ca1ed0f60a67d4f4, type: 3}
   - name: HpItem
@@ -1599,7 +1600,7 @@ MonoBehaviour:
   - name: FenceTrap
     clip: {fileID: 8300000, guid: 7178bf82468fc484b9db23ac1d3eaa55, type: 3}
   - name: Shot
-    clip: {fileID: 8300000, guid: a747f36e31ccbf948be5c3af6f71b06c, type: 3}
+    clip: {fileID: 8300000, guid: a66f5efbbd94a5247a02734142cc35f0, type: 3}
   - name: Minimap_On
     clip: {fileID: 8300000, guid: 58d97244211464b45b8e33b60714946e, type: 3}
   - name: Minimap_Off
@@ -1610,15 +1611,15 @@ MonoBehaviour:
   - name: Main
     clip: {fileID: 8300000, guid: c82aa9d643ece6547becdef4a6954693, type: 3}
   - name: Tutorial
-    clip: {fileID: 8300000, guid: c82aa9d643ece6547becdef4a6954693, type: 3}
+    clip: {fileID: 8300000, guid: 68b0dcf323e3dbe4ba488290b3f61859, type: 3}
   - name: Stage_1
-    clip: {fileID: 8300000, guid: c82aa9d643ece6547becdef4a6954693, type: 3}
+    clip: {fileID: 8300000, guid: 5b66615c711865a458a1b473fd743b49, type: 3}
   - name: Stage_2
-    clip: {fileID: 8300000, guid: c82aa9d643ece6547becdef4a6954693, type: 3}
+    clip: {fileID: 8300000, guid: 927fad3188cfd2543a6dd994c69b97d3, type: 3}
   - name: Stage_3
-    clip: {fileID: 8300000, guid: c82aa9d643ece6547becdef4a6954693, type: 3}
+    clip: {fileID: 8300000, guid: 17bee607aea27a741a0458d22b084c0e, type: 3}
   - name: Ending
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: c82aa9d643ece6547becdef4a6954693, type: 3}
   bgmPlayer: {fileID: 2020490044450914412}
   sfxPlayer:
   - {fileID: 2020490044309957790}
@@ -1635,3 +1636,5 @@ MonoBehaviour:
   - {fileID: 2020490044309957789}
   - {fileID: 2020490044309957788}
   - {fileID: 4997534611760192689}
+  bgmSound: 0
+  sfxSound: 0

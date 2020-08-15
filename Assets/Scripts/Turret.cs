@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+    
     public GameManager gameManager;
     public GameObject bulletPrefab;
     public Transform pos;
 
+    public AudioClip audioShot;
+
     Animator anim;
     ParticleSystem particle;
+    AudioSource audioSource;
 
     public bool canShot = true;
 
@@ -20,6 +24,7 @@ public class Turret : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         particle = GetComponent<ParticleSystem>();
+        audioSource = GetComponent<AudioSource>();
 
         particle.Stop();
         particle.Clear();
@@ -48,6 +53,7 @@ public class Turret : MonoBehaviour
 
     void ShotAction()
     {
+        //audioSource.Play();
         AudioManager.instance.PlaySFX("Shot");
         anim.SetTrigger("isShoot");
         Instantiate(bulletPrefab, pos.position, transform.rotation);  //총알 생성

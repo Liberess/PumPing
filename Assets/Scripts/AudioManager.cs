@@ -31,6 +31,16 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        //if~else구문 추가. 오류시 삭제
+        /* if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }*/
         instance = this;
         AudioLoad();
     }
@@ -68,25 +78,25 @@ public class AudioManager : MonoBehaviour
     public void BgmOn()
     {
         PlayerPrefs.SetInt("BGMCheck", 1);
-        //masterMixer.SetFloat("BGM", bgmSound + 2f);
+        masterMixer.SetFloat("BGM", bgmSound + 2f);
     }
 
     public void BgmOff()
     {
         PlayerPrefs.SetInt("BGMCheck", 0);
-        //masterMixer.SetFloat("BGM", -80f);
+        masterMixer.SetFloat("BGM", -80f);
     }
 
     public void SfxOn()
     {
         PlayerPrefs.SetInt("SFXCheck", 1);
-        //masterMixer.SetFloat("SFX", sfxSound + 2f);
+        masterMixer.SetFloat("SFX", sfxSound + 2f);
     }
 
     public void SfxOff()
     {
         PlayerPrefs.SetInt("SFXCheck", 0);
-        //masterMixer.SetFloat("SFX", -80f);
+        masterMixer.SetFloat("SFX", -80f);
     }
 
     public void PlayBGM(string p_bgmName)
@@ -137,5 +147,10 @@ public class AudioManager : MonoBehaviour
     {
         bgmSlider.value = PlayerPrefs.GetFloat("BGMCheck");
         sfxSlider.value = PlayerPrefs.GetFloat("SFXCheck");
+    }
+
+    public void ToggleAudioVolume()
+    {
+        AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
     }
 }

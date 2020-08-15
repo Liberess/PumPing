@@ -40,7 +40,6 @@ public class Player : MonoBehaviour
     SpriteRenderer spriteRenderer;
     CapsuleCollider2D capsuleCollider;
     BoxCollider2D boxCollider;  //Sliding
-    AudioManager audioManager;
 
     //실시간 플레이어 위치
     Vector3 previousPosition = new Vector3();
@@ -60,7 +59,6 @@ public class Player : MonoBehaviour
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-        audioManager = AudioManager.instance;
     }
 
     void Update()
