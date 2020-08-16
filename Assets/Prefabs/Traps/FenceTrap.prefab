@@ -165,4 +165,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trap: {fileID: 2210965189176257251}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
+    type: 3}

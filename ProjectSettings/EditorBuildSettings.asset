@@ -12,17 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Loading.unity
     guid: 2315d639b32f62f43a6e90d02e0fc282
   - enabled: 1
-    path: Assets/Scenes/Stage_0.unity
-    guid: 6dbe329ad6b4bc3498386b3ca65e0d79
+    path: Assets/Scenes/Tutorial.unity
+    guid: a7ea2e2c52344d34f9ba3e2a28380580
   - enabled: 1
     path: Assets/Scenes/Stage_1.unity
-    guid: 93c2691464d95824e9c57e80cba039ce
+    guid: 1fbebfc402bc2b44cb6afa7ae8e9a34e
   - enabled: 1
     path: Assets/Scenes/Stage_2.unity
-    guid: 3d60972f52778c345b916bf4b1bf5617
+    guid: 286982713b9352f419248cf983908a5f
   - enabled: 1
     path: Assets/Scenes/Stage_3.unity
-    guid: 98846bb3119d7e5468a5d5f1eb316076
+    guid: cf07056ddbcde374cbb23e3d8a6a57fd
   - enabled: 1
     path: Assets/Scenes/Stage_Test.unity
     guid: ee36a30d8b6cbcf4ea8357aa9c515a5d

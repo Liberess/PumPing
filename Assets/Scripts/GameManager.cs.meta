@@ -3,7 +3,17 @@ guid: 23dbb9d5ec2cf034a92736ed52ef976f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerMv: {fileID: 5983153266675876626, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+      type: 3}
+  - audioManager: {fileID: 2020490045680173165, guid: efd2a6818a795594b89ed4124857d2ad,
+      type: 3}
+  - energyBar: {instanceID: 0}
+  - player: {fileID: 5983153266675876655, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4,
+      type: 3}
+  - pumping: {instanceID: 0}
+  - menuSet: {instanceID: 0}
+  - miniMap: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

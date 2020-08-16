@@ -117,8 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f55deaa8e31404880f0a2026b016bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  player: {fileID: 0}
+  gameManager: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
+    type: 3}
+  player: {fileID: 5983153266675876626, guid: 26308f2af6a0d8e48ab838b8a9ba2bc4, type: 3}
   nextMove: 0
 --- !u!50 &6086702260055638213
 Rigidbody2D:

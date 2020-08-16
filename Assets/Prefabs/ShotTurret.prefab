@@ -128,11 +128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104c239e5374da34b854f6c5e480753a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
+    type: 3}
   bulletPrefab: {fileID: 2101547472120272337, guid: ef803e737224e974b85f43f709261bb6,
     type: 3}
   pos: {fileID: 2415569685393254059}
-  audioShot: {fileID: 0}
+  audioShot: {fileID: 8300000, guid: a66f5efbbd94a5247a02734142cc35f0, type: 3}
   canShot: 1
 --- !u!50 &2415569685231329271
 Rigidbody2D:
@@ -4909,7 +4910,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a66f5efbbd94a5247a02734142cc35f0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4918,7 +4919,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 5
-  MaxDistance: 100
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -4953,7 +4954,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.5
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

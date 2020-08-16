@@ -9,10 +9,9 @@ public class Player : MonoBehaviour
 {
     //타 스크립트
     public GameManager gameManager;
-    public PumpingGauge pumpingGauge;
 
     //게임 중 사망 시 다시 시작 버튼
-    public GameObject UIReStart;
+    //public GameObject UIReStart;
 
     //플레이어 이동
     public float moveSpeed = 10;
@@ -252,7 +251,7 @@ public class Player : MonoBehaviour
             gameManager.pumpingGauge = 0;
 
             gameManager.pumping.SetActive(false);
-            gameManager.pumping.GetComponent<Image>().sprite = pumpingGauge.emptySprite;
+            gameManager.pumping.GetComponent<Image>().sprite = gameManager.pumpingManager.emptySprite;
         }
     }
 
@@ -430,7 +429,8 @@ public class Player : MonoBehaviour
     {
         gameManager.energyBar.value = 0f;
 
-        UIReStart.SetActive(true);
+        //UIReStart.SetActive(true);
+        gameManager.reStartUI.SetActive(true);
 
         gameManager.menuSet.SetActive(false);
 

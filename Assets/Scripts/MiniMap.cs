@@ -22,7 +22,8 @@ public class MiniMap : MonoBehaviour
     void Update()
     {
         //만약 'T'를 누르면 미니맵 On/Off
-        if (Input.GetKeyDown(KeyCode.T) && gameManager.menuSet.activeSelf == false && gameManager.playerMv.UIReStart.activeSelf == false)
+        //if (Input.GetKeyDown(KeyCode.T) && gameManager.menuSet.activeSelf == false && gameManager.playerMv.UIReStart.activeSelf == false)
+        if (Input.GetKeyDown(KeyCode.T) && gameManager.menuSet.activeSelf == false && gameManager.reStartUI.activeSelf == false)
         {
             if (miniMap.activeSelf)
             {

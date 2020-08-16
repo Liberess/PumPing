@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public Player playerMv;
     public AudioManager audioManager;
+    public PumpingGauge pumpingManager;
     //public SoundManager bgmManager;
     //public SoundManager sfxManager;
 
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject pumping;
     public GameObject menuSet;
     public GameObject miniMap;
+    public GameObject reStartUI;
 
     private int stageIndex;
     public int gameScene;
@@ -39,7 +41,8 @@ public class GameManager : MonoBehaviour
         //Sub Menu
         //esc를 눌렀을 때 만약 stage가 0, 즉 메인화면이라면 메뉴화면을 켤 수 없다.
         //또한 현재 미니맵이 꺼져있고 재시작 버튼이 비활성화 되어 있어야지 메뉴를 불러 올 수 있다.
-        if (stageIndex != 0 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false && playerMv.UIReStart.activeSelf == false)
+        //if (stageIndex != 0 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false && playerMv.UIReStart.activeSelf == false)
+        if (stageIndex != 0 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false && reStartUI.activeSelf == false)
         {
             if (menuSet.activeSelf)
             {
