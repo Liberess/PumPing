@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public Player playerMv;
     public AudioManager audioManager;
     public PumpingGauge pumpingManager;
+    public Canvas canvas;
     //public SoundManager bgmManager;
     //public SoundManager sfxManager;
 
@@ -25,6 +26,36 @@ public class GameManager : MonoBehaviour
     private int stageIndex;
     public int gameScene;
     public float pumpingGauge;
+
+    private void Start()
+    {
+        int index = SceneManager.GetActiveScene().buildIndex;
+
+        switch (index)
+        {
+            case 1:
+                AudioManager.instance.PlayBGM("Main");
+                break;
+            case 3:
+                AudioManager.instance.PlayBGM("Opening");
+                break;
+            case 4:
+                AudioManager.instance.PlayBGM("Tutorial");
+                break;
+            case 5:
+                AudioManager.instance.PlayBGM("Stage_1");
+                break;
+            case 6:
+                AudioManager.instance.PlayBGM("Stage_2");
+                break;
+            case 7:
+                AudioManager.instance.PlayBGM("Stage_3");
+                break;
+            case 8:
+                AudioManager.instance.PlayBGM("Ending");
+                break;
+        }
+    }
 
     void Awake()
     {
@@ -46,7 +77,7 @@ public class GameManager : MonoBehaviour
         //esc를 눌렀을 때 만약 stage가 0, 즉 메인화면이라면 메뉴화면을 켤 수 없다.
         //또한 현재 미니맵이 꺼져있고 재시작 버튼이 비활성화 되어 있어야지 메뉴를 불러 올 수 있다.
         //if (stageIndex != 0 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false && playerMv.UIReStart.activeSelf == false)
-        if (stageIndex != 0 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false && reStartUI.activeSelf == false)
+        if (gameScene > 2 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false && reStartUI.activeSelf == false)
         {
             if (menuSet.activeSelf)
             {
@@ -76,13 +107,9 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
         PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
         PlayerPrefs.SetInt("GameScene", SceneManager.GetActiveScene().buildIndex);
-        //PlayerPrefs.SetFloat("BGMCheck", bgmManager.bgmSlider.value);
-        //PlayerPrefs.SetFloat("SFXCheck", sfxManager.sfxSlider.value);
         PlayerPrefs.SetFloat("BGMCheck", audioManager.bgmSlider.value);
         PlayerPrefs.SetFloat("SFXCheck", audioManager.sfxSlider.value);
         PlayerPrefs.Save();
-
-        //soundManager.SoundSave();
 
         menuSet.SetActive(false);
     }
@@ -100,9 +127,6 @@ public class GameManager : MonoBehaviour
         player.transform.position = new Vector3(x, y, 0);
         
         gameScene = PlayerPrefs.GetInt("GameScene");
-
-        //bgmManager.bgmSlider.value = PlayerPrefs.GetFloat("BGMCheck");
-        //sfxManager.sfxSlider.value = PlayerPrefs.GetFloat("SFXCheck");
         audioManager.bgmSlider.value = PlayerPrefs.GetFloat("BGMCheck");
         audioManager.sfxSlider.value = PlayerPrefs.GetFloat("SFXCheck");
 
@@ -122,15 +146,12 @@ public class GameManager : MonoBehaviour
 
     public void NextStage()
     {
-        if (gameScene < 4 && gameScene > 1)
+        /* if (gameScene < 10 && gameScene > 1)
         {
             gameScene++;
             SceneLoad.LoadSceneHandle(gameScene, 3);
-        }
-        else
-        {
-            Time.timeScale = 0;
-            Debug.Log("게임 클리어");
-        }
+        } */
+        gameScene++;
+        SceneLoad.LoadSceneHandle(gameScene, 3);
     }
 }

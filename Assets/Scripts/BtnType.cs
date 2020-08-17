@@ -46,7 +46,7 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         switch (currentType)
         {
             case BTNType.New:
-                SceneLoad.LoadSceneHandle(2, 1);
+                SceneLoad.LoadSceneHandle(3, 1);
                 break;
             case BTNType.Load:
                 //SceneLoad.LoadSceneHandle(gameManager.gameScene, 2);
@@ -84,7 +84,7 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 CanvasGroupOff(optionGroup);
                 break;
             case BTNType.Main:
-                SceneLoad.LoadSceneHandle(0, 0);
+                SceneLoad.LoadSceneHandle(1, 0);
                 break;
             case BTNType.Exit:
                 Application.Quit();

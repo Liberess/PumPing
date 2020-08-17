@@ -65,7 +65,7 @@ public class SceneLoad : MonoBehaviour
         }
         else if (loadType == 1)
         {
-            SceneManager.LoadScene("Stage_0");  //새게임
+            SceneManager.LoadScene("Opening");  //새게임
         }
         else if (loadType == 2)
         {

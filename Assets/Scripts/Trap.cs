@@ -40,7 +40,6 @@ public class Trap : MonoBehaviour
             }
 
             anim.SetTrigger("doTouch");
-
             Invoke("ReSetting", 6f);
         }
     }

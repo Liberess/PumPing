@@ -18,6 +18,7 @@ TagManager:
   - MoveTurret
   - Bullet
   - EmpItem
+  - Ending
   layers:
   - Default
   - TransparentFX

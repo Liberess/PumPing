@@ -4,14 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     //타 스크립트
     public GameManager gameManager;
-
-    //게임 중 사망 시 다시 시작 버튼
-    //public GameObject UIReStart;
 
     //플레이어 이동
     public float moveSpeed = 10;
@@ -27,12 +25,17 @@ public class Player : MonoBehaviour
 
     //플레이어 움직임 On/Off
     private bool isMove;
-    private bool isSliding;
+    public bool isSliding;
+    private bool isEnding;
 
     private bool isGround;
     private bool isEnemy;
 
+    private float slidingTimer = 0;
+    private float slidingDelay = 5;
+
     private Animator animator;
+    public Transform pos;
 
     Animator anim;
     Rigidbody2D rigid;
@@ -43,10 +46,14 @@ public class Player : MonoBehaviour
     //실시간 플레이어 위치
     Vector3 previousPosition = new Vector3();
 
+    Vector3 target = new Vector3(13.4f, 77f, 0f);
+
     private void Awake()
     {
         audioPlay = true;
         isMove = true;
+        isSliding = true;
+        isEnding = false;
 
         moveSpeed = 10;
 
@@ -60,10 +67,34 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Ending()
+    {
+        SceneManager.LoadScene("Ending", LoadSceneMode.Additive);
+        AudioManager.instance.PlayBGM("Ending");
+        AudioManager.instance.bgmPlayer.volume = 1;
+    }
+
     void Update()
     {
-        isGround = Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Platform"));
-        isEnemy = Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Enemy"));
+        isGround = Physics2D.OverlapCircle(pos.position, 0.5f, LayerMask.GetMask("Platform"));
+        isEnemy = Physics2D.OverlapCircle(pos.position, 0.5f, LayerMask.GetMask("Enemy"));
+
+        if (isEnding)
+        { 
+            transform.position = Vector3.MoveTowards(transform.position, target, 0.1f);
+
+            if(transform.position.x >= target.x - 1f)
+            {
+                rigid.gravityScale = 0f;
+                rigid.AddForce(Vector2.up * 50f, ForceMode2D.Impulse);
+
+                AudioManager.instance.sfxSlider.value = 0;
+                AudioManager.instance.bgmPlayer.volume = 0;
+
+                isEnding = false;
+                Invoke("Ending", 3f);
+            }
+        }
 
         if (!isGround)
         {
@@ -71,13 +102,11 @@ public class Player : MonoBehaviour
         }
         else
         {
-            jumpCount = 0;
             anim.SetBool("isJump", false);
         }
 
         if (isEnemy)
         {
-            jumpCount = 0;
             anim.SetBool("isJump", false);
         }
 
@@ -95,24 +124,16 @@ public class Player : MonoBehaviour
         }
 
         //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
-        if (IsAlive && isMove == true)
+        if (IsAlive && isMove)
         {
             Jump();
             Pumping();
-            Sliding();
-        }
 
-        //Stop Speed
-        if (Input.GetButtonUp("Horizontal"))
-        {
-            //rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.5f, rigid.velocity.y);
-            VelocityZero();
-        }
-
-        //Sprite Flip
-        if (Input.GetButton("Horizontal"))
-        {
-            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+            if (isSliding && (slidingTimer >= slidingDelay))
+            {
+                Sliding();
+            }
+            slidingTimer += Time.deltaTime;
         }
     }
 
@@ -120,14 +141,13 @@ public class Player : MonoBehaviour
     {
         if (this.transform.position.y < this.previousPosition.y)
         {
-            //anim.SetBool("isJumpUp", false);
             anim.SetBool("isJump", false);
         }
 
         this.previousPosition = this.transform.position;
 
         //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
-        if (IsAlive && isMove == true)
+        if (IsAlive && isMove)
         {
             Move();
         }
@@ -135,7 +155,7 @@ public class Player : MonoBehaviour
         //Landing Platform
         if (rigid.velocity.y < 0)
         {
-            /* Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
+            Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
 
             RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1f, LayerMask.GetMask("Platform"));
 
@@ -159,7 +179,7 @@ public class Player : MonoBehaviour
                     anim.SetBool("isJump", false);
                     jumpCount = 0;
                 }
-            } */
+            }
         }
     }
 
@@ -197,27 +217,34 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("isRun", true);
         }
+
+        //Stop Speed
+        if (Input.GetButtonUp("Horizontal"))
+        {
+            VelocityZero();
+        }
+
+        //Sprite Flip
+        if (Input.GetButton("Horizontal"))
+        {
+            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+        }
     }
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump") && jumpCount < 2 && gameManager.energyBar.value >= 1f)
+        if (Input.GetButtonDown("Jump") && jumpCount < maxJump && gameManager.energyBar.value >= 1f)
         {
-            if (jumpCount < maxJump)
-            {
-                animator.SetLayerWeight(1, 0);
+            animator.SetLayerWeight(1, 0);
 
-                rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
+            rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
 
-                //anim.SetBool("isJumpUp", true);
-                //anim.SetBool("isJumpDown", true);
-                anim.SetBool("isJump", true);
+            anim.SetBool("isJump", true);
 
-                gameManager.energyBar.value--;
-                jumpCount++;
+            jumpCount++;
+            gameManager.energyBar.value--;
 
-                AudioManager.instance.PlaySFX("Jump");
-            }
+            AudioManager.instance.PlaySFX("Jump");
         }
     }
 
@@ -241,8 +268,6 @@ public class Player : MonoBehaviour
             if (pumpingCount >= 10 && gameManager.pumpingGauge >= 0.2)
             {
                 rigid.velocity = new Vector2(rigid.velocity.x, jumpPower * pumpingCount / 120);
-                //anim.SetBool("isJumpUp", true);
-                //anim.SetBool("isJumpDown", true);
                 anim.SetBool("isJump", true);
                 AudioManager.instance.PlaySFX("Pumping");
                 gameManager.energyBar.value -= 3;
@@ -257,33 +282,26 @@ public class Player : MonoBehaviour
 
     private void Sliding()
     {
-        if (isSliding == true)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
-            {
-                //VelocityZero();
-                isSliding = false;
-                //isMove = false;
+            isSliding = false;
 
-                boxCollider.enabled = true;
-                capsuleCollider.enabled = false;
+            boxCollider.enabled = true;
+            capsuleCollider.enabled = false;
 
-                //float h = Input.GetAxisRaw("Horizontal");
-                //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
-                //rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
-
-                gameManager.energyBar.value -= 1;
-                animator.SetLayerWeight(1, 1);
-                anim.SetTrigger("doSliding");
-            }
-
-            Invoke("MoveOn", 3f);
-            Invoke("SlidingOff", 3f);
+            gameManager.energyBar.value -= 1;
+            animator.SetLayerWeight(1, 1);
+            anim.SetTrigger("doSliding");
+            anim.SetBool("isJump", false);
         }
+        Invoke("SlidingOff", 1f);
     }
 
     private void SlidingOff()
     {
+        slidingTimer = 0;
+
+        isSliding = true;
         boxCollider.enabled = false;
         capsuleCollider.enabled = true;
     }
@@ -344,17 +362,10 @@ public class Player : MonoBehaviour
             //AudioManager.instance.PlaySFX("SpeedItem");
             Invoke("MoveOn", 3f);
         }
-
-        if (collision.gameObject.tag == "EmpItem")
-        {
-            //sfxManager.PlaySound("EmpItem");
-            //AudioManager.instance.PlaySFX("EmpItem");
-        }
     }
 
     public void MoveOn()
     {
-        isSliding = true;
         isMove = true;
         moveSpeed = 10;
     }
@@ -439,9 +450,7 @@ public class Player : MonoBehaviour
 
         anim.SetTrigger("doDied");
 
-        rigid.gravityScale = 0f;
-
-        capsuleCollider.enabled = false;
+        rigid.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
 
         gameObject.tag = "Untagged";
         gameObject.layer = 0;
@@ -469,8 +478,19 @@ public class Player : MonoBehaviour
             anim.SetTrigger("doDoor");
 
             Invoke("MoveOn", 1f);
-            Invoke("NextStage", 0.8f);
+            Invoke("NextStage", 0.6f);
             Invoke("MoveSpeedReturn", 2f);
+        }
+
+        if(collision.gameObject.tag == "Ending")
+        {
+            isMove = false;
+
+            moveSpeed = 0;
+
+            VelocityZero();
+
+            isEnding = true;
         }
     }
 

@@ -23,25 +23,14 @@ public class AudioManager : MonoBehaviour
     [SerializeField] Sound[] sfx = null;
     [SerializeField] Sound[] bgm = null;
 
-    [SerializeField] AudioSource bgmPlayer = null;
-    [SerializeField] AudioSource[] sfxPlayer = null;
+    public AudioSource bgmPlayer = null;
+    public AudioSource[] sfxPlayer = null;
 
     public float bgmSound;
     public float sfxSound;
 
     void Start()
     {
-        //if~else구문 추가. 오류시 삭제
-        /* if(instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }*/
-
         instance = this;
         AudioLoad();
     }

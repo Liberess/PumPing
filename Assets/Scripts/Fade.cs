@@ -41,7 +41,7 @@ public class Fade : MonoBehaviour
             yield return null;
         }
 
-        Panel.gameObject.SetActive(true);
+        Panel.gameObject.SetActive(false);
         yield return null;
     }
 }

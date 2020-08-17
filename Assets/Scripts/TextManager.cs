@@ -1,0 +1,102 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class TextManager : MonoBehaviour
+{
+    [SerializeField] Text[] texts = null;
+
+    float time = 0f;
+    float F_time = 1f;
+
+    Color alpha;
+
+    public void Start()
+    {
+        int index = SceneManager.GetActiveScene().buildIndex;
+
+        if (index >= 8)
+        {
+            StartCoroutine(EndingFadeFlow());
+        }
+        else
+        {
+            StartCoroutine(FadeFlow());
+        }
+    }
+
+    IEnumerator FadeFlow()
+    {
+        for (int i = 0; i < texts.Length; i++)
+        {
+            alpha = texts[i].color;
+        }
+
+        time = 0f;
+
+        while (alpha.a < 1f)
+        {
+            time += Time.deltaTime / F_time;
+            alpha.a = Mathf.Lerp(0, 1, time);
+
+            for (int i = 0; i < texts.Length; i++)
+            {
+                texts[i].color = alpha;
+            }
+            yield return null;
+        }
+
+        time = 0f;
+
+        yield return new WaitForSeconds(3f);
+
+        while (alpha.a > 0f)
+        {
+            time += Time.deltaTime / F_time;
+            alpha.a = Mathf.Lerp(1, 0, time);
+
+            for (int i = 0; i < texts.Length; i++)
+            {
+                texts[i].color = alpha;
+            }
+            yield return null;
+        }
+
+        int index = SceneManager.GetActiveScene().buildIndex;
+
+        if (index == 3)
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
+
+        yield return null;
+    }
+
+    IEnumerator EndingFadeFlow()
+    {
+        GameManager.instance.canvas.enabled = false;
+
+        for (int i = 0; i < texts.Length; i++)
+        {
+            alpha = texts[i].color;
+
+            time = 0f;
+
+            while (alpha.a < 1f)
+            {
+                time += Time.deltaTime / F_time;
+                alpha.a = Mathf.Lerp(0, 1, time);
+
+                texts[i].color = alpha;
+
+                yield return null;
+            }
+
+            time = 0f;
+
+            yield return new WaitForSeconds(3f);
+        }
+    }
+}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class Title : MonoBehaviour
 
     IEnumerator FadeFlow()
     {
-        gameObject.SetActive(true);
+        this.gameObject.SetActive(true);
         Color alpha = spriteRenderer.color;
 
         time = 0f;
@@ -32,7 +33,7 @@ public class Title : MonoBehaviour
 
         time = 0f;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         while (alpha.a > 0f)
         {
@@ -42,7 +43,8 @@ public class Title : MonoBehaviour
             yield return null;
         }
 
-        gameObject.SetActive(true);
+        this.gameObject.SetActive(true);
+        SceneManager.LoadScene("Main");
         yield return null;
     }
 }
