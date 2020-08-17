@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Sound
@@ -31,6 +32,15 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        if (!PlayerPrefs.HasKey("BGMCheck"))
+        {
+            PlayerPrefs.SetFloat("BGMCheck", 1);
+            PlayerPrefs.SetFloat("SFXCheck", 1);
+
+            bgmSlider.value = 1;
+            sfxSlider.value = 1;
+        }
+
         instance = this;
         AudioLoad();
     }
