@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3298752320758874504}
   - component: {fileID: 3298752320758874505}
   - component: {fileID: 3298752320758874507}
-  - component: {fileID: 3298752320758874506}
+  - component: {fileID: 449101458871350690}
   m_Layer: 0
   m_Name: EMP
   m_TagString: EmpItem
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4730358, y: 0.8858814}
   m_EdgeRadius: 0
---- !u!114 &3298752320758874506
+--- !u!114 &449101458871350690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,10 +119,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3298752320758874502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81df1ce661e9d6b4fae269ec7088ff10, type: 3}
+  m_Script: {fileID: 11500000, guid: 4357c69927334e742ab0937b7ec98424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turret: {fileID: 0}
+  turret:
+  - {fileID: 0}
+  _turret: {fileID: 2415569685231329270, guid: e55e20536235c2246bd952d92d995fe3, type: 3}
 --- !u!1 &3298752322140963996
 GameObject:
   m_ObjectHideFlags: 0

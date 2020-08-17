@@ -12,7 +12,6 @@ public class MoveTurret : MonoBehaviour
 
     public int nextMove;
 
-
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();

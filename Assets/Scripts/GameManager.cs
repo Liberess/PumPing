@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
     public Player playerMv;
     public AudioManager audioManager;
     public PumpingGauge pumpingManager;
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
+
         if (!PlayerPrefs.HasKey("BGMCheck"))
         {
             PlayerPrefs.SetFloat("BGMCheck", 1);

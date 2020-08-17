@@ -179,7 +179,7 @@ public class Player : MonoBehaviour
         rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
 
         //MaxSpeed
-        if(rigid.velocity.x > maxSpeed)  //Right
+        if (rigid.velocity.x > maxSpeed)  //Right
         {
             rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
         }
@@ -276,7 +276,7 @@ public class Player : MonoBehaviour
                 animator.SetLayerWeight(1, 1);
                 anim.SetTrigger("doSliding");
             }
-  
+
             Invoke("MoveOn", 3f);
             Invoke("SlidingOff", 3f);
         }
@@ -290,7 +290,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet")
         {
             onDamaged(collision.transform.position, 5);
             gameManager.energyBar.value -= 5;
@@ -333,25 +333,22 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "HpItem")
         {
-            gameManager.energyBar.value += 4;
-            //sfxManager.PlaySound("HpItem");
-            AudioManager.instance.PlaySFX("HpItem");
+            //gameManager.energyBar.value += 4;
+            //AudioManager.instance.PlaySFX("HpItem");
         }
 
         if (collision.gameObject.tag == "SpeedItem")
         {
             //VelocityZero();
             moveSpeed += 10;
-            Debug.Log(moveSpeed);
-            //sfxManager.PlaySound("SpeedItem");
-            AudioManager.instance.PlaySFX("SpeedItem");
+            //AudioManager.instance.PlaySFX("SpeedItem");
             Invoke("MoveOn", 3f);
         }
 
         if (collision.gameObject.tag == "EmpItem")
         {
             //sfxManager.PlaySound("EmpItem");
-            AudioManager.instance.PlaySFX("EmpItem");
+            //AudioManager.instance.PlaySFX("EmpItem");
         }
     }
 
@@ -401,7 +398,7 @@ public class Player : MonoBehaviour
             //Reaction Force
             rigid.AddForce(new Vector2(dirc, 3f) * 4f, ForceMode2D.Impulse);
         }
-        else if(what == 6)
+        else if (what == 6)
         {
             //Change Layer (Immortal Active)
             gameObject.layer = 11;
@@ -442,9 +439,14 @@ public class Player : MonoBehaviour
 
         anim.SetTrigger("doDied");
 
-        gameObject.layer = 11;
+        rigid.gravityScale = 0f;
 
-        Invoke("VelocityZero", 1f);
+        capsuleCollider.enabled = false;
+
+        gameObject.tag = "Untagged";
+        gameObject.layer = 0;
+
+        Invoke("VelocityZero", 3f);
     }
 
     public void VelocityZero()

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    [SerializeField] Turret[] turret = null;
+
     float time = 0;
 
     private void Update()
@@ -20,6 +22,29 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            if(gameObject.tag == "HpItem")
+            {
+                GameManager.instance.energyBar.value += 4;
+                AudioManager.instance.PlaySFX("HpItem");
+            }
+
+            if (gameObject.tag == "SpeedItem")
+            {
+                AudioManager.instance.PlaySFX("SpeedItem");
+            }
+
+            if(gameObject.tag == "EmpItem")
+            {
+                AudioManager.instance.PlaySFX("EmpItem");
+
+                for(int i = 0; i < turret.Length; i++)
+                {
+                    turret[i].canShot = false;
+                }
+                
+                Invoke("OnCanShot", 3f);
+            }
+
             gameObject.SetActive(false);
             Invoke("ReSetting", 6f);
         }
@@ -30,5 +55,13 @@ public class Item : MonoBehaviour
         time = 0;
         gameObject.SetActive(true);
         GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+    }
+
+    public void OnCanShot()
+    {
+        for (int i = 0; i < turret.Length; i++)
+        {
+            turret[i].canShot = true;
+        }
     }
 }
