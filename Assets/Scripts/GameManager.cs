@@ -12,8 +12,6 @@ public class GameManager : MonoBehaviour
     public AudioManager audioManager;
     public PumpingGauge pumpingManager;
     public Canvas canvas;
-    //public SoundManager bgmManager;
-    //public SoundManager sfxManager;
 
     public Slider energyBar;
 
@@ -26,36 +24,6 @@ public class GameManager : MonoBehaviour
     private int stageIndex;
     public int gameScene;
     public float pumpingGauge;
-
-    private void Start()
-    {
-        int index = SceneManager.GetActiveScene().buildIndex;
-
-        switch (index)
-        {
-            case 1:
-                AudioManager.instance.PlayBGM("Main");
-                break;
-            case 3:
-                AudioManager.instance.PlayBGM("Opening");
-                break;
-            case 4:
-                AudioManager.instance.PlayBGM("Tutorial");
-                break;
-            case 5:
-                AudioManager.instance.PlayBGM("Stage_1");
-                break;
-            case 6:
-                AudioManager.instance.PlayBGM("Stage_2");
-                break;
-            case 7:
-                AudioManager.instance.PlayBGM("Stage_3");
-                break;
-            case 8:
-                AudioManager.instance.PlayBGM("Ending");
-                break;
-        }
-    }
 
     void Awake()
     {
@@ -146,12 +114,10 @@ public class GameManager : MonoBehaviour
 
     public void NextStage()
     {
-        /* if (gameScene < 10 && gameScene > 1)
+        if (gameScene < 9 && gameScene > 3)
         {
-            gameScene++;
             SceneLoad.LoadSceneHandle(gameScene, 3);
-        } */
-        gameScene++;
-        SceneLoad.LoadSceneHandle(gameScene, 3);
+            gameScene += 1;
+        }
     }
 }

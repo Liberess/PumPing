@@ -4546,6 +4546,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 399755608105075728, guid: 4b0d0085600fe604fabe3193cda4e60d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 399755608105075732, guid: 4b0d0085600fe604fabe3193cda4e60d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23761,15 +23766,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 806302689322511517, guid: 38e14df307de23c438ee84d90e245a18,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 36.906296
+      objectReference: {fileID: 0}
+    - target: {fileID: 806302689322511517, guid: 38e14df307de23c438ee84d90e245a18,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 110.86835
+      objectReference: {fileID: 0}
+    - target: {fileID: 806302689322511517, guid: 38e14df307de23c438ee84d90e245a18,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.9275174
+      objectReference: {fileID: 0}
+    - target: {fileID: 806302689322511517, guid: 38e14df307de23c438ee84d90e245a18,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.855035
+      objectReference: {fileID: 0}
     - target: {fileID: 1934588912887009988, guid: 38e14df307de23c438ee84d90e245a18,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 960
+      value: -28.5
       objectReference: {fileID: 0}
     - target: {fileID: 1934588912887009988, guid: 38e14df307de23c438ee84d90e245a18,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 540
+      value: -15.2
       objectReference: {fileID: 0}
     - target: {fileID: 1934588912887009988, guid: 38e14df307de23c438ee84d90e245a18,
         type: 3}

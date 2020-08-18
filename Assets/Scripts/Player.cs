@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
 
     private void Ending()
     {
+        GameManager.instance.canvas.enabled = false;
         SceneManager.LoadScene("Ending", LoadSceneMode.Additive);
         AudioManager.instance.PlayBGM("Ending");
         AudioManager.instance.bgmPlayer.volume = 1;
@@ -308,22 +309,25 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "GameController")
+        {
+            onDie();
+        }
+
         if (collision.gameObject.tag == "Bullet")
         {
+            AudioManager.instance.PlaySFX("Damaged");
             onDamaged(collision.transform.position, 5);
             gameManager.energyBar.value -= 5;
         }
 
         if (collision.gameObject.tag == "Platform")
         {
-            //anim.SetBool("isJumpUp", false);
-            //anim.SetBool("isJumpDown", false);
             anim.SetBool("isJump", false);
         }
 
         if (collision.gameObject.tag == "MineTrap")
         {
-            //sfxManager.PlaySound("MineTrap");
             AudioManager.instance.PlaySFX("MineTrap");
             onDamaged(collision.transform.position, 5);
         }
@@ -340,26 +344,15 @@ public class Player : MonoBehaviour
 
             AudioManager.instance.PlaySFX("FootTrap");
 
-            //anim.Play("Idle");
             anim.SetBool("isRun", false);
-            //anim.SetBool("isJumpUp", false);
-            //anim.SetBool("isJumpDown", false);
             anim.SetBool("isJump", false);
 
             Invoke("MoveOn", 1.8f);
         }
 
-        if (collision.gameObject.tag == "HpItem")
-        {
-            //gameManager.energyBar.value += 4;
-            //AudioManager.instance.PlaySFX("HpItem");
-        }
-
         if (collision.gameObject.tag == "SpeedItem")
         {
-            //VelocityZero();
             moveSpeed += 10;
-            //AudioManager.instance.PlaySFX("SpeedItem");
             Invoke("MoveOn", 3f);
         }
     }
@@ -407,7 +400,7 @@ public class Player : MonoBehaviour
         else if (what == 5)
         {
             //Reaction Force
-            rigid.AddForce(new Vector2(dirc, 3f) * 4f, ForceMode2D.Impulse);
+            //rigid.AddForce(new Vector2(dirc, 1f) * 5f, ForceMode2D.Impulse);
         }
         else if (what == 6)
         {

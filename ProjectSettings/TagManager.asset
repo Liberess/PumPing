@@ -19,6 +19,7 @@ TagManager:
   - Bullet
   - EmpItem
   - Ending
+  - Sliding_Ob
   layers:
   - Default
   - TransparentFX

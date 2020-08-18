@@ -17,7 +17,7 @@ public class TextManager : MonoBehaviour
     {
         int index = SceneManager.GetActiveScene().buildIndex;
 
-        if (index >= 8)
+        if (index >= 7)
         {
             StartCoroutine(EndingFadeFlow());
         }
@@ -76,8 +76,6 @@ public class TextManager : MonoBehaviour
 
     IEnumerator EndingFadeFlow()
     {
-        GameManager.instance.canvas.enabled = false;
-
         for (int i = 0; i < texts.Length; i++)
         {
             alpha = texts[i].color;
@@ -96,7 +94,17 @@ public class TextManager : MonoBehaviour
 
             time = 0f;
 
-            yield return new WaitForSeconds(3f);
+            if(i <= 1)
+            {
+                yield return new WaitForSeconds(3f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(1.5f);
+            }
+
+            yield return new WaitForSeconds(2f);
         }
+        SceneManager.LoadScene("Title");
     }
 }

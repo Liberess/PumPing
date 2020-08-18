@@ -32,6 +32,8 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        instance = this;
+
         if (!PlayerPrefs.HasKey("BGMCheck"))
         {
             PlayerPrefs.SetFloat("BGMCheck", 1);
@@ -40,9 +42,34 @@ public class AudioManager : MonoBehaviour
             bgmSlider.value = 1;
             sfxSlider.value = 1;
         }
+        else
+        {
+            AudioLoad();
+        }
 
-        instance = this;
-        AudioLoad();
+        int index = SceneManager.GetActiveScene().buildIndex;
+
+        switch (index)
+        {
+            case 1:
+                PlayBGM("Main");
+                break;
+            case 4:
+                PlayBGM("Tutorial");
+                break;
+            case 5:
+                PlayBGM("Stage_1");
+                break;
+            case 6:
+                PlayBGM("Stage_2");
+                break;
+            case 7:
+                PlayBGM("Stage_3");
+                break;
+            case 8:
+                PlayBGM("Ending");
+                break;
+        }
     }
 
     private void Update()

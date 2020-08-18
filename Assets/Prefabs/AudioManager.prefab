@@ -1448,7 +1448,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1596,7 +1596,7 @@ MonoBehaviour:
   - name: FootTrap
     clip: {fileID: 8300000, guid: fdd39d8b9a070a04ab34af736c24424b, type: 3}
   - name: MineTrap
-    clip: {fileID: 8300000, guid: f09dd1cd7782a344fb0d571b2cfda15f, type: 3}
+    clip: {fileID: 8300000, guid: 586e8bf2acd373c46a19c25707731fe2, type: 3}
   - name: FenceTrap
     clip: {fileID: 8300000, guid: 7178bf82468fc484b9db23ac1d3eaa55, type: 3}
   - name: Shot
