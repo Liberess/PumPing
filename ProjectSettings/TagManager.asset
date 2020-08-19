@@ -20,6 +20,7 @@ TagManager:
   - EmpItem
   - Ending
   - Sliding_Ob
+  - Land
   layers:
   - Default
   - TransparentFX

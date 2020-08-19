@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MiniMap : MonoBehaviour
 {
@@ -14,15 +15,49 @@ public class MiniMap : MonoBehaviour
     //cameraSpeed
     protected float cameraSpeed = 0.5f;
 
+    private int posJ = 0;
+    private int posL = 0;
+    private int posI = 0;
+    private int posK = 0;
+
     void Start()
     {
         caMove = miniMapCamera.transform;
+
+        int index = SceneManager.GetActiveScene().buildIndex;
+
+        switch (index)
+        {
+            case 4:
+                posJ = -10;
+                posL = 45;
+                posI = 30;
+                posK = -2;
+                break;
+            case 5:
+                posJ = -40;
+                posL = 20;
+                posI = 80;
+                posK = -6;
+                break;
+            case 6:
+                posJ = -10;
+                posL = 22;
+                posI = 60;
+                posK = -2;
+                break;
+            case 7:
+                posJ = -35;
+                posL = 25;
+                posI = 80;
+                posK = -6;
+                break;
+        }
     }
 
     void Update()
     {
         //만약 'T'를 누르면 미니맵 On/Off
-        //if (Input.GetKeyDown(KeyCode.T) && gameManager.menuSet.activeSelf == false && gameManager.playerMv.UIReStart.activeSelf == false)
         if (Input.GetKeyDown(KeyCode.T) && gameManager.menuSet.activeSelf == false && gameManager.reStartUI.activeSelf == false)
         {
             if (miniMap.activeSelf)
@@ -39,24 +74,37 @@ public class MiniMap : MonoBehaviour
 
         if (miniMap.activeSelf)
         {
-            if (Input.GetKey(KeyCode.J))
+
+            if(caMove.position.x >= posJ)
             {
-                caMove.Translate(-(cameraSpeed), 0, 0);
+                if (Input.GetKey(KeyCode.J))
+                {
+                    caMove.Translate(-(cameraSpeed), 0, 0);
+                }
             }
 
-            if (Input.GetKey(KeyCode.L))
+            if(caMove.position.x <= posL)
             {
-                caMove.Translate(cameraSpeed, 0, 0);
+                if (Input.GetKey(KeyCode.L))
+                {
+                    caMove.Translate(cameraSpeed, 0, 0);
+                }
             }
 
-            if (Input.GetKey(KeyCode.I))
+            if(caMove.position.y <= posI)
             {
-                caMove.Translate(0, cameraSpeed, 0);
+                if (Input.GetKey(KeyCode.I))
+                {
+                    caMove.Translate(0, cameraSpeed, 0);
+                }
             }
 
-            if (Input.GetKey(KeyCode.K))
+            if(caMove.position.y >= posK)
             {
-                caMove.Translate(0, (-cameraSpeed), 0);
+                if (Input.GetKey(KeyCode.K))
+                {
+                    caMove.Translate(0, (-cameraSpeed), 0);
+                }
             }
         }
 

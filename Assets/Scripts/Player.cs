@@ -16,8 +16,8 @@ public class Player : MonoBehaviour
     private float maxSpeed = 10;
     private float jumpPower = 10;
     private float maxPumping = 200;
-    private float maxJump = 2;
-    private int jumpCount = 0;
+    private static float maxJump = 2;
+    public int jumpCount = 0;
     private int pumpingCount = 0;
 
     //사망 효과음 On/Off
@@ -140,21 +140,13 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (this.transform.position.y < this.previousPosition.y)
-        {
-            anim.SetBool("isJump", false);
-        }
-
-        this.previousPosition = this.transform.position;
-
-        //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
         if (IsAlive && isMove)
         {
             Move();
         }
 
         //Landing Platform
-        if (rigid.velocity.y < 0)
+        if (rigid.velocity.y <= 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
 
@@ -222,7 +214,7 @@ public class Player : MonoBehaviour
         //Stop Speed
         if (Input.GetButtonUp("Horizontal"))
         {
-            VelocityZero();
+            //VelocityZero();
         }
 
         //Sprite Flip
@@ -319,6 +311,12 @@ public class Player : MonoBehaviour
             AudioManager.instance.PlaySFX("Damaged");
             onDamaged(collision.transform.position, 5);
             gameManager.energyBar.value -= 5;
+        }
+
+        if (collision.gameObject.tag == "Land")
+        {
+            anim.SetBool("isJump", false);
+            jumpCount = 0;
         }
 
         if (collision.gameObject.tag == "Platform")
