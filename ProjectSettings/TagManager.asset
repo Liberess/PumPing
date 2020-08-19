@@ -21,6 +21,10 @@ TagManager:
   - Ending
   - Sliding_Ob
   - Land
+  - Info_Jump
+  - Info_Sliding
+  - Info_Minimap
+  - Info_Menu
   layers:
   - Default
   - TransparentFX
