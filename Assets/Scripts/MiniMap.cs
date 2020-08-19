@@ -74,8 +74,15 @@ public class MiniMap : MonoBehaviour
 
         if (miniMap.activeSelf)
         {
+            if (caMove.position.y <= posI)
+            {
+                if (Input.GetKey(KeyCode.I))
+                {
+                    caMove.Translate(0, cameraSpeed, 0);
+                }
+            }
 
-            if(caMove.position.x >= posJ)
+            if (caMove.position.x >= posJ)
             {
                 if (Input.GetKey(KeyCode.J))
                 {
@@ -88,14 +95,6 @@ public class MiniMap : MonoBehaviour
                 if (Input.GetKey(KeyCode.L))
                 {
                     caMove.Translate(cameraSpeed, 0, 0);
-                }
-            }
-
-            if(caMove.position.y <= posI)
-            {
-                if (Input.GetKey(KeyCode.I))
-                {
-                    caMove.Translate(0, cameraSpeed, 0);
                 }
             }
 

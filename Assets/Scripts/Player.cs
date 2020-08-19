@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public float moveSpeed = 10;
     private float maxSpeed = 10;
     private float jumpPower = 10;
-    private float maxPumping = 200;
+    private static float maxPumping = 200;
     private static float maxJump = 2;
     public int jumpCount = 0;
     private int pumpingCount = 0;
@@ -42,9 +42,6 @@ public class Player : MonoBehaviour
     SpriteRenderer spriteRenderer;
     CapsuleCollider2D capsuleCollider;
     BoxCollider2D boxCollider;  //Sliding
-
-    //실시간 플레이어 위치
-    Vector3 previousPosition = new Vector3();
 
     Vector3 target = new Vector3(13.4f, 77f, 0f);
 

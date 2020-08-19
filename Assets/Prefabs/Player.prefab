@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5983153266083540336}
   - component: {fileID: 5983153266083540367}
   - component: {fileID: 5983153266083540365}
+  - component: {fileID: 8045392072852222636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -83,6 +84,26 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5983153266083540364}
   m_Enabled: 1
+--- !u!114 &8045392072852222636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5983153266083540364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 16
+  m_RefResolutionX: 320
+  m_RefResolutionY: 170
+  m_UpscaleRT: 0
+  m_PixelSnapping: 1
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &5983153266675876655
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +249,7 @@ MonoBehaviour:
   gameManager: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
     type: 3}
   moveSpeed: 10
+  jumpCount: 0
   isSliding: 0
   pos: {fileID: 8760173490658972590}
 --- !u!70 &5983153266675876628
