@@ -57,16 +57,16 @@ public class AudioManager : MonoBehaviour
             case 4:
                 PlayBGM("Tutorial");
                 break;
-            case 5:
+            case 6:
                 PlayBGM("Stage_1");
                 break;
-            case 6:
+            case 8:
                 PlayBGM("Stage_2");
                 break;
-            case 7:
+            case 10:
                 PlayBGM("Stage_3");
                 break;
-            case 8:
+            case 11:
                 PlayBGM("Ending");
                 break;
         }

@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
 
     public void NextStage()
     {
-        if (gameScene < 9 && gameScene > 3)
+        if (gameScene < 11 && gameScene > 3)
         {
             SceneLoad.LoadSceneHandle(gameScene, 3);
             gameScene += 1;

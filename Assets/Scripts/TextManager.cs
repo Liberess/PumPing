@@ -17,7 +17,7 @@ public class TextManager : MonoBehaviour
     {
         int index = SceneManager.GetActiveScene().buildIndex;
 
-        if (index >= 7)
+        if (index >= 10)
         {
             StartCoroutine(EndingFadeFlow());
         }
@@ -66,9 +66,20 @@ public class TextManager : MonoBehaviour
 
         int index = SceneManager.GetActiveScene().buildIndex;
 
-        if (index == 3)
+        switch (index)
         {
-            SceneManager.LoadScene("Tutorial");
+            case 3:
+                SceneManager.LoadScene("Tutorial");
+                break;
+            case 5:
+                SceneManager.LoadScene("Stage_1");
+                break;
+            case 7:
+                SceneManager.LoadScene("Stage_2");
+                break;
+            case 9:
+                SceneManager.LoadScene("Stage_3");
+                break;
         }
 
         yield return null;
