@@ -12,12 +12,12 @@ public class Player : MonoBehaviour
     public GameManager gameManager;
 
     //플레이어 이동
-    public float moveSpeed = 10;
+    private float moveSpeed = 10;
     private float maxSpeed = 10;
     private float jumpPower = 10;
     private static float maxPumping = 200;
     private static float maxJump = 2;
-    public int jumpCount = 0;
+    private int jumpCount = 0;
     private int pumpingCount = 0;
 
     //사망 효과음 On/Off
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     //플레이어 움직임 On/Off
     private bool isMove;
-    public bool isSliding;
+    private bool isSliding;
     private bool isEnding;
 
     private bool isGround;

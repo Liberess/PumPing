@@ -56,7 +56,6 @@ public class Trap : MonoBehaviour
     {
         trap.gameObject.layer = 14;
 
-        //EnergyDown
         gameManager.energyBar.value -= 1;
 
         Invoke("offDamage", 0.1f);
