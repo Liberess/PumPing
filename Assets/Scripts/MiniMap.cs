@@ -34,19 +34,19 @@ public class MiniMap : MonoBehaviour
                 posI = 30;
                 posK = -2;
                 break;
-            case 5:
+            case 6:
                 posJ = -40;
                 posL = 20;
                 posI = 80;
                 posK = -6;
                 break;
-            case 6:
+            case 8:
                 posJ = -10;
                 posL = 22;
                 posI = 60;
                 posK = -2;
                 break;
-            case 7:
+            case 10:
                 posJ = -35;
                 posL = 25;
                 posI = 80;
