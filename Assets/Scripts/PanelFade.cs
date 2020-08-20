@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Fade : MonoBehaviour
+public class PanelFade : MonoBehaviour
 {
     public Image Panel;
     float time = 0f;
@@ -13,7 +13,7 @@ public class Fade : MonoBehaviour
     {
         StartCoroutine(FadeFlow());
     }
-    
+
     IEnumerator FadeFlow()
     {
         Panel.gameObject.SetActive(true);
@@ -21,7 +21,7 @@ public class Fade : MonoBehaviour
 
         time = 0f;
 
-        while(alpha.a < 1f)
+        while (alpha.a < 1f)
         {
             time += Time.deltaTime / F_time;
             alpha.a = Mathf.Lerp(0, 1, time);

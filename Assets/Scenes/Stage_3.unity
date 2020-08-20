@@ -7233,6 +7233,11 @@ PrefabInstance:
       propertyPath: energyBar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 399755608168792447, guid: 4b0d0085600fe604fabe3193cda4e60d,
+        type: 3}
+      propertyPath: currentType
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 399755608217117890, guid: 4b0d0085600fe604fabe3193cda4e60d,
         type: 3}
       propertyPath: m_IsActive

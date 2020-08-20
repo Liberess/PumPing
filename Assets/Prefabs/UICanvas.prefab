@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63119a3212bf4948a906b70750c4bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentType: 9
+  currentType: 7
   buttonScale: {fileID: 399755608168792442}
   gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63119a3212bf4948a906b70750c4bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentType: 7
+  currentType: 5
   buttonScale: {fileID: 399755608186736827}
   gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63119a3212bf4948a906b70750c4bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentType: 8
+  currentType: 6
   buttonScale: {fileID: 399755608198999111}
   gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
@@ -2906,7 +2906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63119a3212bf4948a906b70750c4bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentType: 6
+  currentType: 4
   buttonScale: {fileID: 269139453032594367}
   gameManager: {fileID: 0}
   mainGroup: {fileID: 399755608217117888}
@@ -3028,7 +3028,7 @@ GameObject:
   - component: {fileID: 1022133478971227483}
   - component: {fileID: 7010769857874479258}
   - component: {fileID: 8071488964454956236}
-  - component: {fileID: 7904643141931839802}
+  - component: {fileID: 3007442223466657800}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3092,7 +3092,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7904643141931839802
+--- !u!114 &3007442223466657800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3101,7 +3101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6992399364270966542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fd9498e7dd8124419f5e981e397d13d, type: 3}
+  m_Script: {fileID: 11500000, guid: 375825cf707dfc14ba37ba939d2b5e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 8071488964454956236}

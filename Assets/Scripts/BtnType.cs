@@ -11,8 +11,6 @@ public enum BTNType
     Load,
     Save,
     Option,
-    SFX,
-    Bgm,
     Back,
     Main,
     Exit,
@@ -32,9 +30,6 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     Vector3 defaultScale;
 
-    bool isSfx;
-    bool isBgm;
-
     private void Start()
     {
         defaultScale = buttonScale.localScale;
@@ -43,6 +38,7 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnBtnClick()
     {
         AudioManager.instance.PlaySFX("Click");
+
         switch (currentType)
         {
             case BTNType.New:
@@ -59,26 +55,6 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 CanvasGroupOn(optionGroup);
                 CanvasGroupOff(mainGroup);
                 break;
-            case BTNType.SFX:
-                if (isSfx)
-                {
-                    isSfx = false;
-                }
-                else
-                {
-                    isSfx = true;
-                }
-                break;
-            case BTNType.Bgm:
-                if (isBgm)
-                {
-                    isBgm = false;
-                }
-                else
-                {
-                    isBgm = true;
-                }
-                break;
             case BTNType.Back:
                 CanvasGroupOn(mainGroup);
                 CanvasGroupOff(optionGroup);
@@ -90,7 +66,6 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 Application.Quit();
                 break;
             case BTNType.Restart:
-                //SceneManager를 이용하여 씬을 불러오는데, 현재 씬의 인덱스 번호를 불러와서 현재의 씬을 불러온다.
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 break;
         }
