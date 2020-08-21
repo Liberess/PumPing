@@ -425,7 +425,13 @@ public class Player : MonoBehaviour
     {
         gameManager.energyBar.value = 0f;
 
-        //UIReStart.SetActive(true);
+        pumpingCount = 0;
+        gameManager.pumpingGauge = 0;
+
+        gameManager.pumping.SetActive(false);
+
+        gameManager.pumping.GetComponent<Image>().sprite = gameManager.pumpingManager.emptySprite;
+
         gameManager.reStartUI.SetActive(true);
 
         gameManager.menuSet.SetActive(false);

@@ -248,9 +248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
     type: 3}
-  moveSpeed: 10
-  jumpCount: 0
-  isSliding: 0
   pos: {fileID: 8760173490658972590}
 --- !u!70 &5983153266675876628
 CapsuleCollider2D:

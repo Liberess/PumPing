@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63119a3212bf4948a906b70750c4bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentType: 9
+  currentType: 7
   buttonScale: {fileID: 2984000877517075787}
   gameManager: {fileID: 0}
   mainGroup: {fileID: 0}

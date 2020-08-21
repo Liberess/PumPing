@@ -2046,6 +2046,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1782740012}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1113062640}
     - target: {fileID: 6086702260055638271, guid: 9e2ba6cc884d54349810d80b7b403b74,
         type: 3}
       propertyPath: m_Name
@@ -2710,6 +2720,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1782740012}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1113062640}
     - target: {fileID: 6086702260055638271, guid: 9e2ba6cc884d54349810d80b7b403b74,
         type: 3}
       propertyPath: m_Name
@@ -8007,6 +8027,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1782740012}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1113062640}
     - target: {fileID: 6086702260055638271, guid: 9e2ba6cc884d54349810d80b7b403b74,
         type: 3}
       propertyPath: m_Name
@@ -11072,6 +11102,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1782740012}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1113062640}
     - target: {fileID: 6086702260055638271, guid: 9e2ba6cc884d54349810d80b7b403b74,
         type: 3}
       propertyPath: m_Name
@@ -35427,6 +35467,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1782740012}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1113062640}
     - target: {fileID: 6086702260055638271, guid: 9e2ba6cc884d54349810d80b7b403b74,
         type: 3}
       propertyPath: m_Name
@@ -39247,6 +39297,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1782740012}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1113062640}
     - target: {fileID: 6086702260055638271, guid: 9e2ba6cc884d54349810d80b7b403b74,
         type: 3}
       propertyPath: m_Name
@@ -42048,6 +42108,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1782740012}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1113062640}
     - target: {fileID: 6086702260055638271, guid: 9e2ba6cc884d54349810d80b7b403b74,
         type: 3}
       propertyPath: m_Name
@@ -42937,6 +43007,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1782740012}
+    - target: {fileID: 6086702260055638267, guid: 9e2ba6cc884d54349810d80b7b403b74,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1113062640}
     - target: {fileID: 6086702260055638271, guid: 9e2ba6cc884d54349810d80b7b403b74,
         type: 3}
       propertyPath: m_Name

@@ -70,8 +70,8 @@ public class MoveTurret : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            player.onDamaged(collision.transform.position, 6);
             gameManager.energyBar.value -= 7;
+            player.onDamaged(collision.transform.position, 6);
         }
     }
 }
