@@ -45,7 +45,6 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 SceneLoad.LoadSceneHandle(3, 1);
                 break;
             case BTNType.Load:
-                //SceneLoad.LoadSceneHandle(gameManager.gameScene, 2);
                 gameManager.GameLoad();
                 break;
             case BTNType.Save:

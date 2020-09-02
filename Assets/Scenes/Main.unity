@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63119a3212bf4948a906b70750c4bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentType: 8
+  currentType: 6
   buttonScale: {fileID: 330714709}
   gameManager: {fileID: 0}
   mainGroup: {fileID: 0}
@@ -1795,7 +1795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63119a3212bf4948a906b70750c4bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentType: 6
+  currentType: 4
   buttonScale: {fileID: 1215237998}
   gameManager: {fileID: 0}
   mainGroup: {fileID: 900735210}
