@@ -189,7 +189,11 @@ MonoBehaviour:
   gameManager: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
     type: 3}
   miniMap: {fileID: 6979320324563707308}
-  miniMapCamera: {fileID: 0}
+  miniMapMainCam: {fileID: 0}
+  miniMapSubCam: {fileID: 0}
+  mapImg: {fileID: 7456156752244976440}
+  mainTexture: {fileID: 8400000, guid: b9fd81409e4f67c4fb12491a521c88c5, type: 2}
+  subTexture: {fileID: 8400000, guid: e5124075e57742a4898c80c63cba2626, type: 2}
 --- !u!1 &6979320324563707308
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +282,7 @@ GameObject:
   - component: {fileID: 6212392764816511835}
   - component: {fileID: 7420637656933285176}
   m_Layer: 5
-  m_Name: MiniMapImage
+  m_Name: MiniMapImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

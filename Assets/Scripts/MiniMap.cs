@@ -2,27 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MiniMap : MonoBehaviour
 {
+    public static MiniMap instance;
+
     public GameManager gameManager;
     public GameObject miniMap;
-    public GameObject miniMapCamera;
+    public GameObject miniMapMainCam;
+    public GameObject miniMapSubCam;
+
+    public GameObject mapImg;
+
+    public Texture mainTexture;
+    public Texture subTexture;
 
     //cameraMove
     Transform caMove;
 
     //cameraSpeed
-    protected float cameraSpeed = 0.5f;
+    protected float cameraSpeed = 0.2f;
 
     private int posJ = 0;
     private int posL = 0;
     private int posI = 0;
     private int posK = 0;
 
+    private float x;
+    private float y;
+
+    Vector3 originMainCamPos;
+    Vector3 originSubCamPos;
+
     void Start()
     {
-        caMove = miniMapCamera.transform;
+        instance = this;
+
+        originMainCamPos = miniMapMainCam.transform.position;
+        originSubCamPos = miniMapSubCam.transform.position;
+
+        if (gameManager.isMainPlayer)
+        {
+            caMove = miniMapMainCam.transform;
+        }
+        else
+        {
+            caMove = miniMapSubCam.transform;
+        }
 
         int index = SceneManager.GetActiveScene().buildIndex;
 
@@ -57,6 +84,11 @@ public class MiniMap : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            miniMap.SetActive(false);
+        }
+
         //만약 'T'를 누르면 미니맵 On/Off
         if (Input.GetKeyDown(KeyCode.T) && gameManager.menuSet.activeSelf == false && gameManager.reStartUI.activeSelf == false)
         {
@@ -74,45 +106,77 @@ public class MiniMap : MonoBehaviour
 
         if (miniMap.activeSelf)
         {
-            if (caMove.position.y <= posI)
+            if (gameManager.isMainPlayer)
             {
-                if (Input.GetKey(KeyCode.I))
-                {
-                    caMove.Translate(0, cameraSpeed, 0);
-                }
+                mapImg.GetComponent<RawImage>().texture = mainTexture;
+                caMove = miniMapMainCam.transform;
+            }
+            else
+            {
+                mapImg.GetComponent<RawImage>().texture = subTexture;
+                caMove = miniMapSubCam.transform;
             }
 
-            if (caMove.position.x >= posJ)
-            {
-                if (Input.GetKey(KeyCode.J))
-                {
-                    caMove.Translate(-(cameraSpeed), 0, 0);
-                }
-            }
-
-            if(caMove.position.x <= posL)
-            {
-                if (Input.GetKey(KeyCode.L))
-                {
-                    caMove.Translate(cameraSpeed, 0, 0);
-                }
-            }
-
-            if(caMove.position.y >= posK)
-            {
-                if (Input.GetKey(KeyCode.K))
-                {
-                    caMove.Translate(0, (-cameraSpeed), 0);
-                }
-            }
+            MapCamMove();
         }
 
-        float x = gameManager.player.transform.position.x;
-        float y = gameManager.player.transform.position.y;
+        if (gameManager.isMainPlayer)
+        {
+            x = gameManager.mainPlayer.transform.position.x;
+            y = gameManager.mainPlayer.transform.position.y;
+        }
+        else
+        {
+            x = gameManager.subPlayer.transform.position.x;
+            y = gameManager.subPlayer.transform.position.y;
+        }
 
         if (Input.GetKeyUp(KeyCode.T))
         {
-            caMove.position = new Vector3(x, y + 5, -10);
+            ResetCamPos();
         }
+    }
+
+    private void MapCamMove()
+    {
+        if (caMove.position.y <= posI)
+        {
+            if (Input.GetKey(KeyCode.I))
+            {
+                caMove.Translate(0, cameraSpeed, 0);
+            }
+        }
+
+        if (caMove.position.x >= posJ)
+        {
+            if (Input.GetKey(KeyCode.J))
+            {
+                caMove.Translate(-(cameraSpeed), 0, 0);
+            }
+        }
+
+        if (caMove.position.x <= posL)
+        {
+            if (Input.GetKey(KeyCode.L))
+            {
+                caMove.Translate(cameraSpeed, 0, 0);
+            }
+        }
+
+        if (caMove.position.y >= posK)
+        {
+            if (Input.GetKey(KeyCode.K))
+            {
+                caMove.Translate(0, (-cameraSpeed), 0);
+            }
+        }
+    }
+
+    public void ResetCamPos()
+    {
+        miniMapMainCam.transform.position = originMainCamPos;
+        miniMapSubCam.transform.position = originSubCamPos;
+
+        caMove.position = new Vector3(x, y + 5, -10);
     }
 }

@@ -25,6 +25,8 @@ TagManager:
   - Info_Sliding
   - Info_Minimap
   - Info_Menu
+  - MainPlayer
+  - SubPlayer
   layers:
   - Default
   - TransparentFX

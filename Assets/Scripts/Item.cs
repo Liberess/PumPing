@@ -10,7 +10,7 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
-        if(time < 3f)
+        if (time < 3f)
         {
             GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, time / 3);
         }
@@ -20,14 +20,22 @@ public class Item : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (gameObject.tag == "HpItem")
         {
-            if(gameObject.tag == "HpItem")
+            if (collision.gameObject.tag == "MainPlayer")
             {
-                GameManager.instance.energyBar.value += 4;
-                AudioManager.instance.PlaySFX("HpItem");
+                GameManager.instance.mainEnergyBar.value += 4;
+            }
+            else if (collision.gameObject.tag == "SubPlayer")
+            {
+                GameManager.instance.subEnergyBar.value += 4;
             }
 
+            AudioManager.instance.PlaySFX("HpItem");
+        }
+
+        if (collision.gameObject.tag == "MainPlayer" || collision.gameObject.tag == "SubPlayer")
+        {
             if (gameObject.tag == "SpeedItem")
             {
                 AudioManager.instance.PlaySFX("SpeedItem");

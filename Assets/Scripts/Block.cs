@@ -15,7 +15,7 @@ public class Block : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "MainPlayer" || collision.gameObject.tag == "SubPlayer")
         {
             Invoke("OffCollision", 1.3f);
             Invoke("BrokenAnim", 1f);

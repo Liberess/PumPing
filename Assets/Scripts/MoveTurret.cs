@@ -68,9 +68,15 @@ public class MoveTurret : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "MainPlayer")
         {
-            gameManager.energyBar.value -= 7;
+            gameManager.mainEnergyBar.value -= 7;
+            player.onDamaged(collision.transform.position, 6);
+        }
+
+        if (collision.gameObject.tag == "SubPlayer")
+        {
+            gameManager.subEnergyBar.value -= 7;
             player.onDamaged(collision.transform.position, 6);
         }
     }

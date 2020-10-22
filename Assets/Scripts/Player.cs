@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
 
         moveSpeed = 10;
 
-        gameManager.energyBar.value = 14f;
+        gameManager.mainEnergyBar.value = 30f;
 
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
@@ -110,19 +110,19 @@ public class Player : MonoBehaviour
 
         if (audioPlay == true)
         {
-            if (gameManager.energyBar.value <= 0.5f)
+            if (gameManager.mainEnergyBar.value <= 0.5f)
             {
                 onDie();
                 audioPlay = false;
             }
             else
             {
-                gameManager.energyBar.value = Mathf.MoveTowards(gameManager.energyBar.value, 14f, Time.deltaTime * 1f);
+                gameManager.mainEnergyBar.value = Mathf.MoveTowards(gameManager.mainEnergyBar.value, 14f, Time.deltaTime * 1f);
             }
         }
 
         //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
-        if (IsAlive && isMove)
+        if (IsAlive && isMove && gameManager.isMainPlayer == true)
         {
             Jump();
             Pumping();
@@ -137,7 +137,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (IsAlive && isMove)
+        if (IsAlive && isMove && gameManager.isMainPlayer == true)
         {
             Move();
         }
@@ -177,7 +177,7 @@ public class Player : MonoBehaviour
     {
         get
         {
-            return gameManager.energyBar.value >= 0.5f;
+            return gameManager.mainEnergyBar.value >= 0.5f;
         }
     }
 
@@ -223,7 +223,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump") && jumpCount < maxJump && gameManager.energyBar.value >= 1f)
+        if (Input.GetButtonDown("Jump") && jumpCount < maxJump && gameManager.mainEnergyBar.value >= 1f)
         {
             animator.SetLayerWeight(1, 0);
 
@@ -232,7 +232,7 @@ public class Player : MonoBehaviour
             anim.SetBool("isJump", true);
 
             jumpCount++;
-            gameManager.energyBar.value--;
+            gameManager.mainEnergyBar.value--;
 
             AudioManager.instance.PlaySFX("Jump");
         }
@@ -241,7 +241,7 @@ public class Player : MonoBehaviour
     private void Pumping()
     {
         //Pumping Charging Down
-        if (Input.GetKey(KeyCode.UpArrow) && gameManager.pumpingGauge < 1f && gameManager.energyBar.value >= 1f)
+        if (Input.GetKey(KeyCode.UpArrow) && gameManager.pumpingGauge < 1f && gameManager.mainEnergyBar.value >= 1f)
         {
             gameManager.pumping.SetActive(true);
 
@@ -253,14 +253,14 @@ public class Player : MonoBehaviour
         }
 
         //Pumping Charging Up
-        if (Input.GetKeyUp(KeyCode.UpArrow) && gameManager.energyBar.value >= 1f)
+        if (Input.GetKeyUp(KeyCode.UpArrow) && gameManager.mainEnergyBar.value >= 1f)
         {
             if (pumpingCount >= 10 && gameManager.pumpingGauge >= 0.2)
             {
                 rigid.velocity = new Vector2(rigid.velocity.x, jumpPower * pumpingCount / 120);
                 anim.SetBool("isJump", true);
                 AudioManager.instance.PlaySFX("Pumping");
-                gameManager.energyBar.value -= 3;
+                gameManager.mainEnergyBar.value -= 3;
             }
             pumpingCount = 0;
             gameManager.pumpingGauge = 0;
@@ -279,7 +279,7 @@ public class Player : MonoBehaviour
             boxCollider.enabled = true;
             capsuleCollider.enabled = false;
 
-            gameManager.energyBar.value -= 1;
+            gameManager.mainEnergyBar.value -= 1;
             animator.SetLayerWeight(1, 1);
             anim.SetTrigger("doSliding");
             anim.SetBool("isJump", false);
@@ -307,7 +307,7 @@ public class Player : MonoBehaviour
         {
             AudioManager.instance.PlaySFX("Damaged");
             onDamaged(collision.transform.position, 5);
-            gameManager.energyBar.value -= 5;
+            gameManager.mainEnergyBar.value -= 5;
         }
 
         if (collision.gameObject.tag == "Land")
@@ -423,7 +423,7 @@ public class Player : MonoBehaviour
 
     public void onDie()
     {
-        gameManager.energyBar.value = 0f;
+        gameManager.mainEnergyBar.value = 0f;
 
         pumpingCount = 0;
         gameManager.pumpingGauge = 0;

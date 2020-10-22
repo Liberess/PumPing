@@ -19,13 +19,21 @@ public class Trap : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && trap.gameObject.tag != "FenceTrap")
+        //if(collision.gameObject.tag == "Player" && trap.gameObject.tag != "FenceTrap")
+        if(trap.gameObject.tag != "FenceTrap")
         {
             if (trap.gameObject.tag == "MineTrap")
             {
                 trap.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
-                gameManager.energyBar.value -= 5;
+                if (collision.gameObject.tag == "MainPlayer")
+                {
+                    gameManager.mainEnergyBar.value -= 5;
+                }
+                else if(collision.gameObject.tag == "SubPlayer")
+                {
+                    gameManager.subEnergyBar.value -= 5;
+                }
 
                 Invoke("DelateTrap", 0.5f);
             }
@@ -34,7 +42,14 @@ public class Trap : MonoBehaviour
             {
                 trap.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
-                gameManager.energyBar.value -= 2;
+                if (collision.gameObject.tag == "MainPlayer")
+                {
+                    gameManager.mainEnergyBar.value -= 2;
+                }
+                else if (collision.gameObject.tag == "SubPlayer")
+                {
+                    gameManager.subEnergyBar.value -= 2;
+                }
 
                 Invoke("DelateTrap", 1.1f);
             }
@@ -46,9 +61,18 @@ public class Trap : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && trap.gameObject.layer == 13)
+        if(trap.gameObject.layer == 13)
         {
-            doDamage();
+            if (collision.gameObject.tag == "MainPlayer")
+            {
+                doDamage();
+                gameManager.mainEnergyBar.value -= 1;
+            }
+            else if (collision.gameObject.tag == "SubPlayer")
+            {
+                doDamage();
+                gameManager.subEnergyBar.value -= 1;
+            }
         }
     }
 
@@ -56,7 +80,7 @@ public class Trap : MonoBehaviour
     {
         trap.gameObject.layer = 14;
 
-        gameManager.energyBar.value -= 1;
+        //gameManager.energyBar.value -= 1;
 
         Invoke("offDamage", 0.1f);
     }

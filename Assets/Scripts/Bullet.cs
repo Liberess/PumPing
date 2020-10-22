@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Platform")
+        if (collision.gameObject.tag == "MainPlayer" || collision.gameObject.tag == "SubPlayer" || collision.gameObject.tag == "Platform")
         {
             Destroy(gameObject);
         }

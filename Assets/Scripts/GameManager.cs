@@ -13,20 +13,32 @@ public class GameManager : MonoBehaviour
     public PumpingGauge pumpingManager;
     public Canvas canvas;
 
-    public Slider energyBar;
+    public Slider mainEnergyBar;
+    public Slider subEnergyBar;
 
-    public GameObject player;
+    public GameObject mainPlayer;
+    public GameObject subPlayer;
     public GameObject pumping;
     public GameObject menuSet;
     public GameObject miniMap;
     public GameObject reStartUI;
 
+    public GameObject mainCamera;
+    public GameObject subCamera;
+
     public int gameScene;
     public float pumpingGauge;
+
+    public bool isMainPlayer;
+
+    private float time;
+    private float delaytime = 2f;
 
     void Awake()
     {
         instance = this;
+
+        isMainPlayer = true;
 
         if (!PlayerPrefs.HasKey("BGMCheck"))
         {
@@ -55,12 +67,44 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        if(time >= delaytime)
+        {
+            if (gameScene > 4 && Input.GetKeyDown(KeyCode.R))
+            {
+                ChangePlayer();
+            }
+        }
+
+        time += Time.deltaTime;
+
         gameScene = SceneManager.GetActiveScene().buildIndex;
+    }
+
+    private void ChangePlayer()
+    {
+        MiniMap.instance.ResetCamPos();
+
+        if (isMainPlayer)
+        {
+            mainCamera.SetActive(false);
+            subCamera.SetActive(true);
+
+            isMainPlayer = false;
+        }
+        else
+        {
+            mainCamera.SetActive(true);
+            subCamera.SetActive(false);
+
+            isMainPlayer = true;
+        }
+
+        time = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "MainPlayer" || collision.gameObject.tag == "SubPlayer")
         {
             playerMv.onDie();
         }
@@ -69,8 +113,10 @@ public class GameManager : MonoBehaviour
     public void GameSave()
     {
         //PlayerPrefs : 간단한 데이터 저장 기능을 지원하는 클래스
-        PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
-        PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
+        PlayerPrefs.SetFloat("PlayerX", mainPlayer.transform.position.x);
+        PlayerPrefs.SetFloat("PlayerY", mainPlayer.transform.position.y);
+        PlayerPrefs.SetFloat("SubPlayerX", subPlayer.transform.position.x);
+        PlayerPrefs.SetFloat("SubPlayerY", subPlayer.transform.position.y);
         PlayerPrefs.SetInt("GameScene", SceneManager.GetActiveScene().buildIndex);
         PlayerPrefs.SetFloat("BGMCheck", audioManager.bgmSlider.value);
         PlayerPrefs.SetFloat("SFXCheck", audioManager.sfxSlider.value);
@@ -89,7 +135,7 @@ public class GameManager : MonoBehaviour
         float x = PlayerPrefs.GetFloat("PlayerX");
         float y = PlayerPrefs.GetFloat("PlayerY");
 
-        player.transform.position = new Vector3(x, y, 0);
+        mainPlayer.transform.position = new Vector3(x, y, 0);
         
         gameScene = PlayerPrefs.GetInt("GameScene");
         audioManager.bgmSlider.value = PlayerPrefs.GetFloat("BGMCheck");
@@ -105,7 +151,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayerReposition()
     {
-        player.transform.position = new Vector3(0, 0, -1);
+        mainPlayer.transform.position = new Vector3(0, 0, -1);
         playerMv.VelocityZero();
     }
 
