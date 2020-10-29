@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System;
 using UnityEngine.SceneManagement;
-using UnityEngine.Windows.WebCam;
 
 public class SubPlayer : MonoBehaviour
 {
@@ -16,8 +15,10 @@ public class SubPlayer : MonoBehaviour
     private float moveSpeed = 10;
     private float maxSpeed = 10;
     private float jumpPower = 10;
+    private static float maxPumping = 200;
     private static float maxJump = 2;
     private int jumpCount = 0;
+    private int pumpingCount = 0;
 
     //사망 효과음 On/Off
     private bool audioPlay;
@@ -53,7 +54,7 @@ public class SubPlayer : MonoBehaviour
 
         moveSpeed = 10;
 
-        gameManager.subEnergyBar.value = 15f;
+        gameManager.subEnergyBar.value = 30f;
 
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
@@ -99,7 +100,7 @@ public class SubPlayer : MonoBehaviour
             anim.SetBool("isJump", false);
         }
 
-        if (audioPlay)
+        if (audioPlay == true)
         {
             if (gameManager.subEnergyBar.value <= 0.5f)
             {
@@ -113,9 +114,10 @@ public class SubPlayer : MonoBehaviour
         }
 
         //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
-        if (IsAlive && isMove && gameManager.isMainPlayer == false)
+        if (gameManager.isAlive && isMove && gameManager.isMainPlayer == false)
         {
             Jump();
+            Pumping();
 
             if (isSliding && (slidingTimer >= slidingDelay))
             {
@@ -127,9 +129,14 @@ public class SubPlayer : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (IsAlive && isMove && gameManager.isMainPlayer == false)
+        if (gameManager.isAlive && isMove && gameManager.isMainPlayer == false)
         {
             Move();
+        }
+
+        if (!gameManager.isAlive)
+        {
+            anim.SetTrigger("doDied");
         }
 
         //Landing Platform
@@ -160,14 +167,6 @@ public class SubPlayer : MonoBehaviour
                     jumpCount = 0;
                 }
             }
-        }
-    }
-
-    public bool IsAlive  //플레이어가 살아있는지, 죽었는지
-    {
-        get
-        {
-            return gameManager.subEnergyBar.value >= 0.5f;
         }
     }
 
@@ -209,13 +208,16 @@ public class SubPlayer : MonoBehaviour
         //Stop Speed
         if (Input.GetButtonUp("Horizontal"))
         {
-            //VelocityZero();
+            VelocityZero();
         }
 
-        //Sprite Flip
-        if (Input.GetButton("Horizontal"))
+        if (gameManager.isAlive)
         {
-            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+            //Sprite Flip
+            if (Input.GetButton("Horizontal"))
+            {
+                spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+            }
         }
     }
 
@@ -236,20 +238,55 @@ public class SubPlayer : MonoBehaviour
         }
     }
 
+    private void Pumping()
+    {
+        //Pumping Charging Down
+        if (Input.GetKey(KeyCode.UpArrow) && gameManager.pumpingGauge < 1f && gameManager.subEnergyBar.value >= 1f)
+        {
+            gameManager.pumping.SetActive(true);
+
+            if (pumpingCount <= maxPumping)
+            {
+                pumpingCount += 3;
+                gameManager.pumpingGauge = Mathf.MoveTowards(gameManager.pumpingGauge, 1f, Time.deltaTime);
+            }
+        }
+
+        //Pumping Charging Up
+        if (Input.GetKeyUp(KeyCode.UpArrow) && gameManager.subEnergyBar.value >= 1f)
+        {
+            if (pumpingCount >= 10 && gameManager.pumpingGauge >= 0.2)
+            {
+                rigid.velocity = new Vector2(rigid.velocity.x, jumpPower * pumpingCount / 120);
+                anim.SetBool("isJump", true);
+                AudioManager.instance.PlaySFX("Pumping");
+                gameManager.subEnergyBar.value -= 3;
+            }
+            pumpingCount = 0;
+            gameManager.pumpingGauge = 0;
+
+            gameManager.pumping.SetActive(false);
+            gameManager.pumping.GetComponent<Image>().sprite = gameManager.pumpingManager.emptySprite;
+        }
+    }
+
     private void Sliding()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
+            animator.SetLayerWeight(1, 1);
+
             isSliding = false;
 
             boxCollider.enabled = true;
             capsuleCollider.enabled = false;
 
             gameManager.subEnergyBar.value -= 1;
-            animator.SetLayerWeight(1, 1);
+
             anim.SetTrigger("doSliding");
             anim.SetBool("isJump", false);
         }
+
         Invoke("SlidingOff", 1f);
     }
 
@@ -389,7 +426,18 @@ public class SubPlayer : MonoBehaviour
 
     public void onDie()
     {
+        animator.SetLayerWeight(3, 1);
+        gameManager.isAlive = false;
+
+        gameManager.mainEnergyBar.value = 0f;
         gameManager.subEnergyBar.value = 0f;
+
+        pumpingCount = 0;
+        gameManager.pumpingGauge = 0;
+
+        gameManager.pumping.SetActive(false);
+
+        gameManager.pumping.GetComponent<Image>().sprite = gameManager.pumpingManager.emptySprite;
 
         gameManager.reStartUI.SetActive(true);
 

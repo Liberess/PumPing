@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public float pumpingGauge;
 
     public bool isMainPlayer;
+    public bool isAlive;
 
     private float time;
     private float delaytime = 2f;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
+        isAlive = true;
         isMainPlayer = true;
 
         if (!PlayerPrefs.HasKey("BGMCheck"))

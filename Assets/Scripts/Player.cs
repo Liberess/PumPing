@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.Windows.WebCam;
 
 public class Player : MonoBehaviour
 {
@@ -15,10 +16,8 @@ public class Player : MonoBehaviour
     private float moveSpeed = 10;
     private float maxSpeed = 10;
     private float jumpPower = 10;
-    private static float maxPumping = 200;
     private static float maxJump = 2;
     private int jumpCount = 0;
-    private int pumpingCount = 0;
 
     //사망 효과음 On/Off
     private bool audioPlay;
@@ -54,7 +53,7 @@ public class Player : MonoBehaviour
 
         moveSpeed = 10;
 
-        gameManager.mainEnergyBar.value = 30f;
+        gameManager.mainEnergyBar.value = 15f;
 
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
@@ -64,24 +63,16 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void Ending()
-    {
-        GameManager.instance.canvas.enabled = false;
-        SceneManager.LoadScene("Ending", LoadSceneMode.Additive);
-        AudioManager.instance.PlayBGM("Ending");
-        AudioManager.instance.bgmPlayer.volume = 1;
-    }
-
     void Update()
     {
         isGround = Physics2D.OverlapCircle(pos.position, 0.5f, LayerMask.GetMask("Platform"));
         isEnemy = Physics2D.OverlapCircle(pos.position, 0.5f, LayerMask.GetMask("Enemy"));
 
         if (isEnding)
-        { 
+        {
             transform.position = Vector3.MoveTowards(transform.position, target, 0.1f);
 
-            if(transform.position.x >= target.x - 1f)
+            if (transform.position.x >= target.x - 1f)
             {
                 rigid.gravityScale = 0f;
                 rigid.AddForce(Vector2.up * 50f, ForceMode2D.Impulse);
@@ -108,7 +99,7 @@ public class Player : MonoBehaviour
             anim.SetBool("isJump", false);
         }
 
-        if (audioPlay == true)
+        if (audioPlay)
         {
             if (gameManager.mainEnergyBar.value <= 0.5f)
             {
@@ -122,10 +113,9 @@ public class Player : MonoBehaviour
         }
 
         //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
-        if (IsAlive && isMove && gameManager.isMainPlayer == true)
+        if (gameManager.isAlive && isMove && gameManager.isMainPlayer)
         {
             Jump();
-            Pumping();
 
             if (isSliding && (slidingTimer >= slidingDelay))
             {
@@ -137,9 +127,14 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (IsAlive && isMove && gameManager.isMainPlayer == true)
+        if (gameManager.isAlive && isMove && gameManager.isMainPlayer)
         {
             Move();
+        }
+
+        if (!gameManager.isAlive)
+        {
+            anim.SetTrigger("doDead");
         }
 
         //Landing Platform
@@ -153,7 +148,7 @@ public class Player : MonoBehaviour
 
             if (rayHit.collider != null)
             {
-                if (rayHit.distance < 0.5f)
+                if (rayHit.distance < 1f)
                 {
                     //anim.SetBool("isJumpUp", false);
                     anim.SetBool("isJump", false);
@@ -173,12 +168,12 @@ public class Player : MonoBehaviour
         }
     }
 
-    public bool IsAlive  //플레이어가 살아있는지, 죽었는지
+    private void Ending()
     {
-        get
-        {
-            return gameManager.mainEnergyBar.value >= 0.5f;
-        }
+        GameManager.instance.canvas.enabled = false;
+        SceneManager.LoadScene("Ending", LoadSceneMode.Additive);
+        AudioManager.instance.PlayBGM("Ending");
+        AudioManager.instance.bgmPlayer.volume = 1;
     }
 
     private void Move()  //FixedUpdate
@@ -211,13 +206,16 @@ public class Player : MonoBehaviour
         //Stop Speed
         if (Input.GetButtonUp("Horizontal"))
         {
-            //VelocityZero();
+            VelocityZero();
         }
 
-        //Sprite Flip
-        if (Input.GetButton("Horizontal"))
+        if (gameManager.isAlive)
         {
-            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+            //Sprite Flip
+            if (Input.GetButton("Horizontal"))
+            {
+                spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+            }
         }
     }
 
@@ -238,52 +236,23 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Pumping()
-    {
-        //Pumping Charging Down
-        if (Input.GetKey(KeyCode.UpArrow) && gameManager.pumpingGauge < 1f && gameManager.mainEnergyBar.value >= 1f)
-        {
-            gameManager.pumping.SetActive(true);
-
-            if (pumpingCount <= maxPumping)
-            {
-                pumpingCount += 3;
-                gameManager.pumpingGauge = Mathf.MoveTowards(gameManager.pumpingGauge, 1f, Time.deltaTime);
-            }
-        }
-
-        //Pumping Charging Up
-        if (Input.GetKeyUp(KeyCode.UpArrow) && gameManager.mainEnergyBar.value >= 1f)
-        {
-            if (pumpingCount >= 10 && gameManager.pumpingGauge >= 0.2)
-            {
-                rigid.velocity = new Vector2(rigid.velocity.x, jumpPower * pumpingCount / 120);
-                anim.SetBool("isJump", true);
-                AudioManager.instance.PlaySFX("Pumping");
-                gameManager.mainEnergyBar.value -= 3;
-            }
-            pumpingCount = 0;
-            gameManager.pumpingGauge = 0;
-
-            gameManager.pumping.SetActive(false);
-            gameManager.pumping.GetComponent<Image>().sprite = gameManager.pumpingManager.emptySprite;
-        }
-    }
-
     private void Sliding()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
+            animator.SetLayerWeight(1, 1);
+
             isSliding = false;
 
             boxCollider.enabled = true;
             capsuleCollider.enabled = false;
 
             gameManager.mainEnergyBar.value -= 1;
-            animator.SetLayerWeight(1, 1);
+            
             anim.SetTrigger("doSliding");
             anim.SetBool("isJump", false);
         }
+
         Invoke("SlidingOff", 1f);
     }
 
@@ -298,7 +267,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "GameController")
+        if (collision.gameObject.tag == "GameController")
         {
             onDie();
         }
@@ -423,14 +392,11 @@ public class Player : MonoBehaviour
 
     public void onDie()
     {
+        animator.SetLayerWeight(3, 1);
+        gameManager.isAlive = false;
+
         gameManager.mainEnergyBar.value = 0f;
-
-        pumpingCount = 0;
-        gameManager.pumpingGauge = 0;
-
-        gameManager.pumping.SetActive(false);
-
-        gameManager.pumping.GetComponent<Image>().sprite = gameManager.pumpingManager.emptySprite;
+        gameManager.subEnergyBar.value = 0f;
 
         gameManager.reStartUI.SetActive(true);
 
@@ -440,9 +406,9 @@ public class Player : MonoBehaviour
 
         AudioManager.instance.PlaySFX("GameOver");
 
-        anim.Play("Died");
+        anim.Play("Dead");
 
-        anim.SetTrigger("doDied");
+        anim.SetTrigger("doDead");
 
         rigid.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
 
@@ -476,7 +442,7 @@ public class Player : MonoBehaviour
             Invoke("MoveSpeedReturn", 2f);
         }
 
-        if(collision.gameObject.tag == "Ending")
+        if (collision.gameObject.tag == "Ending")
         {
             isMove = false;
 
