@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     public bool isMainPlayer;
     public bool isAlive;
+    public bool isClear_Main;
+    public bool isClear_Sub;
 
     private float time;
     private float delaytime = 2f;
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         isAlive = true;
+        isClear_Main = false;
+        isClear_Sub = false;
         isMainPlayer = true;
 
         if (!PlayerPrefs.HasKey("BGMCheck"))
@@ -88,6 +92,7 @@ public class GameManager : MonoBehaviour
 
         if (isMainPlayer)
         {
+            Player.instance.VelocityZero();
             mainCamera.SetActive(false);
             subCamera.SetActive(true);
 
@@ -95,6 +100,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            SubPlayer.instance.VelocityZero();
             mainCamera.SetActive(true);
             subCamera.SetActive(false);
 
@@ -108,7 +114,8 @@ public class GameManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "MainPlayer" || collision.gameObject.tag == "SubPlayer")
         {
-            playerMv.onDie();
+            Player.instance.onDie();
+            SubPlayer.instance.onDie();
         }
     }
 

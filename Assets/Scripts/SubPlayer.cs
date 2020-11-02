@@ -8,11 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class SubPlayer : MonoBehaviour
 {
+    public static SubPlayer instance;
+
     //타 스크립트
     public GameManager gameManager;
 
     //플레이어 이동
-    private float moveSpeed = 10;
+    private float moveSpeed;
     private float maxSpeed = 10;
     private float jumpPower = 10;
     private static float maxPumping = 200;
@@ -31,10 +33,10 @@ public class SubPlayer : MonoBehaviour
     private bool isGround;
     private bool isEnemy;
 
-    private float slidingTimer = 0;
-    private float slidingDelay = 5;
+    private float slidingTimer = 0; //슬라이딩 On/Off 시간
+    private float slidingDelay = 3; //슬라이딩 쿨타임 3초
 
-    private Animator animator;
+    private Animator animator; //Animator Layer 제어
     public Transform pos;
 
     Animator anim;
@@ -45,8 +47,13 @@ public class SubPlayer : MonoBehaviour
 
     Vector3 target = new Vector3(13.4f, 77f, 0f);
 
+    Vector2 previousPos;
+    Vector2 nextPos;
+
     private void Awake()
     {
+        instance = this;
+
         audioPlay = true;
         isMove = true;
         isSliding = true;
@@ -113,7 +120,7 @@ public class SubPlayer : MonoBehaviour
             }
         }
 
-        //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
+        //살아있으며 isMove가 true여야 움직일 수 있다. 또한 서브 플레이어야 움직인다.
         if (gameManager.isAlive && isMove && gameManager.isMainPlayer == false)
         {
             Jump();
@@ -124,6 +131,13 @@ public class SubPlayer : MonoBehaviour
                 Sliding();
             }
             slidingTimer += Time.deltaTime;
+        }
+
+        nextPos = transform.position;
+
+        if(previousPos.y >= nextPos.y)
+        {
+            anim.SetBool("isJumpDown", true);
         }
     }
 
@@ -136,7 +150,7 @@ public class SubPlayer : MonoBehaviour
 
         if (!gameManager.isAlive)
         {
-            anim.SetTrigger("doDied");
+            anim.SetTrigger("doDead");
         }
 
         //Landing Platform
@@ -225,11 +239,14 @@ public class SubPlayer : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && jumpCount < maxJump && gameManager.subEnergyBar.value >= 1f)
         {
+            previousPos = transform.position;
+
             animator.SetLayerWeight(1, 0);
 
             rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
 
             anim.SetBool("isJump", true);
+            anim.SetBool("isJumpEnd", false);
 
             jumpCount++;
             gameManager.subEnergyBar.value--;
@@ -274,6 +291,8 @@ public class SubPlayer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
+            Debug.Log("서브 슬라이딩");
+
             animator.SetLayerWeight(1, 1);
 
             isSliding = false;
@@ -321,7 +340,7 @@ public class SubPlayer : MonoBehaviour
 
         if (collision.gameObject.tag == "Platform")
         {
-            anim.SetBool("isJump", false);
+            anim.SetBool("isJumpEnd", true);
         }
 
         if (collision.gameObject.tag == "MineTrap")
@@ -426,7 +445,6 @@ public class SubPlayer : MonoBehaviour
 
     public void onDie()
     {
-        animator.SetLayerWeight(3, 1);
         gameManager.isAlive = false;
 
         gameManager.mainEnergyBar.value = 0f;
@@ -447,9 +465,9 @@ public class SubPlayer : MonoBehaviour
 
         AudioManager.instance.PlaySFX("GameOver");
 
-        anim.Play("Died");
+        anim.Play("Dead");
 
-        anim.SetTrigger("doDied");
+        anim.SetTrigger("doDead");
 
         rigid.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
 
@@ -461,6 +479,8 @@ public class SubPlayer : MonoBehaviour
 
     public void VelocityZero()
     {
+        anim.SetBool("isRun", false);
+        anim.SetBool("isJump", false);
         rigid.velocity = Vector2.zero;
     }
 
@@ -468,19 +488,24 @@ public class SubPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "door")
         {
-            isMove = false;
+            gameManager.isClear_Sub = true;
 
-            moveSpeed = 0;
+            if(gameManager.isClear_Main && gameManager.isClear_Sub)
+            {
+                isMove = false;
 
-            VelocityZero();
+                moveSpeed = 0;
 
-            this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
+                VelocityZero();
 
-            anim.SetTrigger("doDoor");
+                this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
 
-            Invoke("MoveOn", 1f);
-            Invoke("NextStage", 0.6f);
-            Invoke("MoveSpeedReturn", 2f);
+                //anim.SetTrigger("doDoor");
+
+                Invoke("MoveOn", 1f);
+                //Invoke("NextStage", 0.6f);
+                Invoke("MoveSpeedReturn", 2f);
+            }
         }
 
         if (collision.gameObject.tag == "Ending")
@@ -492,6 +517,14 @@ public class SubPlayer : MonoBehaviour
             VelocityZero();
 
             isEnding = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "door")
+        {
+            gameManager.isClear_Sub = false;
         }
     }
 

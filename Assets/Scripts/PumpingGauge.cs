@@ -45,6 +45,7 @@ public class PumpingGauge : MonoBehaviour
             if (timer > waitingTime)
             {
                 FullSprite();
+
                 timer = 0;
                 count = 0;
             }
