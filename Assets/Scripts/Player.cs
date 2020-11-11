@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
 
-    //타 스크립트
     public GameManager gameManager;
 
     //플레이어 이동
@@ -25,6 +24,7 @@ public class Player : MonoBehaviour
 
     //플레이어 움직임 On/Off
     private bool isMove;
+    public bool canJump;
     public bool isSliding;
     private bool isEnding;
 
@@ -44,12 +44,16 @@ public class Player : MonoBehaviour
 
     Vector3 target = new Vector3(13.4f, 77f, 0f);
 
+    Vector2 previousPos;
+    Vector2 nextPos;
+
     private void Awake()
     {
         instance = this;
 
         audioPlay = true;
         isMove = true;
+        canJump = true;
         isSliding = true;
         isEnding = false;
 
@@ -110,7 +114,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                gameManager.mainEnergyBar.value = Mathf.MoveTowards(gameManager.mainEnergyBar.value, 14f, Time.deltaTime * 1f);
+                gameManager.mainEnergyBar.value = Mathf.MoveTowards(gameManager.mainEnergyBar.value, 15f, Time.deltaTime * 1f);
             }
         }
 
@@ -125,6 +129,8 @@ public class Player : MonoBehaviour
             }
             slidingTimer += Time.deltaTime;
         }
+
+        nextPos = transform.position;
     }
 
     void FixedUpdate()
@@ -181,7 +187,7 @@ public class Player : MonoBehaviour
     {
         //Move Speed
         float h = Input.GetAxisRaw("Horizontal");
-        //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+        rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
         rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
 
         //MaxSpeed
@@ -218,32 +224,28 @@ public class Player : MonoBehaviour
                 spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
             }
         }
-
-        if(h == 0) //이동하지 않으면 정지(경사 없애기)
-        {
-            rigid.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
-        }
-        else
-        {
-            rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
-        }
     }
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump") && jumpCount < maxJump && gameManager.mainEnergyBar.value >= 1f)
+        if (canJump)
         {
-            anim.SetLayerWeight(1, 0);
+            if (Input.GetButtonDown("Jump") && jumpCount < maxJump && gameManager.mainEnergyBar.value >= 1f)
+            {
+                previousPos = transform.position;
 
-            rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
+                anim.SetLayerWeight(1, 0);
 
-            anim.SetBool("isJump", true);
-            anim.SetBool("isJumpEnd", false);
+                rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
 
-            jumpCount++;
-            gameManager.mainEnergyBar.value--;
+                anim.SetBool("isJump", true);
+                anim.SetBool("isJumpEnd", false);
 
-            AudioManager.instance.PlaySFX("Jump");
+                jumpCount++;
+                gameManager.mainEnergyBar.value--;
+
+                AudioManager.instance.PlaySFX("Jump");
+            }
         }
     }
 
@@ -277,6 +279,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "GameController")
+        {
+            onDie();
+        }
+
         if (collision.gameObject.tag == "Bullet")
         {
             AudioManager.instance.PlaySFX("Damaged");
@@ -286,6 +293,7 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "Land")
         {
+            anim.SetBool("isJumpEnd", true);
             anim.SetBool("isJump", false);
             jumpCount = 0;
         }
@@ -400,8 +408,6 @@ public class Player : MonoBehaviour
         gameManager.mainEnergyBar.value = 0f;
         gameManager.subEnergyBar.value = 0f;
 
-        gameManager.reStartUI.SetActive(true);
-
         gameManager.menuSet.SetActive(false);
 
         gameManager.miniMap.SetActive(false);
@@ -429,7 +435,7 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "door")
+        /* if (collision.gameObject.tag == "door")
         {
             gameManager.isClear_Main = true;
 
@@ -449,7 +455,7 @@ public class Player : MonoBehaviour
                 //Invoke("NextStage", 0.6f);
                 Invoke("MoveSpeedReturn", 2f);
             }
-        }
+        } */
 
         if (collision.gameObject.tag == "Ending")
         {
@@ -467,7 +473,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "door")
         {
-            gameManager.isClear_Main = false;
+            //gameManager.isClear_Main = false;
         }
     }
 

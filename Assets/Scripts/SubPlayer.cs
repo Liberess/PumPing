@@ -10,8 +10,9 @@ public class SubPlayer : MonoBehaviour
 {
     public static SubPlayer instance;
 
-    //타 스크립트
     public GameManager gameManager;
+
+    PumpingManager pumpingManager;
 
     //플레이어 이동
     private float moveSpeed;
@@ -27,6 +28,7 @@ public class SubPlayer : MonoBehaviour
 
     //플레이어 움직임 On/Off
     private bool isMove;
+    public bool canJump;
     private bool isSliding;
     private bool isEnding;
 
@@ -54,8 +56,11 @@ public class SubPlayer : MonoBehaviour
     {
         instance = this;
 
+        pumpingManager = PumpingManager.instance;
+
         audioPlay = true;
         isMove = true;
+        canJump = true;
         isSliding = true;
         isEnding = false;
 
@@ -116,7 +121,7 @@ public class SubPlayer : MonoBehaviour
             }
             else
             {
-                gameManager.subEnergyBar.value = Mathf.MoveTowards(gameManager.subEnergyBar.value, 14f, Time.deltaTime * 1f);
+                gameManager.subEnergyBar.value = Mathf.MoveTowards(gameManager.subEnergyBar.value, 30f, Time.deltaTime * 1f);
             }
         }
 
@@ -237,21 +242,24 @@ public class SubPlayer : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump") && jumpCount < maxJump && gameManager.subEnergyBar.value >= 1f)
+        if (canJump)
         {
-            previousPos = transform.position;
+            if (Input.GetButtonDown("Jump") && jumpCount < maxJump && gameManager.subEnergyBar.value >= 1f)
+            {
+                previousPos = transform.position;
 
-            animator.SetLayerWeight(1, 0);
+                animator.SetLayerWeight(1, 0);
 
-            rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
+                rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
 
-            anim.SetBool("isJump", true);
-            anim.SetBool("isJumpEnd", false);
+                anim.SetBool("isJump", true);
+                anim.SetBool("isJumpEnd", false);
 
-            jumpCount++;
-            gameManager.subEnergyBar.value--;
+                jumpCount++;
+                gameManager.subEnergyBar.value--;
 
-            AudioManager.instance.PlaySFX("Jump");
+                AudioManager.instance.PlaySFX("Jump");
+            }
         }
     }
 
@@ -283,7 +291,7 @@ public class SubPlayer : MonoBehaviour
             gameManager.pumpingGauge = 0;
 
             gameManager.pumping.SetActive(false);
-            gameManager.pumping.GetComponent<Image>().sprite = gameManager.pumpingManager.emptySprite;
+            gameManager.pumping.GetComponent<Image>().sprite = pumpingManager.emptySprite;
         }
     }
 
@@ -291,8 +299,6 @@ public class SubPlayer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
-            Debug.Log("서브 슬라이딩");
-
             animator.SetLayerWeight(1, 1);
 
             isSliding = false;
@@ -334,6 +340,7 @@ public class SubPlayer : MonoBehaviour
 
         if (collision.gameObject.tag == "Land")
         {
+            anim.SetBool("isJumpEnd", true);
             anim.SetBool("isJump", false);
             jumpCount = 0;
         }
@@ -455,10 +462,6 @@ public class SubPlayer : MonoBehaviour
 
         gameManager.pumping.SetActive(false);
 
-        gameManager.pumping.GetComponent<Image>().sprite = gameManager.pumpingManager.emptySprite;
-
-        gameManager.reStartUI.SetActive(true);
-
         gameManager.menuSet.SetActive(false);
 
         gameManager.miniMap.SetActive(false);
@@ -486,7 +489,7 @@ public class SubPlayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "door")
+        /* if (collision.gameObject.tag == "door")
         {
             gameManager.isClear_Sub = true;
 
@@ -506,7 +509,7 @@ public class SubPlayer : MonoBehaviour
                 //Invoke("NextStage", 0.6f);
                 Invoke("MoveSpeedReturn", 2f);
             }
-        }
+        } */
 
         if (collision.gameObject.tag == "Ending")
         {
@@ -524,7 +527,7 @@ public class SubPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "door")
         {
-            gameManager.isClear_Sub = false;
+            //gameManager.isClear_Sub = false;
         }
     }
 

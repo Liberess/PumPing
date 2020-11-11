@@ -8,7 +8,8 @@ public class MiniMap : MonoBehaviour
 {
     public static MiniMap instance;
 
-    public GameManager gameManager;
+    GameManager gameManager;
+
     public GameObject miniMap;
     public GameObject miniMapMainCam;
     public GameObject miniMapSubCam;
@@ -38,6 +39,8 @@ public class MiniMap : MonoBehaviour
     void Start()
     {
         instance = this;
+
+        gameManager = GameManager.instance;
 
         originMainCamPos = miniMapMainCam.transform.position;
         originSubCamPos = miniMapSubCam.transform.position;
@@ -90,7 +93,7 @@ public class MiniMap : MonoBehaviour
         }
 
         //만약 'T'를 누르면 미니맵 On/Off
-        if (Input.GetKeyDown(KeyCode.T) && gameManager.menuSet.activeSelf == false && gameManager.reStartUI.activeSelf == false)
+        if (Input.GetKeyDown(KeyCode.T) && gameManager.menuSet.activeSelf == false)
         {
             if (miniMap.activeSelf)
             {
@@ -122,13 +125,13 @@ public class MiniMap : MonoBehaviour
 
         if (gameManager.isMainPlayer)
         {
-            x = gameManager.mainPlayer.transform.position.x;
-            y = gameManager.mainPlayer.transform.position.y;
+            x = Player.instance.transform.position.x;
+            y = Player.instance.transform.position.y;
         }
         else
         {
-            x = gameManager.subPlayer.transform.position.x;
-            y = gameManager.subPlayer.transform.position.y;
+            x = SubPlayer.instance.transform.position.x;
+            y = SubPlayer.instance.transform.position.y;
         }
 
         if (Input.GetKeyUp(KeyCode.T))

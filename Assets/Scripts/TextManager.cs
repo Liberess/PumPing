@@ -9,7 +9,7 @@ public class TextManager : MonoBehaviour
     [SerializeField] Text[] texts = null;
 
     float time = 0f;
-    float F_time = 1f;
+    float F_time = 0.5f;
 
     Color alpha;
 
@@ -50,7 +50,7 @@ public class TextManager : MonoBehaviour
 
         time = 0f;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         while (alpha.a > 0f)
         {
@@ -64,7 +64,7 @@ public class TextManager : MonoBehaviour
             yield return null;
         }
 
-        int index = SceneManager.GetActiveScene().buildIndex;
+        /* int index = SceneManager.GetActiveScene().buildIndex;
 
         switch (index)
         {
@@ -80,7 +80,7 @@ public class TextManager : MonoBehaviour
             case 9:
                 SceneManager.LoadScene("Stage_3");
                 break;
-        }
+        } */
 
         yield return null;
     }

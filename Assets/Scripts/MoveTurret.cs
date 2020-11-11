@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveTurret : MonoBehaviour
 {
+    public static MoveTurret instance;
+
     public GameManager gameManager;
     public Player player;
 
@@ -11,9 +13,14 @@ public class MoveTurret : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     public int nextMove;
+    public bool isMove;
 
     private void Awake()
     {
+        instance = this;
+
+        isMove = true;
+
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -22,17 +29,19 @@ public class MoveTurret : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Move
-        rigid.velocity = new Vector2(nextMove * 2f, rigid.velocity.y);
-
-        //Platform Check
-        Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.2f, rigid.position.y);
-        Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 1, LayerMask.GetMask("Platform"));
-
-        if(rayHit.collider == null)
+        if (isMove)  //Move
         {
-            Turn();
+            rigid.velocity = new Vector2(nextMove * 2f, rigid.velocity.y);
+
+            //Platform Check
+            Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.2f, rigid.position.y);
+            Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0));
+            RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 1, LayerMask.GetMask("Platform"));
+
+            if (rayHit.collider == null)
+            {
+                Turn();
+            }
         }
     }
 

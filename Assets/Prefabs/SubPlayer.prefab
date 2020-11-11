@@ -83,7 +83,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5983153266083540364}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!114 &8045392072852222636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d47eb3ec4f711478a8838da6289f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
+    type: 3}
+  canJump: 0
   pos: {fileID: 8760173490658972590}
 --- !u!70 &5983153266675876628
 CapsuleCollider2D:

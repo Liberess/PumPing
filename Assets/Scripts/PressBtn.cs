@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PressBtn : MonoBehaviour
 {
+    public static PressBtn instance;
+
     public Sprite Pressed_Off;
 
     [SerializeField]
@@ -20,6 +22,8 @@ public class PressBtn : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
+
         isPressed = false;
 
         sprite = GetComponent<SpriteRenderer>();

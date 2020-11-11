@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] Turret[] turret = null;
+    [SerializeField] ShotTurret[] turret = null;
 
     float time = 0;
 

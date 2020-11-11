@@ -8,20 +8,19 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public Player playerMv;
-    public AudioManager audioManager;
-    public PumpingGauge pumpingManager;
+    public Player MainPlayer;
+    public SubPlayer SubPlayer;
+
+    AudioManager audioManager;
+
     public Canvas canvas;
 
     public Slider mainEnergyBar;
     public Slider subEnergyBar;
 
-    public GameObject mainPlayer;
-    public GameObject subPlayer;
     public GameObject pumping;
     public GameObject menuSet;
     public GameObject miniMap;
-    public GameObject reStartUI;
 
     public GameObject mainCamera;
     public GameObject subCamera;
@@ -31,19 +30,20 @@ public class GameManager : MonoBehaviour
 
     public bool isMainPlayer;
     public bool isAlive;
-    public bool isClear_Main;
-    public bool isClear_Sub;
 
     private float time;
     private float delaytime = 2f;
+
+    public void Start()
+    {
+        audioManager = AudioManager.instance;
+    }
 
     void Awake()
     {
         instance = this;
 
         isAlive = true;
-        isClear_Main = false;
-        isClear_Sub = false;
         isMainPlayer = true;
 
         if (!PlayerPrefs.HasKey("BGMCheck"))
@@ -60,8 +60,8 @@ public class GameManager : MonoBehaviour
     {
         //Sub Menu
         //esc를 눌렀을 때 만약 stage가 0, 즉 메인화면이라면 메뉴화면을 켤 수 없다.
-        //또한 현재 미니맵이 꺼져있고 재시작 버튼이 비활성화 되어 있어야지 메뉴를 불러 올 수 있다.
-        if (gameScene > 2 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false && reStartUI.activeSelf == false)
+        //또한 현재 미니맵이 꺼져있어야지 메뉴를 불러 올 수 있다.
+        if (gameScene >= 0 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false)
         {
             if (menuSet.activeSelf)
             {
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
 
         if(time >= delaytime)
         {
-            if (gameScene > 4 && Input.GetKeyDown(KeyCode.R))
+            if (gameScene >= 0 && Input.GetKeyDown(KeyCode.R))
             {
                 ChangePlayer();
             }
@@ -121,15 +121,16 @@ public class GameManager : MonoBehaviour
 
     public void GameSave()
     {
+        /*
         //PlayerPrefs : 간단한 데이터 저장 기능을 지원하는 클래스
-        PlayerPrefs.SetFloat("PlayerX", mainPlayer.transform.position.x);
-        PlayerPrefs.SetFloat("PlayerY", mainPlayer.transform.position.y);
-        PlayerPrefs.SetFloat("SubPlayerX", subPlayer.transform.position.x);
-        PlayerPrefs.SetFloat("SubPlayerY", subPlayer.transform.position.y);
+        PlayerPrefs.SetFloat("PlayerX", MainPlayer.transform.position.x);
+        PlayerPrefs.SetFloat("PlayerY", MainPlayer.transform.position.y);
+        PlayerPrefs.SetFloat("SubPlayerX", SubPlayer.transform.position.x);
+        PlayerPrefs.SetFloat("SubPlayerY", SubPlayer.transform.position.y);
         PlayerPrefs.SetInt("GameScene", SceneManager.GetActiveScene().buildIndex);
         PlayerPrefs.SetFloat("BGMCheck", audioManager.bgmSlider.value);
-        PlayerPrefs.SetFloat("SFXCheck", audioManager.sfxSlider.value);
-        PlayerPrefs.Save();
+        PlayerPrefs.SetFloat("SFXCheck", audioManager.sfxSlider.value); */
+        PlayerPrefs.Save(); 
 
         menuSet.SetActive(false);
     }
@@ -144,7 +145,7 @@ public class GameManager : MonoBehaviour
         float x = PlayerPrefs.GetFloat("PlayerX");
         float y = PlayerPrefs.GetFloat("PlayerY");
 
-        mainPlayer.transform.position = new Vector3(x, y, 0);
+        //MainPlayer.transform.position = new Vector3(x, y, 0);
         
         gameScene = PlayerPrefs.GetInt("GameScene");
         audioManager.bgmSlider.value = PlayerPrefs.GetFloat("BGMCheck");
@@ -160,8 +161,14 @@ public class GameManager : MonoBehaviour
 
     public void PlayerReposition()
     {
-        mainPlayer.transform.position = new Vector3(0, 0, -1);
-        playerMv.VelocityZero();
+        /* MainPlayer.transform.position = new Vector3(0, 0, -1);
+        SubPlayer.transform.position = new Vector3(0, 0, -1);
+        MainPlayer.VelocityZero();
+        SubPlayer.VelocityZero(); */
+        Player.instance.transform.position = new Vector3(0, 0, -1);
+        SubPlayer.instance.transform.position = new Vector3(0, 0, -1);
+        Player.instance.VelocityZero();
+        SubPlayer.instance.VelocityZero();
     }
 
     public void NextStage()
