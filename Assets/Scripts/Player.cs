@@ -279,11 +279,6 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "GameController")
-        {
-            onDie();
-        }
-
         if (collision.gameObject.tag == "Bullet")
         {
             AudioManager.instance.PlaySFX("Damaged");
@@ -401,20 +396,35 @@ public class Player : MonoBehaviour
         spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 
+    public void onAlive()
+    {
+        audioPlay = true;
+        isMove = true;
+        canJump = true;
+        isSliding = true;
+        isEnding = false;
+
+        moveSpeed = 10;
+
+        gameManager.mainEnergyBar.value = 15f;
+
+        gameObject.tag = "MainPlayer";
+        gameObject.layer = 10;
+
+        anim.ResetTrigger("doDead");
+        anim.Play("Idle");
+
+        rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+
     public void onDie()
     {
-        gameManager.isAlive = false;
-
         gameManager.mainEnergyBar.value = 0f;
-        gameManager.subEnergyBar.value = 0f;
 
         gameManager.menuSet.SetActive(false);
-
         gameManager.miniMap.SetActive(false);
 
         AudioManager.instance.PlaySFX("GameOver");
-
-        anim.Play("Dead");
 
         anim.SetTrigger("doDead");
 

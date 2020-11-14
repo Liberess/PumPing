@@ -153,11 +153,6 @@ public class SubPlayer : MonoBehaviour
             Move();
         }
 
-        if (!gameManager.isAlive)
-        {
-            anim.SetTrigger("doDead");
-        }
-
         //Landing Platform
         if (rigid.velocity.y <= 0)
         {
@@ -326,11 +321,6 @@ public class SubPlayer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "GameController")
-        {
-            onDie();
-        }
-
         if (collision.gameObject.tag == "Bullet")
         {
             AudioManager.instance.PlaySFX("Damaged");
@@ -450,6 +440,27 @@ public class SubPlayer : MonoBehaviour
         spriteRenderer.color = new Color(1, 1, 1, 1);
     }
 
+    public void onAlive()
+    {
+        audioPlay = true;
+        isMove = true;
+        canJump = true;
+        isSliding = true;
+        isEnding = false;
+
+        moveSpeed = 10;
+
+        gameManager.subEnergyBar.value = 30f;
+
+        gameObject.tag = "SubPlayer";
+        gameObject.layer = 15;
+
+        anim.ResetTrigger("doDead");
+        anim.Play("Idle");
+
+        rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+
     public void onDie()
     {
         gameManager.isAlive = false;
@@ -468,7 +479,7 @@ public class SubPlayer : MonoBehaviour
 
         AudioManager.instance.PlaySFX("GameOver");
 
-        anim.Play("Dead");
+        //anim.Play("Dead");
 
         anim.SetTrigger("doDead");
 

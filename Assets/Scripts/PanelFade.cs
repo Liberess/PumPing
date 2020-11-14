@@ -5,15 +5,30 @@ using UnityEngine.UI;
 
 public class PanelFade : MonoBehaviour
 {
+    public static PanelFade instance;
     public GameObject UI;
     public Image Panel;
     float time = 0f;
     float F_time = 1f;
 
+    public bool doFade;
+
     public void Start()
     {
+        instance = this;
+        doFade = false;
         UI.SetActive(false);
         StartCoroutine(FadeFlow());
+    }
+
+    public void Update()
+    {
+        if (doFade)
+        {
+            doFade = false;
+            UI.SetActive(false);
+            StartCoroutine(FadeFlow());
+        }
     }
 
     IEnumerator FadeFlow()

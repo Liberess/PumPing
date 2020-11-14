@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
         //Sub Menu
         //esc를 눌렀을 때 만약 stage가 0, 즉 메인화면이라면 메뉴화면을 켤 수 없다.
         //또한 현재 미니맵이 꺼져있어야지 메뉴를 불러 올 수 있다.
-        if (gameScene >= 0 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false)
+        if (gameScene >= 4 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false)
         {
             if (menuSet.activeSelf)
             {
@@ -75,7 +75,8 @@ public class GameManager : MonoBehaviour
 
         if(time >= delaytime)
         {
-            if (gameScene >= 0 && Input.GetKeyDown(KeyCode.R))
+            //Tutorial부터만 사용 가능
+            if (gameScene >= 3 && Input.GetKeyDown(KeyCode.R))
             {
                 ChangePlayer();
             }
@@ -114,8 +115,11 @@ public class GameManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "MainPlayer" || collision.gameObject.tag == "SubPlayer")
         {
+            isAlive = false;
             Player.instance.onDie();
             SubPlayer.instance.onDie();
+            PanelFade.instance.doFade = true;
+            Invoke("PlayerReposition", 2f);
         }
     }
 
@@ -161,14 +165,13 @@ public class GameManager : MonoBehaviour
 
     public void PlayerReposition()
     {
-        /* MainPlayer.transform.position = new Vector3(0, 0, -1);
-        SubPlayer.transform.position = new Vector3(0, 0, -1);
-        MainPlayer.VelocityZero();
-        SubPlayer.VelocityZero(); */
-        Player.instance.transform.position = new Vector3(0, 0, -1);
-        SubPlayer.instance.transform.position = new Vector3(0, 0, -1);
-        Player.instance.VelocityZero();
-        SubPlayer.instance.VelocityZero();
+        isAlive = true;
+        Player.instance.transform.position = new Vector3(0, 0, 0);
+        SubPlayer.instance.transform.position = new Vector3(-2, 0, 0);
+        Player.instance.onAlive();
+        SubPlayer.instance.onAlive();
+        //Player.instance.VelocityZero();
+        //SubPlayer.instance.VelocityZero();
     }
 
     public void NextStage()
