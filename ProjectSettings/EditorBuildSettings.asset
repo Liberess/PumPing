@@ -18,13 +18,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: a7ea2e2c52344d34f9ba3e2a28380580
   - enabled: 0
-    path: Assets/Scenes/Stage_1.unity
+    path: Assets/Scenes/Old_Stage_1.unity
     guid: 1fbebfc402bc2b44cb6afa7ae8e9a34e
   - enabled: 0
-    path: Assets/Scenes/Stage_2.unity
+    path: Assets/Scenes/Old_Stage_2.unity
     guid: 01873c07e08d1c6459a17f69082b63f3
   - enabled: 0
-    path: Assets/Scenes/Stage_3.unity
+    path: Assets/Scenes/Old_Stage_3.unity
     guid: 899f651df3fef1249b942f7bca14e10b
   - enabled: 0
     path: Assets/Scenes/Ending.unity

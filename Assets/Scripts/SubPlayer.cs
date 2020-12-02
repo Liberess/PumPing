@@ -463,9 +463,6 @@ public class SubPlayer : MonoBehaviour
 
     public void onDie()
     {
-        gameManager.isAlive = false;
-
-        gameManager.mainEnergyBar.value = 0f;
         gameManager.subEnergyBar.value = 0f;
 
         pumpingCount = 0;
@@ -473,13 +470,7 @@ public class SubPlayer : MonoBehaviour
 
         gameManager.pumping.SetActive(false);
 
-        gameManager.menuSet.SetActive(false);
-
-        gameManager.miniMap.SetActive(false);
-
         AudioManager.instance.PlaySFX("GameOver");
-
-        //anim.Play("Dead");
 
         anim.SetTrigger("doDead");
 
