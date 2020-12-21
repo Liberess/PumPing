@@ -11,6 +11,9 @@ public class PressBtn : MonoBehaviour
     [SerializeField]
     private Sprite[] Pressed_On;
 
+    [SerializeField]
+    private ObstacleManager laserWall;
+
     public bool isPressed;
 
     private int i = 0;
@@ -71,6 +74,9 @@ public class PressBtn : MonoBehaviour
         {
             isPressed = true;
             pol.enabled = false;
+
+            laserWall.OnDestroy();
+
             StartCoroutine("PressOn");
         }
     }
@@ -82,6 +88,9 @@ public class PressBtn : MonoBehaviour
             i = 0;
             j = max_i;
             isPressed = false;
+
+            laserWall.gameObject.SetActive(true);
+            laserWall.OnCreate();
 
             StartCoroutine("PressOff");
         }

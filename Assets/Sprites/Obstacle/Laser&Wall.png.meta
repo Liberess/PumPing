@@ -1,0 +1,557 @@
+fileFormatVersion: 2
+guid: 71743912c05ff044f9b1d7fa5b60a5c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7730472688656012302
+    second: Laser&Wall_0
+  - first:
+      213: 6996600555239817492
+    second: Laser&Wall_1
+  - first:
+      213: 1046815513828231564
+    second: Laser&Wall_2
+  - first:
+      213: -7200471282436898970
+    second: Laser&Wall_3
+  - first:
+      213: 5304131940155895378
+    second: Laser&Wall_4
+  - first:
+      213: -3409959144923346137
+    second: Laser&Wall_5
+  - first:
+      213: -7731032188206962122
+    second: Laser&Wall_6
+  - first:
+      213: 7909778021294925144
+    second: Laser&Wall_7
+  - first:
+      213: 5917159451090930880
+    second: Laser&Wall_8
+  - first:
+      213: -360994638372717514
+    second: Laser&Wall_9
+  - first:
+      213: -6253156073967076259
+    second: Laser&Wall_10
+  - first:
+      213: 2259399720035459264
+    second: Laser&Wall_11
+  - first:
+      213: 885836098631251966
+    second: Laser&Wall_12
+  - first:
+      213: -1335822046242896116
+    second: Laser&Wall_13
+  - first:
+      213: 2602360457876055154
+    second: Laser&Wall_14
+  - first:
+      213: 2641305576332619995
+    second: Laser&Wall_15
+  - first:
+      213: -2795851227779408590
+    second: Laser&Wall_16
+  - first:
+      213: 4581621206921715835
+    second: Laser&Wall_17
+  - first:
+      213: 8446895651442416016
+    second: Laser&Wall_18
+  - first:
+      213: -2072080323646873360
+    second: Laser&Wall_19
+  - first:
+      213: 4410416600788033311
+    second: Laser&Wall_20
+  - first:
+      213: -4690296709659319828
+    second: Laser&Wall_21
+  - first:
+      213: -7151722761676905703
+    second: Laser&Wall_22
+  - first:
+      213: -5284101404861368415
+    second: Laser&Wall_23
+  - first:
+      213: -6455365796306433489
+    second: Laser&Wall_24
+  - first:
+      213: -7634924391732523117
+    second: Laser&Wall_25
+  - first:
+      213: 2310549225079014485
+    second: Laser&Wall_26
+  - first:
+      213: -917860803406430655
+    second: Laser&Wall_27
+  - first:
+      213: 4031539392710667502
+    second: Laser&Wall_28
+  - first:
+      213: -1259989461447487178
+    second: Laser&Wall_29
+  - first:
+      213: 2962026888116288624
+    second: Laser&Wall_30
+  - first:
+      213: 1931764509005371714
+    second: Laser&Wall_0
+  - first:
+      213: -6531309785067946136
+    second: Laser&Wall_1
+  - first:
+      213: -2982608752219932851
+    second: Laser&Wall_2
+  - first:
+      213: 806955937492273910
+    second: Laser&Wall_3
+  - first:
+      213: -1784372403991721558
+    second: Laser&Wall_4
+  - first:
+      213: 4912977462230488214
+    second: Laser&Wall_5
+  - first:
+      213: -8169721224263141770
+    second: Laser&Wall_6
+  - first:
+      213: 5728213968131028104
+    second: Laser&Wall_7
+  - first:
+      213: -3230143989400184015
+    second: Laser&Wall_8
+  - first:
+      213: 1738327114342429748
+    second: Laser&Wall_9
+  - first:
+      213: 6514064001403191966
+    second: Laser&Wall_10
+  - first:
+      213: 6152646200205640272
+    second: Laser&Wall_11
+  - first:
+      213: 4599082296335517528
+    second: Laser&Wall_12
+  - first:
+      213: 6083439445624762302
+    second: Laser&Wall_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Laser&Wall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249d8f406910fca10800000000000000
+      internalID: 1931764509005371714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ffdf6da502c55a0800000000000000
+      internalID: -6531309785067946136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47b5f37425ab96d0800000000000000
+      internalID: -2982608752219932851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa8e935622e23b00800000000000000
+      internalID: 806955937492273910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa94019a0c2ac37e0800000000000000
+      internalID: -1784372403991721558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6949fb9c8f66e2440800000000000000
+      internalID: 4912977462230488214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67673d1e4d15f9e80800000000000000
+      internalID: -8169721224263141770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88471ef2144be7f40800000000000000
+      internalID: 5728213968131028104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b507ad7293c23d0800000000000000
+      internalID: -3230143989400184015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4347fc9ec47cf1810800000000000000
+      internalID: 1738327114342429748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e920ccf32ba966a50800000000000000
+      internalID: 6514064001403191966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0520ae7fe17926550800000000000000
+      internalID: 6152646200205640272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857cdd54bf833df30800000000000000
+      internalID: 4599082296335517528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser&Wall_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf2011c1f7bc6450800000000000000
+      internalID: 6083439445624762302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

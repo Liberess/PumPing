@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(time >= delaytime)
+        if (time >= delaytime)
         {
             //Tutorial부터만 사용 가능
             if (gameScene >= 3 && Input.GetKeyDown(KeyCode.R))
@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("GameScene", SceneManager.GetActiveScene().buildIndex);
         PlayerPrefs.SetFloat("BGMCheck", audioManager.bgmSlider.value);
         PlayerPrefs.SetFloat("SFXCheck", audioManager.sfxSlider.value); */
-        PlayerPrefs.Save(); 
+        PlayerPrefs.Save();
 
         menuSet.SetActive(false);
     }
@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour
         float y = PlayerPrefs.GetFloat("PlayerY");
 
         //MainPlayer.transform.position = new Vector3(x, y, 0);
-        
+
         gameScene = PlayerPrefs.GetInt("GameScene");
         audioManager.bgmSlider.value = PlayerPrefs.GetFloat("BGMCheck");
         audioManager.sfxSlider.value = PlayerPrefs.GetFloat("SFXCheck");

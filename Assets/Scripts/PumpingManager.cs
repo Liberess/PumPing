@@ -38,11 +38,11 @@ public class PumpingManager : MonoBehaviour
         {
             gameObject.GetComponent<Image>().sprite = emptySprite;
         }
-        else if (gameManager.pumpingGauge >= 0.1f && gameManager.pumpingGauge < 0.9f)
+        else if (gameManager.pumpingGauge >= 0.1f && gameManager.pumpingGauge < 0.5f)
         {
             gameObject.GetComponent<Image>().sprite = halfSprite;
         }
-        else if (gameManager.pumpingGauge >= 0.9f)
+        else if (gameManager.pumpingGauge >= 0.7f)
         {
             timer += Time.deltaTime;
 

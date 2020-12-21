@@ -12,8 +12,6 @@ public class SubPlayer : MonoBehaviour
 
     public GameManager gameManager;
 
-    PumpingManager pumpingManager;
-
     //플레이어 이동
     private float moveSpeed;
     private float maxSpeed = 10;
@@ -55,8 +53,6 @@ public class SubPlayer : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
-        pumpingManager = PumpingManager.instance;
 
         audioPlay = true;
         isMove = true;
@@ -140,7 +136,7 @@ public class SubPlayer : MonoBehaviour
 
         nextPos = transform.position;
 
-        if(previousPos.y >= nextPos.y)
+        if (previousPos.y >= nextPos.y)
         {
             anim.SetBool("isJumpDown", true);
         }
@@ -267,7 +263,7 @@ public class SubPlayer : MonoBehaviour
 
             if (pumpingCount <= maxPumping)
             {
-                pumpingCount += 3;
+                pumpingCount += 1;
                 gameManager.pumpingGauge = Mathf.MoveTowards(gameManager.pumpingGauge, 1f, Time.deltaTime);
             }
         }
@@ -282,11 +278,13 @@ public class SubPlayer : MonoBehaviour
                 AudioManager.instance.PlaySFX("Pumping");
                 gameManager.subEnergyBar.value -= 3;
             }
+
             pumpingCount = 0;
             gameManager.pumpingGauge = 0;
 
+            //gameManager.pumping.GetComponent<Image>().sprite = pumpingManager.emptySprite;
+
             gameManager.pumping.SetActive(false);
-            gameManager.pumping.GetComponent<Image>().sprite = pumpingManager.emptySprite;
         }
     }
 
