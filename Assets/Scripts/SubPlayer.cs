@@ -12,6 +12,8 @@ public class SubPlayer : MonoBehaviour
 
     public GameManager gameManager;
 
+    public Slider pumpSlider;
+
     //플레이어 이동
     private float moveSpeed;
     private float maxSpeed = 10;
@@ -33,8 +35,13 @@ public class SubPlayer : MonoBehaviour
     private bool isGround;
     private bool isEnemy;
 
-    private float slidingTimer = 0; //슬라이딩 On/Off 시간
-    private float slidingDelay = 3; //슬라이딩 쿨타임 3초
+    private float slidingTimer = 5; //슬라이딩 On/Off 시간
+    private float slidingDelay = 0; //슬라이딩 쿨타임 5초
+
+    private float pumpingTimer = 1;          //펌핑 시간
+    private float pumpingDelay = 0f;      //펌핑 쿨타임 1초
+
+    private float vx = 0;
 
     private Animator animator; //Animator Layer 제어
     public Transform pos;
@@ -74,6 +81,9 @@ public class SubPlayer : MonoBehaviour
 
     void Update()
     {
+        float x = Mathf.SmoothDamp(rigid.velocity.x, 0, ref vx, 1);
+        float y = Mathf.SmoothDamp(rigid.velocity.y, 0, ref vx, 1);
+
         isGround = Physics2D.OverlapCircle(pos.position, 0.5f, LayerMask.GetMask("Platform"));
         isEnemy = Physics2D.OverlapCircle(pos.position, 0.5f, LayerMask.GetMask("Enemy"));
 
@@ -125,13 +135,34 @@ public class SubPlayer : MonoBehaviour
         if (gameManager.isAlive && isMove && gameManager.isMainPlayer == false)
         {
             Jump();
-            Pumping();
 
-            if (isSliding && (slidingTimer >= slidingDelay))
+            gameManager.pumpUI.transform.Find("BackImg").transform.Find("CoolTxt")
+                .gameObject.GetComponent<Text>().text = ((int)pumpingTimer).ToString();
+
+            gameManager.slidUI.transform.Find("BackImg").transform.Find("CoolTxt")
+                .gameObject.GetComponent<Text>().text = ((int)slidingTimer).ToString();
+
+            if (pumpingTimer <= pumpingDelay)
             {
+                gameManager.pumpUI.transform.Find("BackImg").gameObject.SetActive(false);
+
+                Pumping();
+            }
+            else
+            {
+                pumpingTimer -= Time.deltaTime;
+            }
+
+            if (isSliding && (slidingTimer <= slidingDelay))
+            {
+                gameManager.slidUI.transform.Find("BackImg").gameObject.SetActive(false);
+
                 Sliding();
             }
-            slidingTimer += Time.deltaTime;
+            else
+            {
+                slidingTimer -= Time.deltaTime;
+            }
         }
 
         nextPos = transform.position;
@@ -192,7 +223,7 @@ public class SubPlayer : MonoBehaviour
     {
         //Move Speed
         float h = Input.GetAxisRaw("Horizontal");
-        rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+        //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
         rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
 
         //MaxSpeed
@@ -283,8 +314,13 @@ public class SubPlayer : MonoBehaviour
             gameManager.pumpingGauge = 0;
 
             //gameManager.pumping.GetComponent<Image>().sprite = pumpingManager.emptySprite;
+            gameManager.pumping.GetComponent<Image>().sprite = PumpingManager.instance.emptySprite;
 
             gameManager.pumping.SetActive(false);
+
+            pumpingTimer = 3;
+
+            gameManager.pumpUI.transform.Find("BackImg").gameObject.SetActive(true);
         }
     }
 
@@ -303,6 +339,8 @@ public class SubPlayer : MonoBehaviour
 
             anim.SetTrigger("doSliding");
             anim.SetBool("isJump", false);
+
+            gameManager.slidUI.transform.Find("BackImg").gameObject.SetActive(true);
         }
 
         Invoke("SlidingOff", 1f);
@@ -310,7 +348,7 @@ public class SubPlayer : MonoBehaviour
 
     private void SlidingOff()
     {
-        slidingTimer = 0;
+        slidingTimer = 5;
 
         isSliding = true;
         boxCollider.enabled = false;
@@ -478,6 +516,9 @@ public class SubPlayer : MonoBehaviour
         gameObject.layer = 0;
 
         Invoke("VelocityZero", 3f);
+
+        GameManager.instance.canvas.enabled = false;
+        gameManager.reStartBtn.SetActive(true);
     }
 
     public void VelocityZero()

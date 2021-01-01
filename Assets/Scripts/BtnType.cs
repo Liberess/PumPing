@@ -65,7 +65,8 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 Application.Quit();
                 break;
             case BTNType.Restart:
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                GameManager.instance.PlayerReposition();
                 break;
         }
     }

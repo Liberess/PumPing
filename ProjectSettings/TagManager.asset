@@ -28,6 +28,8 @@ TagManager:
   - MainPlayer
   - SubPlayer
   - Key
+  - MainSave
+  - SubSave
   layers:
   - Default
   - TransparentFX

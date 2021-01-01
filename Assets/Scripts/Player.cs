@@ -31,8 +31,10 @@ public class Player : MonoBehaviour
     private bool isGround;
     private bool isEnemy;
 
+    private float vx = 0;
+
     private float slidingTimer = 0; //슬라이딩 On/Off 시간
-    private float slidingDelay = 3; //슬라이딩 쿨타임 3초
+    private float slidingDelay = 1; //슬라이딩 쿨타임 3초
 
     public Transform pos;
 
@@ -70,6 +72,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        float x = Mathf.SmoothDamp(rigid.velocity.x, 0, ref vx, 1);
+        float y = Mathf.SmoothDamp(rigid.velocity.y, 0, ref vx, 1);
+
         isGround = Physics2D.OverlapCircle(pos.position, 0.1f, LayerMask.GetMask("Platform"));
         isEnemy = Physics2D.OverlapCircle(pos.position, 0.5f, LayerMask.GetMask("Enemy"));
 
@@ -187,7 +192,7 @@ public class Player : MonoBehaviour
     {
         //Move Speed
         float h = Input.GetAxisRaw("Horizontal");
-        rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+        //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
         rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
 
         //MaxSpeed
@@ -434,6 +439,9 @@ public class Player : MonoBehaviour
         gameObject.layer = 0;
 
         Invoke("VelocityZero", 3f);
+
+        GameManager.instance.canvas.enabled = false;
+        gameManager.reStartBtn.SetActive(true);
     }
 
     public void VelocityZero()

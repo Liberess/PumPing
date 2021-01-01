@@ -589,6 +589,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 804701806}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &804701811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1620587918643530969, guid: 4b0d0085600fe604fabe3193cda4e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 804701806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &832264139 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
@@ -698,7 +704,7 @@ Animator:
   m_GameObject: {fileID: 852846856}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2a647292847cf414981181412f591119, type: 2}
+  m_Controller: {fileID: 9100000, guid: cdbc30a2a173c1540a10e3d1d1ef5fd4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -746,7 +752,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6253156073967076259, guid: 71743912c05ff044f9b1d7fa5b60a5c9,
+  m_Sprite: {fileID: -7191278751023610133, guid: 5d801ab6321c4eb41bc6554ebfc24335,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -953,6 +959,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 832264139}
+    - target: {fileID: 4910160393710562762, guid: 21b9e05a114ecfa438f48cdb9384f359,
+        type: 3}
+      propertyPath: pumpSlider
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5983153266675876625, guid: 21b9e05a114ecfa438f48cdb9384f359,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1336,6 +1347,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1759234229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2939901137145438366, guid: 4b0d0085600fe604fabe3193cda4e60d,
+    type: 3}
+  m_PrefabInstance: {fileID: 804701806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1807263794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1468,6 +1485,16 @@ PrefabInstance:
       propertyPath: subCamera
       value: 
       objectReference: {fileID: 1144390329}
+    - target: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
+        type: 3}
+      propertyPath: pumpUI
+      value: 
+      objectReference: {fileID: 804701811}
+    - target: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
+        type: 3}
+      propertyPath: slidUI
+      value: 
+      objectReference: {fileID: 1759234229}
     - target: {fileID: 1934588912887009991, guid: 38e14df307de23c438ee84d90e245a18,
         type: 3}
       propertyPath: m_Name

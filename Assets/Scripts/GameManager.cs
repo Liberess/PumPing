@@ -18,12 +18,23 @@ public class GameManager : MonoBehaviour
     public Slider mainEnergyBar;
     public Slider subEnergyBar;
 
+    public GameObject pumpUI;
+    public GameObject slidUI;
+
+    /* public Image slidingImg;
+    public Image pumpingImg;
+
+    public Text slidingTxt;
+    public Text pumpingTxt; */
+
     public GameObject pumping;
     public GameObject menuSet;
     public GameObject miniMap;
 
     public GameObject mainCamera;
     public GameObject subCamera;
+
+    public GameObject reStartBtn;
 
     public int gameScene;
     public float pumpingGauge;
@@ -33,6 +44,9 @@ public class GameManager : MonoBehaviour
 
     private float time;
     private float delaytime = 2f;
+
+    public Vector3 mainPos;    //MainPlayer Position
+    public Vector3 subPos;     //SubPlayer Position
 
     public void Start()
     {
@@ -61,7 +75,7 @@ public class GameManager : MonoBehaviour
         //Sub Menu
         //esc를 눌렀을 때 만약 stage가 0, 즉 메인화면이라면 메뉴화면을 켤 수 없다.
         //또한 현재 미니맵이 꺼져있어야지 메뉴를 불러 올 수 있다.
-        if (gameScene >= 4 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false)
+        if (gameScene >= 3 && Input.GetButtonDown("Cancel") && miniMap.activeSelf == false)
         {
             if (menuSet.activeSelf)
             {
@@ -166,12 +180,10 @@ public class GameManager : MonoBehaviour
     public void PlayerReposition()
     {
         isAlive = true;
-        Player.instance.transform.position = new Vector3(0, 0, 0);
-        SubPlayer.instance.transform.position = new Vector3(-2, 0, 0);
+        Player.instance.transform.position = mainPos;
+        SubPlayer.instance.transform.position = subPos;
         Player.instance.onAlive();
         SubPlayer.instance.onAlive();
-        //Player.instance.VelocityZero();
-        //SubPlayer.instance.VelocityZero();
     }
 
     public void NextStage()

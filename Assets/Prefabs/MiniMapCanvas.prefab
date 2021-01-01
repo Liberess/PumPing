@@ -186,8 +186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83fcd09447be2c04a89f2a14ce1f5744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 1934588912887009989, guid: 38e14df307de23c438ee84d90e245a18,
-    type: 3}
   miniMap: {fileID: 6979320324563707308}
   miniMapMainCam: {fileID: 0}
   miniMapSubCam: {fileID: 0}
@@ -211,7 +209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8426978468287633553
 RectTransform:
   m_ObjectHideFlags: 0

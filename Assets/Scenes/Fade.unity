@@ -456,5 +456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375825cf707dfc14ba37ba939d2b5e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UI: {fileID: 0}
+  UI: {fileID: 1514069242}
   Panel: {fileID: 1840779472}
+  doFade: 0

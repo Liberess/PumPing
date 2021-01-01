@@ -16,6 +16,7 @@ public class PanelFade : MonoBehaviour
     public void Start()
     {
         instance = this;
+
         doFade = false;
         UI.SetActive(false);
         StartCoroutine(FadeFlow());
