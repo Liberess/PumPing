@@ -29,16 +29,16 @@ public class SubPlayer : MonoBehaviour
     //플레이어 움직임 On/Off
     private bool isMove;
     public bool canJump;
-    private bool isSliding;
+    public bool isSliding;
     private bool isEnding;
 
     private bool isGround;
     private bool isEnemy;
 
-    private float slidingTimer = 5; //슬라이딩 On/Off 시간
+    public float slidingTimer = 5; //슬라이딩 On/Off 시간
     private float slidingDelay = 0; //슬라이딩 쿨타임 5초
 
-    private float pumpingTimer = 1;          //펌핑 시간
+    private float pumpingTimer = 1;       //펌핑 시간
     private float pumpingDelay = 0f;      //펌핑 쿨타임 1초
 
     private float vx = 0;
@@ -162,7 +162,7 @@ public class SubPlayer : MonoBehaviour
             else
             {
                 slidingTimer -= Time.deltaTime;
-            }
+            } 
         }
 
         nextPos = transform.position;
@@ -178,6 +178,11 @@ public class SubPlayer : MonoBehaviour
         if (gameManager.isAlive && isMove && gameManager.isMainPlayer == false)
         {
             Move();
+        }
+
+        if (!gameManager.isAlive)
+        {
+            anim.SetTrigger("doDead");
         }
 
         //Landing Platform
@@ -328,6 +333,8 @@ public class SubPlayer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
+            slidingTimer = 5;
+            
             animator.SetLayerWeight(1, 1);
 
             isSliding = false;
@@ -341,14 +348,14 @@ public class SubPlayer : MonoBehaviour
             anim.SetBool("isJump", false);
 
             gameManager.slidUI.transform.Find("BackImg").gameObject.SetActive(true);
-        }
 
-        Invoke("SlidingOff", 1f);
+            Invoke("SlidingOff", 1f);
+        }
     }
 
     private void SlidingOff()
     {
-        slidingTimer = 5;
+        //slidingTimer = 5;
 
         isSliding = true;
         boxCollider.enabled = false;
@@ -400,11 +407,11 @@ public class SubPlayer : MonoBehaviour
             Invoke("MoveOn", 1.8f);
         }
 
-        if (collision.gameObject.tag == "SpeedItem")
+       /*  if (collision.gameObject.tag == "SpeedItem")
         {
             moveSpeed += 10;
             Invoke("MoveOn", 3f);
-        }
+        } */
     }
 
     public void MoveOn()

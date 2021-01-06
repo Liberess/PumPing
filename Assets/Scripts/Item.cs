@@ -18,28 +18,43 @@ public class Item : MonoBehaviour
         time += Time.deltaTime;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameObject.tag == "HpItem")
+        if (gameObject.tag == "MainPotion")
         {
             if (collision.gameObject.tag == "MainPlayer")
             {
-                GameManager.instance.mainEnergyBar.value += 4;
-            }
-            else if (collision.gameObject.tag == "SubPlayer")
-            {
-                GameManager.instance.subEnergyBar.value += 4;
-            }
+                GameManager.instance.mainEnergyBar.value += 15;
 
-            AudioManager.instance.PlaySFX("HpItem");
+                AudioManager.instance.PlaySFX("HpItem");
+
+                gameObject.SetActive(false);
+                Invoke("ReSetting", 6f);
+            }
         }
 
+        if (gameObject.tag == "SubPotion")
+        {
+            if (collision.gameObject.tag == "SubPlayer")
+            {
+                GameManager.instance.subEnergyBar.value += 10;
+
+                AudioManager.instance.PlaySFX("HpItem");
+
+                gameObject.SetActive(false);
+                Invoke("ReSetting", 6f);
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         if (collision.gameObject.tag == "MainPlayer" || collision.gameObject.tag == "SubPlayer")
         {
-            if (gameObject.tag == "SpeedItem")
+            /* if (gameObject.tag == "SpeedItem")
             {
                 AudioManager.instance.PlaySFX("SpeedItem");
-            }
+            } */
 
             if(gameObject.tag == "EmpItem")
             {
@@ -51,10 +66,10 @@ public class Item : MonoBehaviour
                 }
                 
                 Invoke("OnCanShot", 3f);
-            }
 
-            gameObject.SetActive(false);
-            Invoke("ReSetting", 6f);
+                gameObject.SetActive(false);
+                Invoke("ReSetting", 6f);
+            }
         }
     }
 

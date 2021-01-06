@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        audioManager = AudioManager.instance;
+        slidUI.transform.Find("BackImg").gameObject.SetActive(true);
     }
 
     void Awake()
@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
 
         isAlive = true;
         isMainPlayer = true;
+
+        audioManager = AudioManager.instance;
 
         if (!PlayerPrefs.HasKey("BGMCheck"))
         {
@@ -92,6 +94,9 @@ public class GameManager : MonoBehaviour
             //Tutorial부터만 사용 가능
             if (gameScene >= 3 && Input.GetKeyDown(KeyCode.R))
             {
+                Player.instance.slidingTimer = 5;
+                SubPlayer.instance.slidingTimer = 5;
+
                 ChangePlayer();
             }
         }
@@ -105,6 +110,8 @@ public class GameManager : MonoBehaviour
     {
         MiniMap.instance.ResetCamPos();
 
+        slidUI.transform.Find("BackImg").gameObject.SetActive(true);
+
         if (isMainPlayer)
         {
             Player.instance.VelocityZero();
@@ -112,6 +119,8 @@ public class GameManager : MonoBehaviour
             subCamera.SetActive(true);
 
             isMainPlayer = false;
+
+            EnergyBarUI.instance.Change();
         }
         else
         {
@@ -120,6 +129,8 @@ public class GameManager : MonoBehaviour
             subCamera.SetActive(false);
 
             isMainPlayer = true;
+
+            EnergyBarUI.instance.Change();
         }
 
         time = 0;
