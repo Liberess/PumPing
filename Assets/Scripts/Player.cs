@@ -460,6 +460,7 @@ public class Player : MonoBehaviour
     {
         anim.SetBool("isRun", false);
         anim.SetBool("isJump", false);
+
         rigid.velocity = Vector2.zero;
     }
 

@@ -195,6 +195,10 @@ public class GameManager : MonoBehaviour
         SubPlayer.instance.transform.position = subPos;
         Player.instance.onAlive();
         SubPlayer.instance.onAlive();
+
+        canvas.enabled = true;
+
+        reStartBtn.SetActive(false);
     }
 
     public void NextStage()
