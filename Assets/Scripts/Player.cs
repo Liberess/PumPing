@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        //Energy가 0.5f 이상이고 살아있으며 isMove가 true여야 움직일 수 있다.
+        //살아있으며 isMove가 true여야 움직일 수 있다. 또한 메인 플레이어가 움직인다.
         if (gameManager.isAlive && isMove && gameManager.isMainPlayer)
         {
             Jump();
@@ -144,6 +144,11 @@ public class Player : MonoBehaviour
         }
 
         nextPos = transform.position;
+
+        if (previousPos.y >= nextPos.y)
+        {
+            anim.SetBool("isJumpDown", true);
+        }
     }
 
     void FixedUpdate()
@@ -172,7 +177,7 @@ public class Player : MonoBehaviour
                 if (rayHit.distance < 0.5f)
                 {
                     anim.SetBool("isJump", false);
-                    anim.SetBool("isJumpEnd", true);
+                    anim.SetBool("isJumpDown", true);
                     jumpCount = 0;
                 }
             }
@@ -200,7 +205,7 @@ public class Player : MonoBehaviour
     {
         //Move Speed
         float h = Input.GetAxisRaw("Horizontal");
-        //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+        rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
         rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
 
         //MaxSpeed
@@ -224,9 +229,10 @@ public class Player : MonoBehaviour
         }
 
         //Stop Speed
+        //이것을 키면 속도를 0으로 만들기 때문에 공중에서 키 입력받으면 느리게 내려감
         if (Input.GetButtonUp("Horizontal"))
         {
-            VelocityZero();
+            //VelocityZero();
         }
 
         if (gameManager.isAlive)
@@ -252,7 +258,7 @@ public class Player : MonoBehaviour
                 rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
 
                 anim.SetBool("isJump", true);
-                anim.SetBool("isJumpEnd", false);
+                anim.SetBool("isJumpDown", false);
 
                 jumpCount++;
                 gameManager.mainEnergyBar.value--;
@@ -305,14 +311,14 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "Land")
         {
-            anim.SetBool("isJumpEnd", true);
+            anim.SetBool("isJumpDown", true);
             anim.SetBool("isJump", false);
             jumpCount = 0;
         }
 
         if (collision.gameObject.tag == "Platform")
         {
-            anim.SetBool("isJumpEnd", true);
+            anim.SetBool("isJumpDown", true);
         }
 
         if (collision.gameObject.tag == "MineTrap")

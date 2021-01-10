@@ -12,16 +12,14 @@ public class SubPlayer : MonoBehaviour
 
     public GameManager gameManager;
 
-    public Slider pumpSlider;
-
     //플레이어 이동
     private float moveSpeed;
     private float maxSpeed = 10;
     private float jumpPower = 10;
-    private static float maxPumping = 200;
+    private static float maxPumping = 2;
     private static float maxJump = 2;
     private int jumpCount = 0;
-    private int pumpingCount = 0;
+    public float pumpingCount = 0;
 
     //사망 효과음 On/Off
     private bool audioPlay;
@@ -111,6 +109,7 @@ public class SubPlayer : MonoBehaviour
         else
         {
             anim.SetBool("isJump", false);
+            jumpCount = 0;
         }
 
         if (isEnemy)
@@ -131,7 +130,7 @@ public class SubPlayer : MonoBehaviour
             }
         }
 
-        //살아있으며 isMove가 true여야 움직일 수 있다. 또한 서브 플레이어야 움직인다.
+        //살아있으며 isMove가 true여야 움직일 수 있다. 또한 서브 플레이어가 움직인다.
         if (gameManager.isAlive && isMove && gameManager.isMainPlayer == false)
         {
             Jump();
@@ -175,7 +174,7 @@ public class SubPlayer : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (gameManager.isAlive && isMove && gameManager.isMainPlayer == false)
+        if (gameManager.isAlive && isMove && !gameManager.isMainPlayer)
         {
             Move();
         }
@@ -198,8 +197,8 @@ public class SubPlayer : MonoBehaviour
             {
                 if (rayHit.distance < 0.5f)
                 {
-                    //anim.SetBool("isJumpUp", false);
                     anim.SetBool("isJump", false);
+                    anim.SetBool("isJumpDown", true);
                     jumpCount = 0;
                 }
             }
@@ -228,7 +227,7 @@ public class SubPlayer : MonoBehaviour
     {
         //Move Speed
         float h = Input.GetAxisRaw("Horizontal");
-        //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+
         rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
 
         //MaxSpeed
@@ -254,10 +253,10 @@ public class SubPlayer : MonoBehaviour
         //Stop Speed
         if (Input.GetButtonUp("Horizontal"))
         {
-            VelocityZero();
+            //VelocityZero();
         }
 
-        if (gameManager.isAlive)
+        if (gameManager.isAlive && isMove && !gameManager.isMainPlayer)
         {
             //Sprite Flip
             if (Input.GetButton("Horizontal"))
@@ -280,7 +279,7 @@ public class SubPlayer : MonoBehaviour
                 rigid.velocity = new Vector2(rigid.velocity.x, jumpPower);
 
                 anim.SetBool("isJump", true);
-                anim.SetBool("isJumpEnd", false);
+                anim.SetBool("isJumpDown", false);
 
                 jumpCount++;
                 gameManager.subEnergyBar.value--;
@@ -293,13 +292,14 @@ public class SubPlayer : MonoBehaviour
     private void Pumping()
     {
         //Pumping Charging Down
-        if (Input.GetKey(KeyCode.UpArrow) && gameManager.pumpingGauge < 1f && gameManager.subEnergyBar.value >= 1f)
+        if (Input.GetKey(KeyCode.UpArrow) && gameManager.subEnergyBar.value >= 1f)
         {
             gameManager.pumping.SetActive(true);
 
             if (pumpingCount <= maxPumping)
             {
-                pumpingCount += 1;
+                pumpingCount += Time.deltaTime;
+
                 gameManager.pumpingGauge = Mathf.MoveTowards(gameManager.pumpingGauge, 1f, Time.deltaTime);
             }
         }
@@ -307,9 +307,9 @@ public class SubPlayer : MonoBehaviour
         //Pumping Charging Up
         if (Input.GetKeyUp(KeyCode.UpArrow) && gameManager.subEnergyBar.value >= 1f)
         {
-            if (pumpingCount >= 10 && gameManager.pumpingGauge >= 0.2)
+            if (pumpingCount >= 0.5f && gameManager.pumpingGauge >= 0.2f)
             {
-                rigid.velocity = new Vector2(rigid.velocity.x, jumpPower * pumpingCount / 120);
+                rigid.velocity = new Vector2(rigid.velocity.x, (jumpPower * pumpingCount) / 1.2f);
                 anim.SetBool("isJump", true);
                 AudioManager.instance.PlaySFX("Pumping");
                 gameManager.subEnergyBar.value -= 3;
@@ -373,14 +373,14 @@ public class SubPlayer : MonoBehaviour
 
         if (collision.gameObject.tag == "Land")
         {
-            anim.SetBool("isJumpEnd", true);
+            anim.SetBool("isJumpDown", true);
             anim.SetBool("isJump", false);
             jumpCount = 0;
         }
 
         if (collision.gameObject.tag == "Platform")
         {
-            anim.SetBool("isJumpEnd", true);
+            anim.SetBool("isJumpDown", true);
         }
 
         if (collision.gameObject.tag == "MineTrap")
