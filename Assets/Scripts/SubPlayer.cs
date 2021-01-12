@@ -33,10 +33,10 @@ public class SubPlayer : MonoBehaviour
     private bool isGround;
     private bool isEnemy;
 
-    public float slidingTimer = 5; //슬라이딩 On/Off 시간
-    private float slidingDelay = 0; //슬라이딩 쿨타임 5초
+    //public float slidingTimer = 5; //슬라이딩 On/Off 시간
+    //private float slidingDelay = 0; //슬라이딩 쿨타임 5초
 
-    private float pumpingTimer = 1;       //펌핑 시간
+    public float pumpingTimer = 1;       //펌핑 시간
     private float pumpingDelay = 0f;      //펌핑 쿨타임 1초
 
     private float vx = 0;
@@ -138,8 +138,8 @@ public class SubPlayer : MonoBehaviour
             gameManager.pumpUI.transform.Find("BackImg").transform.Find("CoolTxt")
                 .gameObject.GetComponent<Text>().text = ((int)pumpingTimer).ToString();
 
-            gameManager.slidUI.transform.Find("BackImg").transform.Find("CoolTxt")
-                .gameObject.GetComponent<Text>().text = ((int)slidingTimer).ToString();
+            /* gameManager.slidUI.transform.Find("BackImg").transform.Find("CoolTxt")
+                .gameObject.GetComponent<Text>().text = ((int)slidingTimer).ToString(); */
 
             if (pumpingTimer <= pumpingDelay)
             {
@@ -152,7 +152,7 @@ public class SubPlayer : MonoBehaviour
                 pumpingTimer -= Time.deltaTime;
             }
 
-            if (isSliding && (slidingTimer <= slidingDelay))
+            /* if (isSliding && (slidingTimer <= slidingDelay))
             {
                 gameManager.slidUI.transform.Find("BackImg").gameObject.SetActive(false);
 
@@ -161,7 +161,7 @@ public class SubPlayer : MonoBehaviour
             else
             {
                 slidingTimer -= Time.deltaTime;
-            } 
+            } */
         }
 
         nextPos = transform.position;
@@ -329,7 +329,7 @@ public class SubPlayer : MonoBehaviour
         }
     }
 
-    private void Sliding()
+    /* private void Sliding()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
         {
@@ -360,7 +360,7 @@ public class SubPlayer : MonoBehaviour
         isSliding = true;
         boxCollider.enabled = false;
         capsuleCollider.enabled = true;
-    }
+    } */
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

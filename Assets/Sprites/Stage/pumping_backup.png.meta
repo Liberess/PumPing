@@ -1,0 +1,3194 @@
+fileFormatVersion: 2
+guid: 8ded33b6339e9124081d900f28d66e21
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7276055309483422863
+    second: pumping_backup_0
+  - first:
+      213: 9072088985888980735
+    second: pumping_backup_1
+  - first:
+      213: -7315123951545014435
+    second: pumping_backup_2
+  - first:
+      213: -4983145302502095636
+    second: pumping_backup_3
+  - first:
+      213: -4314776384056370522
+    second: pumping_backup_4
+  - first:
+      213: -7589570750590182813
+    second: pumping_backup_5
+  - first:
+      213: 7362927658159187605
+    second: pumping_backup_6
+  - first:
+      213: 4771601963292478520
+    second: pumping_backup_7
+  - first:
+      213: -1154873884216155041
+    second: pumping_backup_8
+  - first:
+      213: 3337183799942679194
+    second: pumping_backup_9
+  - first:
+      213: 3104590688004648902
+    second: pumping_backup_10
+  - first:
+      213: 2460164289245982642
+    second: pumping_backup_11
+  - first:
+      213: -6103760808012148579
+    second: pumping_backup_12
+  - first:
+      213: 188885044430205122
+    second: pumping_backup_13
+  - first:
+      213: 8968029797542876110
+    second: pumping_backup_14
+  - first:
+      213: 578551775764137129
+    second: pumping_backup_15
+  - first:
+      213: -7983196453539426128
+    second: pumping_backup_16
+  - first:
+      213: 6394879988019918736
+    second: pumping_backup_17
+  - first:
+      213: -8827474618374541455
+    second: pumping_backup_18
+  - first:
+      213: 9082059966953409703
+    second: pumping_backup_19
+  - first:
+      213: 5266833737084275533
+    second: pumping_backup_20
+  - first:
+      213: -3955363673113166687
+    second: pumping_backup_21
+  - first:
+      213: 8573307726668210678
+    second: pumping_backup_22
+  - first:
+      213: -3717751447570771667
+    second: pumping_backup_23
+  - first:
+      213: -386249615030212930
+    second: pumping_backup_24
+  - first:
+      213: -2119284271095990464
+    second: pumping_backup_25
+  - first:
+      213: -8774141572111959481
+    second: pumping_backup_26
+  - first:
+      213: 4874068067109698469
+    second: pumping_backup_27
+  - first:
+      213: 8399477689956344917
+    second: pumping_backup_28
+  - first:
+      213: -6372661081111979408
+    second: pumping_backup_29
+  - first:
+      213: -4906300186208493656
+    second: pumping_backup_30
+  - first:
+      213: 4717357502574486880
+    second: pumping_backup_31
+  - first:
+      213: 3715422962923503181
+    second: pumping_backup_32
+  - first:
+      213: 7118266928644350856
+    second: pumping_backup_33
+  - first:
+      213: -9086524144579102458
+    second: pumping_backup_34
+  - first:
+      213: -9053498475758638878
+    second: pumping_backup_35
+  - first:
+      213: 2916847593112131000
+    second: pumping_backup_36
+  - first:
+      213: 3980248020616989515
+    second: pumping_backup_37
+  - first:
+      213: -7052794646167167301
+    second: pumping_backup_38
+  - first:
+      213: -6166836411911574450
+    second: pumping_backup_39
+  - first:
+      213: -7193905886271640552
+    second: pumping_backup_40
+  - first:
+      213: 8905153581441868061
+    second: pumping_backup_41
+  - first:
+      213: 104980083807855641
+    second: pumping_backup_42
+  - first:
+      213: 9139057695532031165
+    second: pumping_backup_43
+  - first:
+      213: 7666026386011497826
+    second: pumping_backup_44
+  - first:
+      213: -6280094037648499718
+    second: pumping_backup_45
+  - first:
+      213: 2838493921767021426
+    second: pumping_backup_46
+  - first:
+      213: -6459675460585015122
+    second: pumping_backup_47
+  - first:
+      213: 6305749095335610651
+    second: pumping_backup_48
+  - first:
+      213: 2124718321412088301
+    second: pumping_backup_49
+  - first:
+      213: -5300739674632837423
+    second: pumping_backup_50
+  - first:
+      213: -1043856885270624154
+    second: pumping_backup_51
+  - first:
+      213: 8047522672024000723
+    second: pumping_backup_52
+  - first:
+      213: 3427042404092048681
+    second: pumping_backup_53
+  - first:
+      213: -8071783691352069910
+    second: pumping_backup_54
+  - first:
+      213: -792134733717592660
+    second: pumping_backup_55
+  - first:
+      213: 4519132830729962309
+    second: pumping_backup_56
+  - first:
+      213: 601532960279404368
+    second: pumping_backup_57
+  - first:
+      213: 8157681476399310935
+    second: pumping_backup_58
+  - first:
+      213: -2489921460593876277
+    second: pumping_backup_59
+  - first:
+      213: 139885681499448313
+    second: pumping_backup_60
+  - first:
+      213: -8337995979450227896
+    second: pumping_backup_61
+  - first:
+      213: 1221203288172151737
+    second: pumping_backup_62
+  - first:
+      213: 1699159801190527114
+    second: pumping_backup_63
+  - first:
+      213: -4103064851965657973
+    second: pumping_backup_64
+  - first:
+      213: 1312575601731095296
+    second: pumping_backup_65
+  - first:
+      213: -7884593858610086360
+    second: pumping_backup_66
+  - first:
+      213: 1439034839451710947
+    second: pumping_backup_67
+  - first:
+      213: 8166283490043656641
+    second: pumping_backup_68
+  - first:
+      213: 9160215657214350753
+    second: pumping_backup_69
+  - first:
+      213: -7421117177667184472
+    second: pumping_backup_70
+  - first:
+      213: -1259672491081148522
+    second: pumping_backup_71
+  - first:
+      213: 2671317414526306064
+    second: pumping_backup_72
+  - first:
+      213: 7971634569875873197
+    second: pumping_backup_73
+  - first:
+      213: 3149750127707150318
+    second: pumping_backup_74
+  - first:
+      213: 1610741452986892093
+    second: pumping_backup_75
+  - first:
+      213: 8615805079641868578
+    second: pumping_backup_76
+  - first:
+      213: 3807221642658250916
+    second: pumping_backup_77
+  - first:
+      213: -3705358437287336525
+    second: pumping_backup_78
+  - first:
+      213: 4996275244045528291
+    second: pumping_backup_79
+  - first:
+      213: -4749784798738917992
+    second: pumping_backup_80
+  - first:
+      213: 5845793621602702986
+    second: pumping_backup_81
+  - first:
+      213: -2200635011618060035
+    second: pumping_backup_82
+  - first:
+      213: 3110889668197909861
+    second: pumping_backup_83
+  - first:
+      213: -472945423821284644
+    second: pumping_backup_84
+  - first:
+      213: 4193934145728774083
+    second: pumping_backup_85
+  - first:
+      213: 4593717713014943677
+    second: pumping_backup_86
+  - first:
+      213: -434103904286172021
+    second: pumping_backup_87
+  - first:
+      213: -4279964233379560922
+    second: pumping_backup_88
+  - first:
+      213: 932873257322678333
+    second: pumping_backup_89
+  - first:
+      213: -4003579835086962339
+    second: pumping_backup_90
+  - first:
+      213: -5657894615851889679
+    second: pumping_backup_91
+  - first:
+      213: 243615549123474090
+    second: pumping_backup_92
+  - first:
+      213: 3839730778298120050
+    second: pumping_backup_93
+  - first:
+      213: 2983632933414593420
+    second: pumping_backup_94
+  - first:
+      213: 1960806621876925434
+    second: pumping_backup_95
+  - first:
+      213: -1614763007766209097
+    second: pumping_backup_96
+  - first:
+      213: 5374440088009221110
+    second: pumping_backup_97
+  - first:
+      213: -2322581480172343385
+    second: pumping_backup_98
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pumping_backup_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b45280f32460b90800000000000000
+      internalID: -7276055309483422863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe75aeddd886ed70800000000000000
+      internalID: 9072088985888980735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d572534f5857b7a90800000000000000
+      internalID: -7315123951545014435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4c43ccfbf48dab0800000000000000
+      internalID: -4983145302502095636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa53174db5de14c0800000000000000
+      internalID: -4314776384056370522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a90651d9d6ca690800000000000000
+      internalID: -7589570750590182813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5962a73d1bf5e2660800000000000000
+      internalID: 7362927658159187605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83cca9f54b2283240800000000000000
+      internalID: 4771601963292478520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: -8}
+        - {x: -3, y: 6}
+        - {x: -1, y: 6}
+        - {x: 3, y: 5}
+        - {x: 5, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54abe2325019ffe0800000000000000
+      internalID: -1154873884216155041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: 8}
+        - {x: -3, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a85c12cfe005e20800000000000000
+      internalID: 3337183799942679194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: -8}
+        - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 8, y: -8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cfa08b28c8b51b20800000000000000
+      internalID: 3104590688004648902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bfab95f262442220800000000000000
+      internalID: 2460164289245982642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d901c7c52e51b4ba0800000000000000
+      internalID: -6103760808012148579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: -1}
+        - {x: 3, y: -3}
+        - {x: 0, y: -4}
+        - {x: -5, y: -4}
+        - {x: -8, y: -1}
+        - {x: -8, y: 1}
+        - {x: -1, y: 5}
+        - {x: 2, y: 5}
+        - {x: 3, y: 3}
+        - {x: 8, y: 3}
+        - {x: 8, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c075a872fd0f9200800000000000000
+      internalID: 188885044430205122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -1, y: -3}
+        - {x: -6, y: -3}
+        - {x: -8, y: -2}
+        - {x: -8, y: 3}
+        - {x: -7, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 5}
+        - {x: -1, y: 5}
+        - {x: -1, y: 4}
+        - {x: 3, y: 4}
+        - {x: 8, y: 1}
+        - {x: 8, y: -2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec359a11697d47c70800000000000000
+      internalID: 8968029797542876110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -8}
+        - {x: -2, y: -8}
+        - {x: -3, y: -7}
+        - {x: -3, y: -2}
+        - {x: -2, y: 0}
+        - {x: 0, y: 2}
+        - {x: 3, y: 3}
+        - {x: 7, y: 3}
+        - {x: 8, y: 2}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4c79656cd670800800000000000000
+      internalID: 578551775764137129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_16
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: -8}
+        - {x: -2, y: -1}
+        - {x: -5, y: -1}
+        - {x: -8, y: -1}
+        - {x: -8, y: 2}
+        - {x: -2, y: 2}
+        - {x: -2, y: 1}
+        - {x: 1, y: 1}
+        - {x: 1, y: -1}
+        - {x: 3, y: -2}
+        - {x: 3, y: -6}
+        - {x: 2, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0df9e4f1df53190800000000000000
+      internalID: -7983196453539426128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -8}
+        - {x: -6, y: -8}
+        - {x: -8, y: -4}
+        - {x: -8, y: 6}
+        - {x: -7, y: 8}
+        - {x: 6, y: 8}
+        - {x: 8, y: 5}
+        - {x: 8, y: -4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0977e23b77d2fb850800000000000000
+      internalID: 6394879988019918736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f2204ca928e7580800000000000000
+      internalID: -8827474618374541455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7accd0fcb65f90e70800000000000000
+      internalID: 9082059966953409703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_20
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b83f5016d871940800000000000000
+      internalID: 5266833737084275533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acfa9a12b9bb19c0800000000000000
+      internalID: -3955363673113166687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -4}
+        - {x: -5, y: -5}
+        - {x: -8, y: -1}
+        - {x: -8, y: 1}
+        - {x: -1, y: 5}
+        - {x: 2, y: 5}
+        - {x: 3, y: 3}
+        - {x: 8, y: 4}
+        - {x: 8, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1ab2e34f18af670800000000000000
+      internalID: 8573307726668210678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_23
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -3}
+        - {x: -7, y: -3}
+        - {x: -8, y: -2}
+        - {x: -8, y: 3}
+        - {x: -4, y: 5}
+        - {x: 0, y: 5}
+        - {x: 8, y: 1}
+        - {x: 8, y: -2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21995481c4e76cc0800000000000000
+      internalID: -3717751447570771667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -2}
+        - {x: -2, y: 0}
+        - {x: -2, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: 6}
+        - {x: 6, y: 2}
+        - {x: 8, y: 2}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb62e758504c3aaf0800000000000000
+      internalID: -386249615030212930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_25
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -1}
+        - {x: -4, y: -3}
+        - {x: -7, y: -3}
+        - {x: -8, y: -2}
+        - {x: -8, y: 2}
+        - {x: -2, y: 2}
+        - {x: -2, y: 3}
+        - {x: -1, y: 3}
+        - {x: -1, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: 6}
+        - {x: 3, y: 6}
+        - {x: 2, y: 2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04730431f2ac692e0800000000000000
+      internalID: -2119284271095990464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -8}
+        - {x: -6, y: -8}
+        - {x: -8, y: -4}
+        - {x: -8, y: 6}
+        - {x: -7, y: 8}
+        - {x: 6, y: 8}
+        - {x: 8, y: 5}
+        - {x: 8, y: -4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a77414abcfb3680800000000000000
+      internalID: -8774141572111959481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: -8}
+        - {x: -2, y: 3}
+        - {x: -1, y: 3}
+        - {x: -1, y: 1}
+        - {x: 2, y: 1}
+        - {x: 2, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abf527451b24a340800000000000000
+      internalID: 4874068067109698469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -1}
+        - {x: 3, y: 5}
+        - {x: 6, y: 5}
+        - {x: 6, y: -1}
+      - - {x: 2, y: -8}
+        - {x: 2, y: -1}
+        - {x: 6, y: -1}
+        - {x: 5, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554aaa8e470f09470800000000000000
+      internalID: 8399477689956344917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -1}
+        - {x: 4, y: 5}
+        - {x: 7, y: 5}
+        - {x: 7, y: -1}
+      - - {x: 3, y: -8}
+        - {x: 3, y: -1}
+        - {x: 7, y: -1}
+        - {x: 6, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a1d52b282cf87a0800000000000000
+      internalID: -6372661081111979408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_30
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: -1}
+        - {x: -7, y: 5}
+        - {x: -4, y: 5}
+        - {x: -4, y: -1}
+      - - {x: -6, y: -8}
+        - {x: -7, y: -1}
+        - {x: -3, y: -1}
+        - {x: -3, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af1c9fa9f159ebb0800000000000000
+      internalID: -4906300186208493656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -3}
+        - {x: -1, y: -3}
+        - {x: -1, y: -2}
+        - {x: 1, y: -2}
+        - {x: 1, y: 1}
+        - {x: 2, y: 1}
+        - {x: 8, y: 1}
+        - {x: 8, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065e97ba7ab677140800000000000000
+      internalID: 4717357502574486880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_32
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -1}
+        - {x: -8, y: 1}
+        - {x: -1, y: 1}
+        - {x: -1, y: -2}
+        - {x: 1, y: -2}
+        - {x: 1, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e7267ef75df8330800000000000000
+      internalID: 3715422962923503181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_33
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: -8}
+        - {x: -5, y: -5}
+        - {x: -5, y: -2}
+        - {x: -4, y: 2}
+        - {x: -1, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: -1}
+        - {x: 3, y: -1.071991}
+        - {x: 3, y: -6}
+        - {x: 2, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883e142be0a29c260800000000000000
+      internalID: 7118266928644350856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_34
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: -8}
+        - {x: -5, y: -5}
+        - {x: -5, y: -2}
+        - {x: -4, y: 2}
+        - {x: -1, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: -1}
+        - {x: 3, y: -1}
+        - {x: 3, y: -6}
+        - {x: 2, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6093a57de6e26e180800000000000000
+      internalID: -9086524144579102458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_35
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -6}
+        - {x: -3, y: -6}
+        - {x: -4, y: -3}
+        - {x: -4, y: 5}
+        - {x: -6, y: 8}
+        - {x: 4, y: 8}
+        - {x: 3, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8add19a138b5280800000000000000
+      internalID: -9053498475758638878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: 0}
+        - {x: -2, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: 0}
+      - - {x: -1, y: -8}
+        - {x: -1, y: 0}
+        - {x: 3, y: 0}
+        - {x: 3, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5d66b8e69ba7820800000000000000
+      internalID: 2916847593112131000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_37
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -6}
+        - {x: 2, y: 8}
+        - {x: 5, y: 8}
+        - {x: 5, y: -6}
+      - - {x: 1, y: -8}
+        - {x: 1, y: -6}
+        - {x: 5, y: -6}
+        - {x: 4, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4bc3da8c7eac3730800000000000000
+      internalID: 3980248020616989515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_38
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -6}
+        - {x: 3, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: -6}
+      - - {x: 2, y: -8}
+        - {x: 2, y: -6}
+        - {x: 6, y: -6}
+        - {x: 5, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbedd69f2a07f1e90800000000000000
+      internalID: -7052794646167167301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: -6}
+        - {x: -6, y: 8}
+        - {x: -3, y: 8}
+        - {x: -3, y: -6}
+      - - {x: -5, y: -8}
+        - {x: -6, y: -6}
+        - {x: -2, y: -6}
+        - {x: -2, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ce018e4fefa6aa0800000000000000
+      internalID: -6166836411911574450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -1}
+        - {x: 1, y: 0}
+        - {x: 5, y: 3}
+        - {x: 8, y: 3}
+        - {x: 8, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81cef2d16bc1a2c90800000000000000
+      internalID: -7193905886271640552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_41
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -1}
+        - {x: -8, y: 3}
+        - {x: -5, y: 3}
+        - {x: -1, y: 0}
+        - {x: -1, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11e3243006759b70800000000000000
+      internalID: 8905153581441868061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_42
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -8}
+        - {x: -2, y: -8}
+        - {x: -4, y: -4}
+        - {x: -4, y: 0}
+        - {x: -3, y: 2}
+        - {x: -2, y: 2}
+        - {x: -2, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: 5}
+        - {x: 3, y: 5}
+        - {x: 3, y: 3}
+        - {x: 4, y: 3}
+        - {x: 4, y: 0}
+        - {x: 5, y: 0}
+        - {x: 5, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914abdb74d6f47100800000000000000
+      internalID: 104980083807855641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_43
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -8}
+        - {x: -2, y: -8}
+        - {x: -4, y: -4}
+        - {x: -4, y: 0}
+        - {x: -2, y: 2}
+        - {x: -2, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: 5}
+        - {x: 3, y: 5}
+        - {x: 3, y: 3}
+        - {x: 4, y: 3}
+        - {x: 4, y: 0}
+        - {x: 5, y: 0}
+        - {x: 5, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc9cf3ad8474de70800000000000000
+      internalID: 9139057695532031165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -3}
+        - {x: -8, y: -3}
+        - {x: -8, y: 3}
+        - {x: -4, y: 4}
+        - {x: -3, y: 8}
+        - {x: 3, y: 8}
+        - {x: 3, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265acf8b162336a60800000000000000
+      internalID: 7666026386011497826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: -8}
+        - {x: -2, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb99e10fbf98d8a0800000000000000
+      internalID: -6280094037648499718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_46
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -8}
+        - {x: 1, y: 8}
+        - {x: 4, y: 8}
+        - {x: 4, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b5700de2b546720800000000000000
+      internalID: 2838493921767021426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_47
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -8}
+        - {x: 2, y: 8}
+        - {x: 5, y: 8}
+        - {x: 5, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8b587b46f9a56a0800000000000000
+      internalID: -6459675460585015122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_48
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -5, y: -8}
+        - {x: -5, y: 8}
+        - {x: -2, y: 8}
+        - {x: -2, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1948369465828750800000000000000
+      internalID: 6305749095335610651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -4}
+        - {x: -5, y: -4}
+        - {x: -8, y: -1}
+        - {x: -8, y: 1}
+        - {x: -1, y: 5}
+        - {x: 2, y: 5}
+        - {x: 4, y: 3}
+        - {x: 8, y: 3}
+        - {x: 8, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1288b5e048c7d10800000000000000
+      internalID: 2124718321412088301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_50
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4, y: -3}
+        - {x: -8, y: -2}
+        - {x: -8, y: 3}
+        - {x: -7, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 5}
+        - {x: -1, y: 5}
+        - {x: -1, y: 4}
+        - {x: 3, y: 4}
+        - {x: 8, y: 1}
+        - {x: 8, y: -2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6a0b6b95dff66b0800000000000000
+      internalID: -5300739674632837423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -8}
+        - {x: -2, y: -8}
+        - {x: -3, y: -7}
+        - {x: -3, y: -2}
+        - {x: 0, y: 2}
+        - {x: 3, y: 2}
+        - {x: 3, y: 3}
+        - {x: 7, y: 3}
+        - {x: 7, y: 2}
+        - {x: 8, y: 2}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668491581b97381f0800000000000000
+      internalID: -1043856885270624154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_52
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: -8}
+        - {x: -2, y: -1}
+        - {x: -8, y: -1}
+        - {x: -8, y: 2}
+        - {x: -2, y: 2}
+        - {x: -2, y: 1}
+        - {x: 1, y: 1}
+        - {x: 1, y: -1}
+        - {x: 3, y: -2}
+        - {x: 3, y: -6}
+        - {x: 2, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d894eb8b3b8eaf60800000000000000
+      internalID: 8047522672024000723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_53
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9257b16c8ec4f8f20800000000000000
+      internalID: 3427042404092048681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: 4}
+      - - {x: -1, y: -3}
+        - {x: -3, y: -3}
+        - {x: -3, y: 4}
+        - {x: 1, y: 4}
+        - {x: 1, y: -3}
+      - - {x: -2, y: -8}
+        - {x: -2, y: -3}
+        - {x: 2, y: -3}
+        - {x: 2, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae82b25bf734bff80800000000000000
+      internalID: -8071783691352069910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_55
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: 3}
+        - {x: 1, y: 8}
+        - {x: 4, y: 8}
+        - {x: 4, y: 3}
+      - - {x: 0, y: -8}
+        - {x: 0, y: 3}
+        - {x: 3, y: 3}
+        - {x: 3, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5a38618a5c105f0800000000000000
+      internalID: -792134733717592660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_56
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -8}
+        - {x: 1, y: 3}
+        - {x: 4, y: 3}
+        - {x: 4, y: -8}
+      - - {x: 1, y: 3}
+        - {x: 2, y: 8}
+        - {x: 5, y: 8}
+        - {x: 5, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543077cbd5f27be30800000000000000
+      internalID: 4519132830729962309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_57
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -5, y: 3}
+        - {x: -5, y: 8}
+        - {x: -2, y: 8}
+        - {x: -1, y: 3}
+      - - {x: -4, y: -8}
+        - {x: -4, y: 3}
+        - {x: -1, y: 3}
+        - {x: -1, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f94225a03195800800000000000000
+      internalID: 601532960279404368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_58
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -4}
+        - {x: -5, y: -5}
+        - {x: -8, y: -1}
+        - {x: -8, y: 1}
+        - {x: -0.8175049, y: 5}
+        - {x: 2, y: 5}
+        - {x: 3, y: 3}
+        - {x: 6, y: 3}
+        - {x: 7, y: 4}
+        - {x: 8, y: 4}
+        - {x: 8, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758a09fd418e53170800000000000000
+      internalID: 8157681476399310935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_59
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -3}
+        - {x: -7, y: -3}
+        - {x: -8, y: -2}
+        - {x: -8, y: 3}
+        - {x: -7, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 5}
+        - {x: 0, y: 5}
+        - {x: 0, y: 4}
+        - {x: 3, y: 4}
+        - {x: 8, y: 1}
+        - {x: 8, y: -2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc22eaeaf95027dd0800000000000000
+      internalID: -2489921460593876277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_60
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -2}
+        - {x: -2, y: 0}
+        - {x: -2, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: 6}
+        - {x: 6, y: 2}
+        - {x: 8, y: 2}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f320f24949f0f100800000000000000
+      internalID: 139885681499448313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_61
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 5}
+        - {x: 0, y: -1}
+        - {x: -4, y: -3}
+        - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 2, y: 8}
+        - {x: 2, y: 6}
+        - {x: 3, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843eb3255dc794c80800000000000000
+      internalID: -8337995979450227896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_62
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b34a0e9be592f010800000000000000
+      internalID: 1221203288172151737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80b59e26d0a49710800000000000000
+      internalID: 1699159801190527114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_64
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -3}
+        - {x: -7, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      - - {x: -8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: 8}
+      - - {x: -8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: 8}
+      - - {x: -8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -7, y: 8}
+        - {x: -7, y: 8}
+      - - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: -8, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c3230914cfe07c0800000000000000
+      internalID: -4103064851965657973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_65
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bc6023e84373210800000000000000
+      internalID: 1312575601731095296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_66
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 3, y: 8}
+        - {x: 3, y: 7}
+        - {x: 8, y: 7}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82eb153f8ab449290800000000000000
+      internalID: -7884593858610086360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_67
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -3}
+        - {x: -1, y: -3}
+        - {x: -1, y: -2}
+        - {x: 1, y: -2}
+        - {x: 1, y: 1}
+        - {x: 2.076004, y: 0.9999962}
+        - {x: 2, y: 0}
+        - {x: 7, y: 0}
+        - {x: 7, y: 1}
+        - {x: 8, y: 1}
+        - {x: 8, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e53ee8ef8a78f310800000000000000
+      internalID: 1439034839451710947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_68
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -1, y: -3}
+        - {x: -8, y: -1}
+        - {x: -8, y: 1}
+        - {x: -6.984146, y: 0.9999962}
+        - {x: -7, y: 0}
+        - {x: -2, y: 0}
+        - {x: -1.940567, y: 1}
+        - {x: -1, y: 1}
+        - {x: -1, y: -2}
+        - {x: 1, y: -2}
+        - {x: 1, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9703f3197745170800000000000000
+      internalID: 8166283490043656641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_69
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -1}
+        - {x: 1, y: 0}
+        - {x: 5, y: 3}
+        - {x: 8, y: 3}
+        - {x: 8, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a59b3a7b9f9f1f70800000000000000
+      internalID: 9160215657214350753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_70
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -1}
+        - {x: -8, y: 3}
+        - {x: -5, y: 3}
+        - {x: -1, y: 0}
+        - {x: -1, y: -1}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a81994ee35e20990800000000000000
+      internalID: -7421117177667184472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_71
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -5}
+        - {x: -8, y: 7}
+        - {x: 8, y: 7}
+        - {x: 8, y: -5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697d6cb1b8eb48ee0800000000000000
+      internalID: -1259672491081148522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017c727090d621520800000000000000
+      internalID: 2671317414526306064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_73
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -3}
+        - {x: 3, y: -6}
+        - {x: 2, y: -8}
+        - {x: -4, y: -8}
+        - {x: -3, y: -3}
+        - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: daddca0e76fe0ae60800000000000000
+      internalID: 7971634569875873197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_74
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -3}
+        - {x: 3, y: -8}
+        - {x: -4, y: -8}
+        - {x: -3, y: -3}
+        - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7d9359d0926bb20800000000000000
+      internalID: 3149750127707150318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_75
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4.9237633, y: -3.9231262}
+        - {x: 5, y: -3}
+        - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 0, y: 8}
+        - {x: 2, y: 7}
+        - {x: 2, y: 6}
+        - {x: 6, y: 6}
+        - {x: 6, y: 2}
+        - {x: 7, y: 2}
+        - {x: 7, y: 1}
+        - {x: 6, y: 1}
+        - {x: 6, y: -4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3fb74241d08a5610800000000000000
+      internalID: 1610741452986892093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_76
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: -4}
+        - {x: 0, y: -5}
+        - {x: -2, y: -5}
+        - {x: -8, y: 1}
+        - {x: -8, y: 2}
+        - {x: -3, y: 3}
+        - {x: -3, y: 5}
+        - {x: 0, y: 5}
+        - {x: 0, y: 7}
+        - {x: 1, y: 7}
+        - {x: 1, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2294f0a421d719770800000000000000
+      internalID: 8615805079641868578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_77
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -5}
+        - {x: 1, y: -5}
+        - {x: 1, y: -8}
+        - {x: -1, y: -8}
+        - {x: -1, y: -5}
+        - {x: -4, y: -5}
+        - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a003d799e7f5d430800000000000000
+      internalID: 3807221642658250916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_78
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -6}
+        - {x: -1, y: -6}
+        - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5edf3122ce39cc0800000000000000
+      internalID: -3705358437287336525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_79
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -6}
+        - {x: -1, y: -6}
+        - {x: -8, y: -3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec6961fcd5565540800000000000000
+      internalID: 4996275244045528291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_80
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -6}
+        - {x: -3, y: -3}
+        - {x: -4, y: 1}
+        - {x: -8, y: 3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895dd9714ef551eb0800000000000000
+      internalID: -4749784798738917992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: 3}
+        - {x: -6, y: 1}
+        - {x: -7, y: -6}
+        - {x: -8, y: -6}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a869fd5935e602150800000000000000
+      internalID: 5845793621602702986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_82
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: -4}
+        - {x: 6, y: 1}
+        - {x: 4, y: 3}
+        - {x: -8, y: 3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8c73ccd16c571e0800000000000000
+      internalID: -2200635011618060035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_83
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 3}
+        - {x: -8, y: 8}
+        - {x: 3, y: 8}
+        - {x: 3, y: 7}
+        - {x: 8, y: 7}
+        - {x: 8, y: 2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5658e58cba91c2b20800000000000000
+      internalID: 3110889668197909861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_84
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 3}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda5cfe84a2cf69f0800000000000000
+      internalID: -472945423821284644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_85
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: 2}
+        - {x: -6, y: 2}
+        - {x: -8, y: 3}
+        - {x: -8, y: 8}
+        - {x: -6, y: 8}
+        - {x: -6, y: 7}
+        - {x: 5, y: 7}
+        - {x: 5, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf7b8792e8d33a30800000000000000
+      internalID: 4193934145728774083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_86
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: 3}
+        - {x: 0, y: 5}
+        - {x: 0, y: 6}
+        - {x: 2, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbfeca2ebe920cf30800000000000000
+      internalID: 4593717713014943677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_87
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 3}
+        - {x: -8, y: 8}
+        - {x: -2, y: 8}
+        - {x: -1, y: 7}
+        - {x: -1, y: 6}
+        - {x: -2, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c996d8cc0c9f9f0800000000000000
+      internalID: -434103904286172021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_88
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: 0}
+        - {x: 2, y: -4}
+        - {x: -7, y: -8}
+        - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622c80ab4338a94c0800000000000000
+      internalID: -4279964233379560922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_89
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -2}
+        - {x: 4, y: -2}
+        - {x: 3, y: 3}
+        - {x: -4, y: 3}
+        - {x: -6, y: 5}
+        - {x: -6, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d380e23f84b32fc00800000000000000
+      internalID: 932873257322678333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -1, y: 3}
+        - {x: -6, y: 2}
+        - {x: -8, y: 2}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5189b31a5d6078c0800000000000000
+      internalID: -4003579835086962339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_91
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: -1}
+        - {x: -2, y: -3}
+        - {x: -3, y: -3}
+        - {x: -4, y: 0}
+        - {x: -4, y: 4}
+        - {x: -8, y: 4}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 3}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb8d8dd2de1b71b0800000000000000
+      internalID: -5657894615851889679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_92
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2, y: 3}
+        - {x: -8, y: 2}
+        - {x: -8, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2344b1d0f716300800000000000000
+      internalID: 243615549123474090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_93
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -7}
+        - {x: -3, y: -6}
+        - {x: -3, y: -8}
+        - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277f7919cc6794530800000000000000
+      internalID: 3839730778298120050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_94
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -8}
+        - {x: 3, y: -6}
+        - {x: -4, y: -7}
+        - {x: -8, y: -2}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c836550585ef76920800000000000000
+      internalID: 2983632933414593420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_95
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: -5, y: 8}
+        - {x: -5, y: 7}
+        - {x: -4, y: 7}
+        - {x: -4, y: 4}
+        - {x: -1, y: 4}
+        - {x: -1, y: 5}
+        - {x: 0, y: 5}
+        - {x: 0, y: 4}
+        - {x: -6, y: 0}
+        - {x: -6, y: -7}
+        - {x: -7, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3353adb3f263b10800000000000000
+      internalID: 1960806621876925434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_96
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7, y: -8}
+        - {x: 6, y: -7}
+        - {x: 6, y: 0}
+        - {x: 0, y: 4}
+        - {x: 0, y: 5}
+        - {x: 1, y: 5}
+        - {x: 1, y: 4}
+        - {x: 4, y: 4}
+        - {x: 4, y: 7}
+        - {x: 5, y: 7}
+        - {x: 5, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd57ad89953799e0800000000000000
+      internalID: -1614763007766209097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_97
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: -6, y: 8}
+        - {x: -6, y: 7}
+        - {x: -5, y: 7}
+        - {x: -5, y: 0}
+        - {x: -6, y: -7}
+        - {x: -7, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3a868f8c8d59a40800000000000000
+      internalID: 5374440088009221110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_backup_98
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7, y: -8}
+        - {x: 6, y: -7}
+        - {x: 5, y: 0}
+        - {x: 5, y: 7}
+        - {x: 6, y: 7}
+        - {x: 6, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af2d68037884cfd0800000000000000
+      internalID: -2322581480172343385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -48,11 +48,6 @@ public class GameManager : MonoBehaviour
     public Vector3 mainPos;    //MainPlayer Position
     public Vector3 subPos;     //SubPlayer Position
 
-    public void Start()
-    {
-        slidUI.transform.Find("BackImg").gameObject.SetActive(true);
-    }
-
     void Awake()
     {
         instance = this;
@@ -70,6 +65,19 @@ public class GameManager : MonoBehaviour
 
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Screen.SetResolution(1920, 1080, true);
+
+        gameScene = SceneManager.GetActiveScene().buildIndex;
+    }
+
+    public void Start()
+    {
+        if (gameScene >= 3)
+        {
+            slidUI.SetActive(true);
+            pumpUI.SetActive(false);
+
+            slidUI.transform.Find("BackImg").gameObject.SetActive(true);
+        }
     }
 
     public void Update()
@@ -93,17 +101,12 @@ public class GameManager : MonoBehaviour
         {
             //Tutorial부터만 사용 가능
             if (gameScene >= 3 && Input.GetKeyDown(KeyCode.R))
-            {
-                Player.instance.slidingTimer = 5;
-                SubPlayer.instance.slidingTimer = 5;
-
+            { 
                 ChangePlayer();
             }
         }
 
         time += Time.deltaTime;
-
-        gameScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     private void ChangePlayer()
@@ -114,6 +117,9 @@ public class GameManager : MonoBehaviour
 
         if (isMainPlayer)
         {
+            slidUI.SetActive(false);
+            pumpUI.SetActive(true);
+
             Player.instance.VelocityZero();
             mainCamera.SetActive(false);
             subCamera.SetActive(true);
@@ -124,6 +130,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            slidUI.SetActive(true);
+            pumpUI.SetActive(false);
+
             SubPlayer.instance.VelocityZero();
             mainCamera.SetActive(true);
             subCamera.SetActive(false);
