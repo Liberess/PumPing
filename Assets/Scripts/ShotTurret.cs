@@ -6,32 +6,42 @@ public class ShotTurret : MonoBehaviour
 {
     public static ShotTurret instance;
 
-    public GameObject bulletPrefab;
-    public Transform pos;
+    public RuntimeAnimatorController[] turretAc;
+
+    public GameObject[] bulletPrefab;
+    public Transform[] pos;
 
     public AudioClip audioShot;
 
     Animator anim;
-    ParticleSystem particle;
+    //ParticleSystem particle;
     AudioSource audioSource;
 
-    public bool canShot = true;
+    public int ID;
 
-    const float shotDelay = 2f;
-    float shotTimer = 0;
+    public float bulletTime;
+
+    public bool canShot;
+
+    private const float shotDelay = 2f;
+    private float shotTimer = 0;
 
     private void Awake()
     {
         instance = this;
+        canShot = true;
 
         anim = GetComponent<Animator>();
-        particle = GetComponent<ParticleSystem>();
+        //particle = GetComponent<ParticleSystem>();
         audioSource = GetComponent<AudioSource>();
 
-        particle.Stop();
-        particle.Clear();
+        ChangeAc();
+
+        //particle.Stop();
+        //particle.Clear();
     }
-    void Update()
+
+    private void Update()
     {
         if (canShot)
         {
@@ -43,21 +53,40 @@ public class ShotTurret : MonoBehaviour
         }
     }
 
-    void ShotControl()
+    private void ShotControl()
     {
-        particle.Clear();
-        particle.Play();
+        //particle.Clear();
+        //particle.Play();
 
-        Invoke("ShotAction", 0.2f);
+        //Invoke("ShotAction", 0.2f);
+        ShotAction();
 
         shotTimer = 0;  //쿨타임 초기화
     }
 
-    void ShotAction()
+    private void ShotAction()
     {
         audioSource.Play();
-        anim.SetTrigger("isShoot");
-        Instantiate(bulletPrefab, pos.position, transform.rotation);  //총알 생성
-        particle.Clear();
+        anim.SetTrigger("doShoot");
+
+        Invoke("Shot", bulletTime);
+        //particle.Clear();
+    }
+
+    private void Shot()
+    {
+        if (ID == 0)
+        {
+            Instantiate(bulletPrefab[ID], pos[0].position, transform.rotation);  //총알 생성
+        }
+        else
+        {
+            Instantiate(bulletPrefab[ID], pos[1].position, transform.rotation);  //총알 생성
+        }
+    }
+
+    private void ChangeAc()
+    {
+        anim.runtimeAnimatorController = turretAc[ID];
     }
 }

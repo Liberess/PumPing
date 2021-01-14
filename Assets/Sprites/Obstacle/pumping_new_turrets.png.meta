@@ -1,0 +1,3308 @@
+fileFormatVersion: 2
+guid: 7ce78e31c0ec62e44ac529ab9157cdc6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8286983269572520911
+    second: pumping_new_turrets_0
+  - first:
+      213: 2623339564213113752
+    second: pumping_new_turrets_1
+  - first:
+      213: 8576997274976717867
+    second: pumping_new_turrets_2
+  - first:
+      213: -5516984156307162864
+    second: pumping_new_turrets_3
+  - first:
+      213: -7166393296362417640
+    second: pumping_new_turrets_4
+  - first:
+      213: 2232294970771693030
+    second: pumping_new_turrets_5
+  - first:
+      213: 7383860661065063683
+    second: pumping_new_turrets_6
+  - first:
+      213: -2236395370205522745
+    second: pumping_new_turrets_7
+  - first:
+      213: -6978304801492922285
+    second: pumping_new_turrets_8
+  - first:
+      213: 3722285491556929908
+    second: pumping_new_turrets_9
+  - first:
+      213: -2315519068280027072
+    second: pumping_new_turrets_10
+  - first:
+      213: 1927885369688838709
+    second: pumping_new_turrets_11
+  - first:
+      213: -8611497876352612551
+    second: pumping_new_turrets_12
+  - first:
+      213: 7321415900678735505
+    second: pumping_new_turrets_13
+  - first:
+      213: -3799107325752946704
+    second: pumping_new_turrets_14
+  - first:
+      213: 8475881858279946662
+    second: pumping_new_turrets_15
+  - first:
+      213: 8835546015471354158
+    second: pumping_new_turrets_16
+  - first:
+      213: 3178307018550506887
+    second: pumping_new_turrets_17
+  - first:
+      213: -7631006662354486938
+    second: pumping_new_turrets_18
+  - first:
+      213: 6991766096828751791
+    second: pumping_new_turrets_19
+  - first:
+      213: 4781743436667985859
+    second: pumping_new_turrets_20
+  - first:
+      213: -8070236221195190053
+    second: pumping_new_turrets_21
+  - first:
+      213: -6815152249747550184
+    second: pumping_new_turrets_22
+  - first:
+      213: -7296147602567474459
+    second: pumping_new_turrets_23
+  - first:
+      213: -6956717058960775589
+    second: pumping_new_turrets_24
+  - first:
+      213: 2293003482245986020
+    second: pumping_new_turrets_25
+  - first:
+      213: -5576006437924863188
+    second: pumping_new_turrets_26
+  - first:
+      213: 5183890408759415130
+    second: pumping_new_turrets_27
+  - first:
+      213: -2836496822464062099
+    second: pumping_new_turrets_28
+  - first:
+      213: -5240915350055714213
+    second: pumping_new_turrets_29
+  - first:
+      213: 3186127018128774906
+    second: pumping_new_turrets_30
+  - first:
+      213: 1001973369043923886
+    second: pumping_new_turrets_31
+  - first:
+      213: 2112576565107453919
+    second: pumping_new_turrets_32
+  - first:
+      213: -1043187751900061343
+    second: pumping_new_turrets_33
+  - first:
+      213: -5532841750443327777
+    second: pumping_new_turrets_34
+  - first:
+      213: -4916396020276197509
+    second: pumping_new_turrets_35
+  - first:
+      213: -4181042990603506529
+    second: pumping_new_turrets_36
+  - first:
+      213: -8664819911049673916
+    second: pumping_new_turrets_37
+  - first:
+      213: -3032071675400943527
+    second: pumping_new_turrets_38
+  - first:
+      213: -5317105636324954349
+    second: pumping_new_turrets_39
+  - first:
+      213: -820275135082869818
+    second: pumping_new_turrets_40
+  - first:
+      213: 658528151250516606
+    second: pumping_new_turrets_41
+  - first:
+      213: 443735975209931591
+    second: pumping_new_turrets_42
+  - first:
+      213: -7745439023077281572
+    second: pumping_new_turrets_43
+  - first:
+      213: -6946103528621482182
+    second: pumping_new_turrets_44
+  - first:
+      213: -566358709533723408
+    second: pumping_new_turrets_45
+  - first:
+      213: 4618334691907466856
+    second: pumping_new_turrets_46
+  - first:
+      213: -3424632940653295274
+    second: pumping_new_turrets_47
+  - first:
+      213: -9035517589069125454
+    second: pumping_new_turrets_48
+  - first:
+      213: 1258429303757827995
+    second: pumping_new_turrets_49
+  - first:
+      213: 7689033553364802296
+    second: pumping_new_turrets_50
+  - first:
+      213: -1109138401512337046
+    second: pumping_new_turrets_51
+  - first:
+      213: -8429247741259057426
+    second: pumping_new_turrets_52
+  - first:
+      213: 5021218793491005239
+    second: pumping_new_turrets_53
+  - first:
+      213: 6035210300222068889
+    second: pumping_new_turrets_54
+  - first:
+      213: 6765209750208519507
+    second: pumping_new_turrets_55
+  - first:
+      213: 6608757074354004782
+    second: pumping_new_turrets_56
+  - first:
+      213: 4280578833270235525
+    second: pumping_new_turrets_57
+  - first:
+      213: 4106533372704673746
+    second: pumping_new_turrets_58
+  - first:
+      213: -448636760073179255
+    second: pumping_new_turrets_59
+  - first:
+      213: 9080916003755384608
+    second: pumping_new_turrets_60
+  - first:
+      213: -6154822367846083322
+    second: pumping_new_turrets_61
+  - first:
+      213: -5434922522174012328
+    second: pumping_new_turrets_62
+  - first:
+      213: -5176936222470827077
+    second: pumping_new_turrets_63
+  - first:
+      213: -6294877771296404672
+    second: pumping_new_turrets_64
+  - first:
+      213: 435314518416344256
+    second: pumping_new_turrets_65
+  - first:
+      213: 6639671366977450605
+    second: pumping_new_turrets_66
+  - first:
+      213: -545117356095306380
+    second: pumping_new_turrets_67
+  - first:
+      213: -190844386539270756
+    second: pumping_new_turrets_68
+  - first:
+      213: -8027105061298779141
+    second: pumping_new_turrets_69
+  - first:
+      213: -7478294606246222949
+    second: pumping_new_turrets_70
+  - first:
+      213: 8200811436349599834
+    second: pumping_new_turrets_71
+  - first:
+      213: 3386840522239442192
+    second: pumping_new_turrets_72
+  - first:
+      213: 2817193672672162343
+    second: pumping_new_turrets_73
+  - first:
+      213: 3740519193236615224
+    second: pumping_new_turrets_74
+  - first:
+      213: 2464309286839960002
+    second: pumping_new_turrets_75
+  - first:
+      213: 874156684787395439
+    second: pumping_new_turrets_76
+  - first:
+      213: -4883387664484604109
+    second: pumping_new_turrets_77
+  - first:
+      213: -8871955168804577306
+    second: pumping_new_turrets_78
+  - first:
+      213: -3890090932323686978
+    second: pumping_new_turrets_79
+  - first:
+      213: -1954316285978320877
+    second: pumping_new_turrets_80
+  - first:
+      213: -5459549866498998719
+    second: pumping_new_turrets_81
+  - first:
+      213: 7394852823466930785
+    second: pumping_new_turrets_82
+  - first:
+      213: -8745007249158209485
+    second: pumping_new_turrets_83
+  - first:
+      213: 705956426069578182
+    second: pumping_new_turrets_84
+  - first:
+      213: 7092464375431212732
+    second: pumping_new_turrets_85
+  - first:
+      213: 2388125246949723373
+    second: pumping_new_turrets_86
+  - first:
+      213: 3441901979840405468
+    second: pumping_new_turrets_87
+  - first:
+      213: -2291203092871454481
+    second: pumping_new_turrets_88
+  - first:
+      213: 5412557668488099653
+    second: pumping_new_turrets_89
+  - first:
+      213: 4708953946806076654
+    second: pumping_new_turrets_90
+  - first:
+      213: 6861684221542398550
+    second: pumping_new_turrets_91
+  - first:
+      213: -1586079953862096988
+    second: pumping_new_turrets_92
+  - first:
+      213: -3894649801695548984
+    second: pumping_new_turrets_93
+  - first:
+      213: 4985563419513916825
+    second: pumping_new_turrets_94
+  - first:
+      213: 2067685909250653273
+    second: pumping_new_turrets_95
+  - first:
+      213: -671797656640467868
+    second: pumping_new_turrets_96
+  - first:
+      213: 310624110894801744
+    second: pumping_new_turrets_97
+  - first:
+      213: -5689443944887287165
+    second: pumping_new_turrets_98
+  - first:
+      213: -6668083024092718637
+    second: pumping_new_turrets_99
+  - first:
+      213: -5291288778444081300
+    second: pumping_new_turrets_100
+  - first:
+      213: -3493432314032332666
+    second: pumping_new_turrets_101
+  - first:
+      213: -7823251533060777643
+    second: pumping_new_turrets_102
+  - first:
+      213: -4849976802126959654
+    second: pumping_new_turrets_103
+  - first:
+      213: 7446195448719585025
+    second: pumping_new_turrets_104
+  - first:
+      213: -2711472035872537667
+    second: pumping_new_turrets_105
+  - first:
+      213: 6520996184938775192
+    second: pumping_new_turrets_106
+  - first:
+      213: 3140115628209095156
+    second: pumping_new_turrets_107
+  - first:
+      213: -786984479496564751
+    second: pumping_new_turrets_108
+  - first:
+      213: 5654395332481525286
+    second: pumping_new_turrets_109
+  - first:
+      213: -3288076017634610256
+    second: pumping_new_turrets_110
+  - first:
+      213: -4838304967226482558
+    second: pumping_new_turrets_111
+  - first:
+      213: 4521019028446457896
+    second: pumping_new_turrets_112
+  - first:
+      213: 8947737627252825083
+    second: pumping_new_turrets_113
+  - first:
+      213: -2766937476251550618
+    second: pumping_new_turrets_114
+  - first:
+      213: 389308364734813896
+    second: pumping_new_turrets_115
+  - first:
+      213: -4016322704712668367
+    second: pumping_new_turrets_116
+  - first:
+      213: 7661885774959608342
+    second: pumping_new_turrets_117
+  - first:
+      213: 409816768555394868
+    second: pumping_new_turrets_118
+  - first:
+      213: -4816881523812685064
+    second: pumping_new_turrets_119
+  - first:
+      213: -7075385852759657212
+    second: pumping_new_turrets_120
+  - first:
+      213: -245318720174932885
+    second: pumping_new_turrets_121
+  - first:
+      213: 497115564225836297
+    second: pumping_new_turrets_122
+  - first:
+      213: 4620031745469285555
+    second: pumping_new_turrets_123
+  - first:
+      213: 578306986199210396
+    second: pumping_new_turrets_124
+  - first:
+      213: -1898477567631624910
+    second: pumping_new_turrets_125
+  - first:
+      213: -4519964246147541118
+    second: pumping_new_turrets_126
+  - first:
+      213: -8101002305015055973
+    second: pumping_new_turrets_127
+  - first:
+      213: -696249931394361107
+    second: pumping_new_turrets_128
+  - first:
+      213: -2244807839983785691
+    second: pumping_new_turrets_129
+  - first:
+      213: -7321090527467287283
+    second: pumping_new_turrets_130
+  - first:
+      213: -8437697880834106022
+    second: pumping_new_turrets_131
+  - first:
+      213: 2250163106599316063
+    second: pumping_new_turrets_132
+  - first:
+      213: -2438594494885610280
+    second: pumping_new_turrets_133
+  - first:
+      213: 315362702240027223
+    second: pumping_new_turrets_134
+  - first:
+      213: -7294987839739899007
+    second: pumping_new_turrets_135
+  - first:
+      213: 3983346634442753356
+    second: pumping_new_turrets_136
+  - first:
+      213: 3501353436672948438
+    second: pumping_new_turrets_137
+  - first:
+      213: 2149347774005490310
+    second: pumping_new_turrets_138
+  - first:
+      213: -2445217841197650955
+    second: pumping_new_turrets_139
+  - first:
+      213: -2516267067114204785
+    second: pumping_new_turrets_140
+  - first:
+      213: 7864407911441106665
+    second: pumping_new_turrets_141
+  - first:
+      213: -3578619121696964071
+    second: pumping_new_turrets_142
+  - first:
+      213: 7079180246691916317
+    second: pumping_new_turrets_143
+  - first:
+      213: -3305796168120594086
+    second: pumping_new_turrets_144
+  - first:
+      213: -9193750076887178814
+    second: pumping_new_turrets_145
+  - first:
+      213: -3404176611261748803
+    second: pumping_new_turrets_146
+  - first:
+      213: 4635744059281852785
+    second: pumping_new_turrets_147
+  - first:
+      213: 1931706700340330703
+    second: pumping_new_turrets_148
+  - first:
+      213: 643359906043376563
+    second: pumping_new_turrets_149
+  - first:
+      213: -1442110661862561857
+    second: pumping_new_turrets_150
+  - first:
+      213: -5019905500964200450
+    second: pumping_new_turrets_151
+  - first:
+      213: -3035409453753548546
+    second: pumping_new_turrets_152
+  - first:
+      213: 300640451809919846
+    second: pumping_new_turrets_153
+  - first:
+      213: -1589102616631943852
+    second: pumping_new_turrets_154
+  - first:
+      213: 261587274555092079
+    second: pumping_new_turrets_155
+  - first:
+      213: 7389767376198858802
+    second: pumping_new_turrets_156
+  - first:
+      213: 6784368620553026443
+    second: pumping_new_turrets_157
+  - first:
+      213: 3522782513775413834
+    second: pumping_new_turrets_158
+  - first:
+      213: 5465612089871639491
+    second: pumping_new_turrets_159
+  - first:
+      213: -7191053874714736523
+    second: pumping_new_turrets_160
+  - first:
+      213: 5368167446327813286
+    second: pumping_new_turrets_161
+  - first:
+      213: -3568969088538566883
+    second: pumping_new_turrets_162
+  - first:
+      213: 784331005896994201
+    second: pumping_new_turrets_163
+  - first:
+      213: 2059535265773329115
+    second: pumping_new_turrets_164
+  - first:
+      213: 1920162203490575848
+    second: pumping_new_turrets_165
+  - first:
+      213: 2040677480692883421
+    second: pumping_new_turrets_166
+  - first:
+      213: 190655065706903355
+    second: pumping_new_turrets_167
+  - first:
+      213: -6510274758157883350
+    second: pumping_new_turrets_168
+  - first:
+      213: 8483231682489323426
+    second: pumping_new_turrets_169
+  - first:
+      213: 1757123704107315671
+    second: pumping_new_turrets_170
+  - first:
+      213: -435989405458724480
+    second: pumping_new_turrets_171
+  - first:
+      213: -8560127942678847404
+    second: pumping_new_turrets_172
+  - first:
+      213: -4182213841366316807
+    second: pumping_new_turrets_173
+  - first:
+      213: 4503800635930261434
+    second: pumping_new_turrets_174
+  - first:
+      213: -5068367661481185523
+    second: pumping_new_turrets_175
+  - first:
+      213: 4518757674439176635
+    second: pumping_new_turrets_176
+  - first:
+      213: 5969386286737659568
+    second: pumping_new_turrets_177
+  - first:
+      213: 7441653036385845338
+    second: pumping_new_turrets_178
+  - first:
+      213: -462541493586418295
+    second: pumping_new_turrets_179
+  - first:
+      213: 3445653291628064685
+    second: pumping_new_turrets_180
+  - first:
+      213: 5248000677748535662
+    second: pumping_new_turrets_181
+  - first:
+      213: 5480362143411749478
+    second: pumping_new_turrets_182
+  - first:
+      213: -3136677264695500668
+    second: pumping_new_turrets_183
+  - first:
+      213: -5453848643738837899
+    second: pumping_new_turrets_184
+  - first:
+      213: 2376808369490279667
+    second: pumping_new_turrets_185
+  - first:
+      213: -3592844392203836226
+    second: pumping_new_turrets_186
+  - first:
+      213: -7096298476756578511
+    second: pumping_new_turrets_187
+  - first:
+      213: 3217020957076253689
+    second: pumping_new_turrets_188
+  - first:
+      213: -7557928721313860883
+    second: pumping_new_turrets_189
+  - first:
+      213: 1711335849175246591
+    second: pumping_new_turrets_190
+  - first:
+      213: 8559536879163079190
+    second: pumping_new_turrets_191
+  - first:
+      213: -2281459041314840710
+    second: pumping_new_turrets_192
+  - first:
+      213: 6272165146656327941
+    second: pumping_new_turrets_193
+  - first:
+      213: -6156351265402404181
+    second: pumping_new_turrets_194
+  - first:
+      213: 1747061548089711356
+    second: pumping_new_turrets_195
+  - first:
+      213: 4618056300685484506
+    second: pumping_new_turrets_196
+  - first:
+      213: 1362652734756937575
+    second: pumping_new_turrets_197
+  - first:
+      213: 8032014706877574282
+    second: pumping_new_turrets_198
+  - first:
+      213: 7738873314622553746
+    second: pumping_new_turrets_199
+  - first:
+      213: 5473431360427670271
+    second: pumping_new_turrets_200
+  - first:
+      213: -3569585500220623964
+    second: pumping_new_turrets_201
+  - first:
+      213: 2455200152352919099
+    second: pumping_new_turrets_202
+  - first:
+      213: 7900863651199791202
+    second: pumping_new_turrets_203
+  - first:
+      213: 3252205278443447909
+    second: pumping_new_turrets_204
+  - first:
+      213: -5353062429961004673
+    second: pumping_new_turrets_205
+  - first:
+      213: -7606517078117124464
+    second: pumping_new_turrets_206
+  - first:
+      213: 7304612403741986251
+    second: pumping_new_turrets_207
+  - first:
+      213: -3731476307857995869
+    second: pumping_new_turrets_208
+  - first:
+      213: -2983386407394340489
+    second: pumping_new_turrets_209
+  - first:
+      213: -8979985079963202662
+    second: pumping_new_turrets_210
+  - first:
+      213: -2457784943670960940
+    second: pumping_new_turrets_211
+  - first:
+      213: -908306765010188293
+    second: pumping_new_turrets_212
+  - first:
+      213: 5542559734671232726
+    second: pumping_new_turrets_213
+  - first:
+      213: 2705372102270960099
+    second: pumping_new_turrets_214
+  - first:
+      213: -4305337033582040133
+    second: pumping_new_turrets_215
+  - first:
+      213: -7483627278024338995
+    second: pumping_new_turrets_216
+  - first:
+      213: 5617957264298989108
+    second: pumping_new_turrets_217
+  - first:
+      213: -8840963558609267333
+    second: pumping_new_turrets_218
+  - first:
+      213: 7778664719101632979
+    second: pumping_new_turrets_219
+  - first:
+      213: -8270477577946554115
+    second: pumping_new_turrets_220
+  - first:
+      213: -995692761187694468
+    second: pumping_new_turrets_221
+  - first:
+      213: -566506689111738998
+    second: pumping_new_turrets_222
+  - first:
+      213: 3017263571138361258
+    second: pumping_new_turrets_223
+  - first:
+      213: -2877122960963407177
+    second: pumping_new_turrets_224
+  - first:
+      213: -6281456589502615638
+    second: pumping_new_turrets_225
+  - first:
+      213: -262081064652420041
+    second: pumping_new_turrets_226
+  - first:
+      213: 5547196781668222606
+    second: pumping_new_turrets_227
+  - first:
+      213: -1554168970813674210
+    second: pumping_new_turrets_228
+  - first:
+      213: 9037065223894659176
+    second: pumping_new_turrets_229
+  - first:
+      213: -6604373973279659223
+    second: pumping_new_turrets_230
+  - first:
+      213: 2986946591884924292
+    second: pumping_new_turrets_231
+  - first:
+      213: -6604949333583814022
+    second: pumping_new_turrets_232
+  - first:
+      213: -7356388698464647592
+    second: pumping_new_turrets_233
+  - first:
+      213: 6586948175792191134
+    second: pumping_new_turrets_234
+  - first:
+      213: 5276381542506391263
+    second: pumping_new_turrets_235
+  - first:
+      213: -1695860171646616905
+    second: pumping_new_turrets_236
+  - first:
+      213: 2168665790313635603
+    second: pumping_new_turrets_237
+  - first:
+      213: -6715657970397133347
+    second: pumping_new_turrets_238
+  - first:
+      213: -1462756742281126538
+    second: pumping_new_turrets_239
+  - first:
+      213: -4650800896112093344
+    second: pumping_new_turrets_240
+  - first:
+      213: -2680725531542635783
+    second: pumping_new_turrets_241
+  - first:
+      213: -596698190903075285
+    second: pumping_new_turrets_242
+  - first:
+      213: -5362938300642610984
+    second: pumping_new_turrets_243
+  - first:
+      213: 2091539297851449664
+    second: pumping_new_turrets_244
+  - first:
+      213: 5806193876175504229
+    second: pumping_new_turrets_245
+  - first:
+      213: -536988483185259956
+    second: pumping_new_turrets_246
+  - first:
+      213: -3264825934690442747
+    second: pumping_new_turrets_247
+  - first:
+      213: -3895718120535744170
+    second: pumping_new_turrets_248
+  - first:
+      213: 779862010481527979
+    second: pumping_new_turrets_249
+  - first:
+      213: -8700552501245904201
+    second: pumping_new_turrets_250
+  - first:
+      213: -77779155498982948
+    second: pumping_new_turrets_251
+  - first:
+      213: 2846852636004041770
+    second: pumping_new_turrets_252
+  - first:
+      213: -8550756732439937702
+    second: pumping_new_turrets_253
+  - first:
+      213: -5958020531270483569
+    second: pumping_new_turrets_254
+  - first:
+      213: -2618773407180672674
+    second: pumping_new_turrets_255
+  - first:
+      213: 1340445475879950819
+    second: pumping_new_turrets_256
+  - first:
+      213: 6242220132266212474
+    second: pumping_new_turrets_257
+  - first:
+      213: 7434656298343822130
+    second: pumping_new_turrets_258
+  - first:
+      213: -5306435530802471812
+    second: pumping_new_turrets_259
+  - first:
+      213: 3991320814842546443
+    second: pumping_new_turrets_260
+  - first:
+      213: -3096086355795203662
+    second: pumping_new_turrets_261
+  - first:
+      213: -1469299877888707792
+    second: pumping_new_turrets_262
+  - first:
+      213: 2035893960687124132
+    second: pumping_new_turrets_263
+  - first:
+      213: -9154560962903806820
+    second: pumping_new_turrets_264
+  - first:
+      213: 2834480155961094885
+    second: pumping_new_turrets_265
+  - first:
+      213: -8217568301787894328
+    second: pumping_new_turrets_266
+  - first:
+      213: -6592209731588683364
+    second: pumping_new_turrets_267
+  - first:
+      213: 523186597559003472
+    second: pumping_new_turrets_268
+  - first:
+      213: 206716114195788287
+    second: pumping_new_turrets_269
+  - first:
+      213: -5421125031538359092
+    second: pumping_new_turrets_270
+  - first:
+      213: 5150455713496001543
+    second: pumping_new_turrets_271
+  - first:
+      213: 4562901117377914080
+    second: pumping_new_turrets_272
+  - first:
+      213: 5177936882848649943
+    second: pumping_new_turrets_273
+  - first:
+      213: -2778919587013953771
+    second: pumping_new_turrets_274
+  - first:
+      213: 56170761683863055
+    second: pumping_new_turrets_275
+  - first:
+      213: 4653257698559646316
+    second: pumping_new_turrets_276
+  - first:
+      213: -5690939200966083656
+    second: pumping_new_turrets_277
+  - first:
+      213: 83056474148358645
+    second: pumping_new_turrets_278
+  - first:
+      213: 6333018818584512768
+    second: pumping_new_turrets_279
+  - first:
+      213: 1962969859130153111
+    second: pumping_new_turrets_280
+  - first:
+      213: -4248692073829740672
+    second: pumping_new_turrets_281
+  - first:
+      213: -2571781054731145919
+    second: pumping_new_turrets_282
+  - first:
+      213: 153449387472236290
+    second: pumping_new_turrets_283
+  - first:
+      213: -3799658221752274803
+    second: pumping_new_turrets_284
+  - first:
+      213: -6365007608618089653
+    second: pumping_new_turrets_285
+  - first:
+      213: 2859103211795043698
+    second: pumping_new_turrets_286
+  - first:
+      213: -2214288167934479848
+    second: pumping_new_turrets_287
+  - first:
+      213: 5759390526995647507
+    second: pumping_new_turrets_288
+  - first:
+      213: -8533635743336680711
+    second: pumping_new_turrets_289
+  - first:
+      213: 7691157539511735532
+    second: pumping_new_turrets_290
+  - first:
+      213: -5900281614904680651
+    second: pumping_new_turrets_291
+  - first:
+      213: -1243144865242706579
+    second: pumping_new_turrets_292
+  - first:
+      213: -1044752740919196792
+    second: pumping_new_turrets_293
+  - first:
+      213: 4152868657637430168
+    second: pumping_new_turrets_294
+  - first:
+      213: -6380092653696077135
+    second: pumping_new_turrets_295
+  - first:
+      213: 2183576383443088995
+    second: pumping_new_turrets_296
+  - first:
+      213: 366697404030084388
+    second: pumping_new_turrets_297
+  - first:
+      213: 3549255125985168252
+    second: pumping_new_turrets_298
+  - first:
+      213: -2971649955406447063
+    second: pumping_new_turrets_299
+  - first:
+      213: 3128031621962984939
+    second: pumping_new_turrets_300
+  - first:
+      213: -941251620913832219
+    second: pumping_new_turrets_301
+  - first:
+      213: 6734542686614691424
+    second: pumping_new_turrets_302
+  - first:
+      213: -6992172385911757699
+    second: pumping_new_turrets_303
+  - first:
+      213: -4424882228484638680
+    second: pumping_new_turrets_304
+  - first:
+      213: 5810250543727223325
+    second: pumping_new_turrets_305
+  - first:
+      213: 563120375322164690
+    second: pumping_new_turrets_306
+  - first:
+      213: 4073634872239248854
+    second: pumping_new_turrets_307
+  - first:
+      213: 320544321812423912
+    second: pumping_new_turrets_308
+  - first:
+      213: 6778001509156356135
+    second: pumping_new_turrets_309
+  - first:
+      213: 8781662480660116655
+    second: pumping_new_turrets_310
+  - first:
+      213: 7207924272118111819
+    second: pumping_new_turrets_311
+  - first:
+      213: -2749620038297853674
+    second: pumping_new_turrets_312
+  - first:
+      213: -7102732491536221082
+    second: pumping_new_turrets_313
+  - first:
+      213: 1661393290481312279
+    second: pumping_new_turrets_314
+  - first:
+      213: -6379629397163844769
+    second: pumping_new_turrets_315
+  - first:
+      213: -4175891908800570025
+    second: pumping_new_turrets_316
+  - first:
+      213: 6548559569321841577
+    second: pumping_new_turrets_317
+  - first:
+      213: -7583211116092038195
+    second: pumping_new_turrets_318
+  - first:
+      213: 6160994384402734071
+    second: pumping_new_turrets_319
+  - first:
+      213: -7304830433488012139
+    second: pumping_new_turrets_320
+  - first:
+      213: 8670789184092667296
+    second: pumping_new_turrets_321
+  - first:
+      213: 8036775190554621575
+    second: pumping_new_turrets_322
+  - first:
+      213: -526995021246618337
+    second: pumping_new_turrets_323
+  - first:
+      213: -5110456622389402567
+    second: pumping_new_turrets_324
+  - first:
+      213: -6992492708336199142
+    second: pumping_new_turrets_325
+  - first:
+      213: 5155517088424417706
+    second: pumping_new_turrets_326
+  - first:
+      213: 2706267502630663369
+    second: pumping_new_turrets_327
+  - first:
+      213: -6883172860656290353
+    second: pumping_new_turrets_328
+  - first:
+      213: 4340705089062627065
+    second: pumping_new_turrets_329
+  - first:
+      213: -6738280446564987368
+    second: pumping_new_turrets_330
+  - first:
+      213: 6315173763892002396
+    second: pumping_new_turrets_331
+  - first:
+      213: -2875666047665524990
+    second: pumping_new_turrets_332
+  - first:
+      213: -7702310634254159760
+    second: pumping_new_turrets_333
+  - first:
+      213: 983187753959269462
+    second: pumping_new_turrets_334
+  - first:
+      213: -6993449533235613595
+    second: pumping_new_turrets_335
+  - first:
+      213: 5634172218719494494
+    second: pumping_new_turrets_336
+  - first:
+      213: 7135926258189241348
+    second: pumping_new_turrets_337
+  - first:
+      213: -3903023558942305188
+    second: pumping_new_turrets_338
+  - first:
+      213: 9123915466945487872
+    second: pumping_new_turrets_339
+  - first:
+      213: -8346583961475375297
+    second: pumping_new_turrets_340
+  - first:
+      213: -1214470575581547437
+    second: pumping_new_turrets_341
+  - first:
+      213: -3126084906024993343
+    second: pumping_new_turrets_342
+  - first:
+      213: 7888167010703677444
+    second: pumping_new_turrets_343
+  - first:
+      213: 7277241494234536929
+    second: pumping_new_turrets_344
+  - first:
+      213: 512330606000315292
+    second: pumping_new_turrets_345
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pumping_new_turrets_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13456856f98befc80800000000000000
+      internalID: -8286983269572520911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89396224f69f76420800000000000000
+      internalID: 2623339564213113752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c0b76249d970770800000000000000
+      internalID: 8576997274976717867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0197adbd32cbf63b0800000000000000
+      internalID: -5516984156307162864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812d391244bdb8c90800000000000000
+      internalID: -7166393296362417640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eddcbed274bafe10800000000000000
+      internalID: 2232294970771693030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d93cd562eb87660800000000000000
+      internalID: 7383860661065063683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4529d724ab6f0e0800000000000000
+      internalID: -2236395370205522745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3509c9471c4182f90800000000000000
+      internalID: -6978304801492922285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47157dcdee638a330800000000000000
+      internalID: 3722285491556929908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0488680fcaf9ddfd0800000000000000
+      internalID: -2315519068280027072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532d9f3878931ca10800000000000000
+      internalID: 1927885369688838709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937c8ff9e40dd7880800000000000000
+      internalID: -8611497876352612551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1964adc98f4ea9560800000000000000
+      internalID: 7321415900678735505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff49e8040cd64bc0800000000000000
+      internalID: -3799107325752946704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a934f894a160a570800000000000000
+      internalID: 8475881858279946662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21c9c0d94a2e9a70800000000000000
+      internalID: 8835546015471354158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78575dbd46d9b1c20800000000000000
+      internalID: 3178307018550506887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669b8b31fd7391690800000000000000
+      internalID: -7631006662354486938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafd81a983eb70160800000000000000
+      internalID: 6991766096828751791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf96a5225a2c5240800000000000000
+      internalID: 4781743436667985859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_21
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd08b2e2ae2c00090800000000000000
+      internalID: -8070236221195190053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810d7971327bb61a0800000000000000
+      internalID: -6815152249747550184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_23
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2d5208960eeba90800000000000000
+      internalID: -7296147602567474459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_24
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b562eb171b6c47f90800000000000000
+      internalID: -6956717058960775589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6710ca48262df10800000000000000
+      internalID: 2293003482245986020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23823a00bb0e92b0800000000000000
+      internalID: -5576006437924863188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51d8a08cd0e0f740800000000000000
+      internalID: 5183890408759415130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_28
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d518a1b2db2a8d0800000000000000
+      internalID: -2836496822464062099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b528906b1478447b0800000000000000
+      internalID: -5240915350055714213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af617d464a5673c20800000000000000
+      internalID: 3186127018128774906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3b3407879b7ed00800000000000000
+      internalID: 1001973369043923886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_32
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf6b0c6131615d10800000000000000
+      internalID: 2112576565107453919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16165f5444ad581f0800000000000000
+      internalID: -1043187751900061343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_34
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdeff520eb56733b0800000000000000
+      internalID: -5532841750443327777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_35
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b770b442ed375cbb0800000000000000
+      internalID: -4916396020276197509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_36
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ce07a5d83f9f5c0800000000000000
+      internalID: -4181042990603506529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_37
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4430727f23060c780800000000000000
+      internalID: -8664819911049673916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958043630eaebe5d0800000000000000
+      internalID: -3032071675400943527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_39
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31faf915898d536b0800000000000000
+      internalID: -5317105636324954349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbcc435c1ccd94f0800000000000000
+      internalID: -820275135082869818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ab1e15ddf832900800000000000000
+      internalID: 658528151250516606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7431378b487782600800000000000000
+      internalID: 443735975209931591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0b700ee3ca28490800000000000000
+      internalID: -7745439023077281572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fdd6b84ab7a9f90800000000000000
+      internalID: -6946103528621482182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f43bce11c3e328f0800000000000000
+      internalID: -566358709533723408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866f10deeee971040800000000000000
+      internalID: 4618334691907466856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65942462c724970d0800000000000000
+      internalID: -3424632940653295274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8adbdff946b9280800000000000000
+      internalID: -9035517589069125454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f6d69c8c6d67110800000000000000
+      internalID: 1258429303757827995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa5e5e474fe4ba60800000000000000
+      internalID: 7689033553364802296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61dc13108c8b90f0800000000000000
+      internalID: -1109138401512337046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_52
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee67d72e6db450b80800000000000000
+      internalID: -8429247741259057426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ffb8d93e3fea540800000000000000
+      internalID: 5021218793491005239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998d389cacf51c350800000000000000
+      internalID: 6035210300222068889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_55
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d10389c6ad2ed50800000000000000
+      internalID: 6765209750208519507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_56
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2368bf5b8507bb50800000000000000
+      internalID: 6608757074354004782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581e026f4cba76b30800000000000000
+      internalID: 4280578833270235525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_58
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df495a58565df830800000000000000
+      internalID: 4106533372704673746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_59
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fe7a26e3f16c9f0800000000000000
+      internalID: -448636760073179255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_60
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fdffe1ef4e50e70800000000000000
+      internalID: 9080916003755384608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_61
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605d7e48aada59aa0800000000000000
+      internalID: -6154822367846083322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8544c04f2c64394b0800000000000000
+      internalID: -5434922522174012328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_63
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb316ca2fe3d728b0800000000000000
+      internalID: -5176936222470827077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_64
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b0069c40a14a8a0800000000000000
+      internalID: -6294877771296404672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_65
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4c6c38f3c8a0600800000000000000
+      internalID: 435314518416344256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_66
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62f5060ee9d42c50800000000000000
+      internalID: 6639671366977450605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_67
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4750a0d17aa5f68f0800000000000000
+      internalID: -545117356095306380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_68
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d03f4aa0cf95df0800000000000000
+      internalID: -190844386539270756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_69
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbcb86e97ef99090800000000000000
+      internalID: -8027105061298779141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_70
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9369f46da2c73890800000000000000
+      internalID: -7478294606246222949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_71
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5034953d822fc170800000000000000
+      internalID: 8200811436349599834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_72
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dfafeb289700f20800000000000000
+      internalID: 3386840522239442192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_73
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7223a1b18bea81720800000000000000
+      internalID: 2817193672672162343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_74
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830366c536ef8e330800000000000000
+      internalID: 3740519193236615224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_75
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1caca6d3cf23220800000000000000
+      internalID: 2464309286839960002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_76
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b29c29fd0a12c00800000000000000
+      internalID: 874156684787395439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_77
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337eedddac8ba3cb0800000000000000
+      internalID: -4883387664484604109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_78
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef563497cb70e480800000000000000
+      internalID: -8871955168804577306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_79
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5e0ea58ee930ac0800000000000000
+      internalID: -3890090932323686978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_80
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310608b31bfd0e4e0800000000000000
+      internalID: -1954316285978320877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_81
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ebbc58258cb34b0800000000000000
+      internalID: -5459549866498998719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_82
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1627a0d967bcf9660800000000000000
+      internalID: 7394852823466930785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_83
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33085bb6d3e73a680800000000000000
+      internalID: -8745007249158209485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_84
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c118c211af0cc900800000000000000
+      internalID: 705956426069578182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbea0bf95ce7d6260800000000000000
+      internalID: 7092464375431212732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_86
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec849f5243542120800000000000000
+      internalID: 2388125246949723373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_87
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfd91c5d9714cf20800000000000000
+      internalID: 3441901979840405468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_88
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0ee152de20430e0800000000000000
+      internalID: -2291203092871454481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_89
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547bc84c5844d1b40800000000000000
+      internalID: 5412557668488099653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_90
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4cc0f5aa0995140800000000000000
+      internalID: 4708953946806076654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_91
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65affe9d179993f50800000000000000
+      internalID: 6861684221542398550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_92
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a78ea47fac1df9e0800000000000000
+      internalID: -1586079953862096988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_93
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9246dd3ac63f9c0800000000000000
+      internalID: -3894649801695548984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_94
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d0f41f387403540800000000000000
+      internalID: 4985563419513916825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_95
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c37ff1165e1bc10800000000000000
+      internalID: 2067685909250653273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c4103379b4da6f0800000000000000
+      internalID: -671797656640467868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_97
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0536e8cabfe8f4400800000000000000
+      internalID: 310624110894801744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_98
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3820f7740e80b01b0800000000000000
+      internalID: -5689443944887287165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_99
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d9142091d53673a0800000000000000
+      internalID: -6668083024092718637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_100
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6774d4f3e09196b0800000000000000
+      internalID: -5291288778444081300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pumping_new_turrets_101
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6806b33c1d5d48fc0800000000000000
+      internalID: -3493432314032332666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

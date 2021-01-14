@@ -6,13 +6,15 @@ public class MoveTurret : MonoBehaviour
 {
     public static MoveTurret instance;
 
-    public GameManager gameManager;
-    public Player player;
+    public RuntimeAnimatorController[] turretAc;
 
+    Animator anim;
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
 
-    public int nextMove;
+    private int nextMove;
+
+    public int ID;
     public bool isMove;
 
     private void Awake()
@@ -21,8 +23,11 @@ public class MoveTurret : MonoBehaviour
 
         isMove = true;
 
+        anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        ChangeAc();
 
         Invoke("Think", 3f);
     }
@@ -34,7 +39,7 @@ public class MoveTurret : MonoBehaviour
             rigid.velocity = new Vector2(nextMove * 2f, rigid.velocity.y);
 
             //Platform Check
-            Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.2f, rigid.position.y);
+            Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.5f, rigid.position.y - 0.5f);
             Debug.DrawRay(frontVec, Vector3.down, new Color(0, 1, 0));
             RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 1, LayerMask.GetMask("Platform"));
 
@@ -75,18 +80,23 @@ public class MoveTurret : MonoBehaviour
         Invoke("Think", 2f);
     }
 
+    private void ChangeAc()
+    {
+        anim.runtimeAnimatorController = turretAc[ID];
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "MainPlayer")
+        if (collision.gameObject.CompareTag("MainPlayer"))
         {
-            gameManager.mainEnergyBar.value -= 7;
-            player.onDamaged(collision.transform.position, 6);
+            GameManager.instance.mainEnergyBar.value -= 7;
+            Player.instance.onDamaged(collision.transform.position, 6);
         }
 
-        if (collision.gameObject.tag == "SubPlayer")
+        if (collision.gameObject.CompareTag("SubPlayer"))
         {
-            gameManager.subEnergyBar.value -= 7;
-            player.onDamaged(collision.transform.position, 6);
+            GameManager.instance.subEnergyBar.value -= 7;
+            SubPlayer.instance.onDamaged(collision.transform.position, 6);
         }
     }
 }

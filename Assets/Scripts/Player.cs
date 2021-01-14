@@ -393,7 +393,7 @@ public class Player : MonoBehaviour
         else if (what == 5)
         {
             //Reaction Force
-            //rigid.AddForce(new Vector2(dirc, 1f) * 5f, ForceMode2D.Impulse);
+            rigid.AddForce(new Vector2(dirc, 1f) * 5f, ForceMode2D.Impulse);
         }
         else if (what == 6)
         {

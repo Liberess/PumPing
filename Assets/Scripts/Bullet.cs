@@ -10,20 +10,31 @@ public class Bullet : MonoBehaviour
     {
         if (transform.rotation.y == 0)
         {
-            transform.Translate(transform.right * moveSpeed * Time.deltaTime);
+            transform.Translate(transform.right * (-1) * moveSpeed * Time.deltaTime);
         }
         else
         {
-            transform.Translate(transform.right * (-1) * moveSpeed * Time.deltaTime);
+            transform.Translate(transform.right * moveSpeed * Time.deltaTime);
         }
-        Destroy(gameObject, 9f);
+
+        Destroy(this.gameObject, 9f);
     }
+
+    /* private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("MainPlayer") || collision.CompareTag("SubPlayer") || collision.CompareTag("Platform") || collision.CompareTag("Land"))
+        {
+            Debug.Log("닿음");
+
+            Destroy(this.gameObject);
+        }
+    } */
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "MainPlayer" || collision.gameObject.tag == "SubPlayer" || collision.gameObject.tag == "Platform")
+        if (collision.gameObject.CompareTag("MainPlayer") || collision.gameObject.CompareTag("SubPlayer") || collision.gameObject.CompareTag("Platform") || collision.gameObject.CompareTag("Land"))
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
