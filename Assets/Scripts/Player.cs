@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    #region 선언
     public static Player instance;
-
-    public GameManager gameManager;
+    GameManager gameManager;
 
     //플레이어 이동
     private float moveSpeed;
@@ -28,10 +28,10 @@ public class Player : MonoBehaviour
     public bool isSliding;
     private bool isEnding;
 
+    private bool isMine;
     private bool isGround;
     private bool isEnemy;
-
-    private float vx = 0;
+    private bool isFence;
 
     public float slidingTimer = 5; //슬라이딩 On/Off 시간
     private float slidingDelay = 0; //슬라이딩 쿨타임 3초
@@ -48,9 +48,11 @@ public class Player : MonoBehaviour
 
     Vector2 previousPos;
     Vector2 nextPos;
+    #endregion
 
     private void Awake()
     {
+        #region 기본 초기화
         instance = this;
 
         audioPlay = true;
@@ -58,56 +60,58 @@ public class Player : MonoBehaviour
         canJump = true;
         isSliding = true;
         isEnding = false;
+        isFence = false;
 
         moveSpeed = 10;
-
-        gameManager.mainEnergyBar.value = 15f;
 
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        #endregion
+    }
+
+    private void Start()
+    {
+        gameManager = GameManager.instance;
+
+        StartCoroutine(AutoPos());
     }
 
     void Update()
     {
-        float x = Mathf.SmoothDamp(rigid.velocity.x, 0, ref vx, 1);
-        float y = Mathf.SmoothDamp(rigid.velocity.y, 0, ref vx, 1);
+        isMine = gameManager.isAlive && isMove && gameManager.isMainPlayer;
 
-        isGround = Physics2D.OverlapCircle(pos.position, 0.1f, LayerMask.GetMask("Platform"));
+        isGround = Physics2D.OverlapCircle(pos.position, 0.3f, LayerMask.GetMask("Land"));
         isEnemy = Physics2D.OverlapCircle(pos.position, 0.5f, LayerMask.GetMask("Enemy"));
+        isFence = Physics2D.OverlapCircle(pos.position, 0.5f, LayerMask.GetMask("TrapOn"));
 
-        if (isEnding)
+        Ending();
+
+        if (isGround)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target, 0.1f);
-
-            if (transform.position.x >= target.x - 1f)
-            {
-                rigid.gravityScale = 0f;
-                rigid.AddForce(Vector2.up * 50f, ForceMode2D.Impulse);
-
-                AudioManager.instance.sfxSlider.value = 0;
-                AudioManager.instance.bgmPlayer.volume = 0;
-
-                isEnding = false;
-                Invoke("Ending", 3f);
-            }
-        }
-
-        if (!isGround)
-        {
-            anim.SetBool("isJump", true);
+            jumpCount = 0;
+            canJump = true;
+            anim.SetBool("isJump", false);
         }
         else
         {
-            anim.SetBool("isJump", false);
-            jumpCount = 0;
+            anim.SetBool("isJump", true);
         }
 
         if (isEnemy)
         {
             anim.SetBool("isJump", false);
+        }
+
+        if(isFence)
+        {
+            jumpCount = 0;
+            canJump = false;
+
+            anim.SetBool("isJump", false);
+            anim.SetBool("isJumpDown", true);
         }
 
         if (audioPlay)
@@ -123,8 +127,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        //살아있으며 isMove가 true여야 움직일 수 있다. 또한 메인 플레이어가 움직인다.
-        if (gameManager.isAlive && isMove && gameManager.isMainPlayer)
+        if (isMine)
         {
             Jump();
 
@@ -149,27 +152,41 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("isJumpDown", true);
         }
+
+        if (gameManager.isAlive == false)
+        {
+            anim.SetTrigger("doDead");
+        }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        if (gameManager.isAlive && isMove && gameManager.isMainPlayer)
+        if (isMine)
         {
             Move();
         }
 
-        if (!gameManager.isAlive)
-        {
-            anim.SetTrigger("doDead");
-        }
+        CheckGapPos();
+        LandingPlatform();
+    }
 
+    IEnumerator AutoPos()
+    {
+        previousPos = transform.position;
+
+        yield return new WaitForSeconds(0.2f);
+
+        StartCoroutine(AutoPos());
+    } //0.2초마다 위치 저장
+
+    private void LandingPlatform()
+    {
         //Landing Platform
         if (rigid.velocity.y <= 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
 
             RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1f, LayerMask.GetMask("Platform"));
-
             RaycastHit2D rayHit2 = Physics2D.Raycast(rigid.position, Vector3.down, 1f, LayerMask.GetMask("Enemy"));
 
             if (rayHit.collider != null)
@@ -191,21 +208,56 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    } //Raycast로 Platform인지 Enemy인지 체크
+
+    private void CheckGapPos()
+    {
+        if (gameManager.isMainPlayer == false)
+        {
+            float gapX = Mathf.Abs(nextPos.x) - Mathf.Abs(previousPos.x);
+
+            if ((gapX <= 0.5) && isGround)
+            {
+                VelocityZero();
+            }
+        }
+    } //경사면에서 천천히
+
+    #region 엔딩
+    private void Ending()
+    {
+        if (isEnding)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target, 0.1f);
+
+            if (transform.position.x >= target.x - 1f)
+            {
+                rigid.gravityScale = 0f;
+                rigid.AddForce(Vector2.up * 50f, ForceMode2D.Impulse);
+
+                AudioManager.instance.sfxSlider.value = 0;
+                AudioManager.instance.bgmPlayer.volume = 0;
+
+                isEnding = false;
+                Invoke("EndingScene", 3f);
+            }
+        }
     }
 
-    private void Ending()
+    private void EndingScene()
     {
         GameManager.instance.canvas.enabled = false;
         SceneManager.LoadScene("Ending", LoadSceneMode.Additive);
         AudioManager.instance.PlayBGM("Ending");
         AudioManager.instance.bgmPlayer.volume = 1;
     }
+    #endregion
 
     private void Move()  //FixedUpdate
     {
         //Move Speed
         float h = Input.GetAxisRaw("Horizontal");
-        rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
+        //rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
         rigid.velocity = new Vector2(h * moveSpeed, rigid.velocity.y);
 
         //MaxSpeed
@@ -228,14 +280,7 @@ public class Player : MonoBehaviour
             anim.SetBool("isRun", true);
         }
 
-        //Stop Speed
-        //이것을 키면 속도를 0으로 만들기 때문에 공중에서 키 입력받으면 느리게 내려감
-        if (Input.GetButtonUp("Horizontal"))
-        {
-            //VelocityZero();
-        }
-
-        if (gameManager.isAlive)
+        if (isMine)
         {
             //Sprite Flip
             if (Input.GetButton("Horizontal"))
@@ -251,7 +296,7 @@ public class Player : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump") && jumpCount < maxJump && gameManager.mainEnergyBar.value >= 1f)
             {
-                previousPos = transform.position;
+                previousPos.y = transform.position.y;
 
                 anim.SetLayerWeight(1, 0);
 
@@ -293,13 +338,12 @@ public class Player : MonoBehaviour
 
     private void SlidingOff()
     {
-        //slidingTimer = 5;
-
         isSliding = true;
         boxCollider.enabled = false;
         capsuleCollider.enabled = true;
     }
 
+    #region 물리 충돌 (Collision)
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
@@ -330,10 +374,12 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "FootTrap")
         {
             isMove = false;
+            moveSpeed = 0;
 
             VelocityZero();
 
-            this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
+            //this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
+            transform.position = new Vector3(collision.transform.position.x, transform.position.y);
 
             AudioManager.instance.PlaySFX("FootTrap");
 
@@ -342,32 +388,76 @@ public class Player : MonoBehaviour
 
             Invoke("MoveOn", 1.8f);
         }
-
-        /* if (collision.gameObject.tag == "SpeedItem")
-        {
-            moveSpeed += 10;
-            Invoke("MoveOn", 3f);
-        } */
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (GameManager.instance.isAlive)
+        {
+            if (collision.gameObject.tag == "FenceTrap")
+            {
+                Invoke("FenceSound", 0.5f);
+                onDamaged(collision.transform.position, 1);
+            }
+
+            if (collision.gameObject.tag == "MoveTrap")
+            {
+                onDamaged(collision.transform.position, 1);
+            }
+        }
+    }
+    #endregion
+
+    #region 물리 충돌 (Trigger)
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        /* if (collision.gameObject.tag == "door")
+        {
+            gameManager.isClear_Main = true;
+
+            if(gameManager.isClear_Main && gameManager.isClear_Sub)
+            {
+                isMove = false;
+
+                moveSpeed = 0;
+
+                VelocityZero();
+
+                this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
+
+                //anim.SetTrigger("doDoor");
+
+                Invoke("MoveOn", 1f);
+                //Invoke("NextStage", 0.6f);
+                Invoke("MoveSpeedReturn", 2f);
+            }
+        } */
+
+        if (collision.gameObject.tag == "Ending")
+        {
+            isMove = false;
+
+            moveSpeed = 0;
+
+            VelocityZero();
+
+            isEnding = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "door")
+        {
+            //gameManager.isClear_Main = false;
+        }
+    }
+    #endregion
 
     public void MoveOn()
     {
         isMove = true;
         moveSpeed = 10;
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "FenceTrap")
-        {
-            Invoke("FenceSound", 0.2f);
-            onDamaged(collision.transform.position, 1);
-        }
-
-        if (collision.gameObject.tag == "MoveTrap")
-        {
-            onDamaged(collision.transform.position, 1);
-        }
     }
 
     private void FenceSound()
@@ -458,6 +548,7 @@ public class Player : MonoBehaviour
 
         Invoke("VelocityZero", 3f);
 
+        GameManager.instance.isAlive = false;
         GameManager.instance.canvas.enabled = false;
         gameManager.reStartBtn.SetActive(true);
     }
@@ -468,54 +559,5 @@ public class Player : MonoBehaviour
         anim.SetBool("isJump", false);
 
         rigid.velocity = Vector2.zero;
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        /* if (collision.gameObject.tag == "door")
-        {
-            gameManager.isClear_Main = true;
-
-            if(gameManager.isClear_Main && gameManager.isClear_Sub)
-            {
-                isMove = false;
-
-                moveSpeed = 0;
-
-                VelocityZero();
-
-                this.transform.position = new Vector3(collision.transform.position.x, collision.transform.position.y);
-
-                //anim.SetTrigger("doDoor");
-
-                Invoke("MoveOn", 1f);
-                //Invoke("NextStage", 0.6f);
-                Invoke("MoveSpeedReturn", 2f);
-            }
-        } */
-
-        if (collision.gameObject.tag == "Ending")
-        {
-            isMove = false;
-
-            moveSpeed = 0;
-
-            VelocityZero();
-
-            isEnding = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "door")
-        {
-            //gameManager.isClear_Main = false;
-        }
-    }
-
-    private void NextStage()
-    {
-        gameManager.NextStage();
     }
 }

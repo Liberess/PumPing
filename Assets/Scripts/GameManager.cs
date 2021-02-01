@@ -73,6 +73,9 @@ public class GameManager : MonoBehaviour
     {
         if (gameScene >= 3)
         {
+            mainEnergyBar.value = 15f;
+            subEnergyBar.value = 30f;
+
             slidUI.SetActive(true);
             pumpUI.SetActive(false);
 

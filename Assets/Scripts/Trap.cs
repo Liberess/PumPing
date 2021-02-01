@@ -6,20 +6,21 @@ using System.Collections.Specialized;
 
 public class Trap : MonoBehaviour
 {
-    public GameObject trap;
+    GameManager gameManager;
 
-    public GameManager gameManager;
+    public GameObject trap;
 
     Animator anim;
 
     private void Awake()
     {
+        gameManager = GameManager.instance;
+
         anim = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if(collision.gameObject.tag == "Player" && trap.gameObject.tag != "FenceTrap")
         if(trap.gameObject.tag != "FenceTrap")
         {
             if (trap.gameObject.tag == "MineTrap")
@@ -28,11 +29,11 @@ public class Trap : MonoBehaviour
 
                 if (collision.gameObject.tag == "MainPlayer")
                 {
-                    gameManager.mainEnergyBar.value -= 5;
+                    GameManager.instance.mainEnergyBar.value -= 5;
                 }
                 else if(collision.gameObject.tag == "SubPlayer")
                 {
-                    gameManager.subEnergyBar.value -= 5;
+                    GameManager.instance.subEnergyBar.value -= 5;
                 }
 
                 Invoke("DelateTrap", 0.5f);
@@ -44,11 +45,11 @@ public class Trap : MonoBehaviour
 
                 if (collision.gameObject.tag == "MainPlayer")
                 {
-                    gameManager.mainEnergyBar.value -= 2;
+                    GameManager.instance.mainEnergyBar.value -= 2;
                 }
                 else if (collision.gameObject.tag == "SubPlayer")
                 {
-                    gameManager.subEnergyBar.value -= 2;
+                    GameManager.instance.subEnergyBar.value -= 2;
                 }
 
                 Invoke("DelateTrap", 1.1f);
@@ -61,17 +62,17 @@ public class Trap : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(trap.gameObject.layer == 13)
+        if(trap.gameObject.layer == 13 && GameManager.instance.isAlive == true)
         {
             if (collision.gameObject.tag == "MainPlayer")
             {
                 doDamage();
-                gameManager.mainEnergyBar.value -= 1;
+                GameManager.instance.mainEnergyBar.value -= 1;
             }
             else if (collision.gameObject.tag == "SubPlayer")
             {
                 doDamage();
-                gameManager.subEnergyBar.value -= 1;
+                GameManager.instance.subEnergyBar.value -= 1;
             }
         }
     }
@@ -80,9 +81,7 @@ public class Trap : MonoBehaviour
     {
         trap.gameObject.layer = 14;
 
-        //gameManager.energyBar.value -= 1;
-
-        Invoke("offDamage", 0.1f);
+        Invoke("offDamage", 0.2f);
     }
 
     private void offDamage()
