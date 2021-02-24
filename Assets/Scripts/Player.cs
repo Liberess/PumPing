@@ -253,6 +253,7 @@ public class Player : MonoBehaviour
     }
     #endregion
 
+    #region 움직임
     private void Move()  //FixedUpdate
     {
         //Move Speed
@@ -342,6 +343,7 @@ public class Player : MonoBehaviour
         boxCollider.enabled = false;
         capsuleCollider.enabled = true;
     }
+    #endregion
 
     #region 물리 충돌 (Collision)
     private void OnCollisionEnter2D(Collision2D collision)
